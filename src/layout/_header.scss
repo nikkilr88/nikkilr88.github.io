@@ -1,0 +1,25 @@
+.hero {
+  padding: $padding-lg $padding-lg 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    flex-basis: 50%;
+  }
+
+  &__image {
+    flex-basis: 50%;
+    text-align: right;
+
+    img {
+      display: block;
+      width: 90%;
+      margin-left: auto;
+    }
+  }
+
+  &__heading {
+    font-size: 5.4em;
+  }
+}

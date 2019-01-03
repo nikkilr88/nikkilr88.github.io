@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-V4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-wait": "^0.0.2"
+  }
+}

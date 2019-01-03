@@ -1,0 +1,32 @@
+.main {
+  padding: $padding-sm $padding-lg;
+
+  section {
+    display: flex;
+    align-items: center;
+  }
+
+  div {
+    padding: 0 25px;
+  }
+
+  &__img {
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+      position: relative;
+      left: -50px;
+    }
+  }
+  &__textblock {
+    flex-basis: 50%;
+  }
+  &__heading {
+    font-size: 4.4em;
+    color: $lightgray;
+  }
+  &__para {
+    font-size: 2em;
+  }
+}
