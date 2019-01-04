@@ -1,5 +1,5 @@
 .hero {
-  padding: $padding-lg $padding-lg 0;
+  padding: $padding-lg;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,6 @@
   }
 
   &__heading {
-    font-size: 5.4em;
+    font-size: 5em;
   }
 }
