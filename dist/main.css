@@ -1,3 +1,7 @@
+html {
+  max-width: 1500px;
+  margin: 0 auto; }
+
 body {
   font-family: "Quicksand";
   color: #333;
@@ -18,15 +22,27 @@ h3 {
 p {
   padding: 5px; }
 
+.center {
+  margin: 0 auto !important;
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
+  max-width: 600px !important;
+  width: 95%;
+  text-align: center; }
+
 .fancy {
   color: #6c63ff;
   font-family: "Grand Hotel";
   font-size: 60px; }
 
 .arrow {
-  position: relative;
-  left: 115px;
-  top: -30px; }
+  display: block;
+  position: absolute;
+  margin: 20px 0; }
+
+.separator {
+  display: block;
+  margin: 50px auto; }
 
 .button {
   padding: 18px 24px;
@@ -34,14 +50,14 @@ p {
   border-radius: 100px;
   font-size: 16px;
   cursor: pointer;
-  margin: 20px 0 0; }
+  margin: 20px 0; }
   .button--main {
     color: #fff;
     background: #ec7580; }
 
 .navbar {
   font-size: 20px;
-  color: #b4b4b4;
+  color: #aaa;
   padding: 40px 90px; }
   .navbar ul {
     list-style: none;
@@ -56,7 +72,7 @@ p {
       margin: 0; }
 
 .hero {
-  padding: 90px 90px 0;
+  padding: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,10 +94,11 @@ p {
       width: 90%;
       margin-left: auto; }
   .hero__heading {
-    font-size: 5.4em; }
+    font-size: 5em; }
 
 .main {
-  padding: 25px 90px; }
+  display: block;
+  padding: 90px; }
   .main section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -94,15 +111,28 @@ p {
   .main__img {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
+    .main__img:nth-child(1) {
+      margin-left: -50px; }
+    .main__img:nth-child(2) {
+      margin-left: auto; }
     .main__img img {
+      display: block;
       width: 100%;
-      position: relative;
-      left: -50px; }
+      position: relative; }
   .main__textblock {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
   .main__heading {
-    font-size: 4.4em;
-    color: #b4b4b4; }
+    font-size: 4em;
+    color: #aaa; }
   .main__para {
-    font-size: 2em; }
+    font-size: 2em;
+    line-height: 30px; }
+
+.footer {
+  text-align: center;
+  margin-top: 90px; }
+  .footer__icon {
+    font-size: 2.5em;
+    margin: 0 25px;
+    color: #aaa; }
