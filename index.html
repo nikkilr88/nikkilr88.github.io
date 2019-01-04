@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Links -->
+    <!-- Web Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Grand+Hotel|Quicksand"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="dist/main.css" />
 
     <title>DevNikki</title>
@@ -28,20 +36,23 @@
 
     <!-- Hero -->
     <header class="hero">
+      <!-- Textblock -->
       <div class="hero__text">
         <h1 class="hero__heading">
-          JavaScript developer and
+          JavaScript developer
+          <br />
+          and
           <span class="fancy">design dabbler</span>
         </h1>
         <button class="button button--main">View my work</button>
+        <!-- Arrow -->
+        <img class="arrow" src="./images/arrow.png" alt="arrow down" />
       </div>
+      <!-- Image -->
       <div class="hero__image">
         <img src="./images/dev-girl.svg" alt="developer woman" />
       </div>
     </header>
-
-    <!-- Arrow -->
-    <img class="arrow" src="./images/arrow.png" alt="arrow down" />
 
     <!-- Main -->
     <main class="main">
@@ -63,6 +74,49 @@
           </p>
         </div>
       </section>
+
+      <!-- Separator -->
+      <img class="separator" src="./images/separator.svg" alt="separator" />
+
+      <section>
+        <!-- Textblock -->
+        <div class="main__textblock">
+          <h2 class="main__heading">Designed with you in mind</h2>
+          <p class="main__para">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
+            suscipit explicabo consectetur.
+          </p>
+          <p class="main__para">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+            nihil, modi necessitatibus officiis qui officia.
+          </p>
+        </div>
+        <!-- Image -->
+        <div class="main__img auto-left">
+          <img src="./images/design-process.svg" alt="responsive devices" />
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <img class="separator" src="./images/separator.svg" alt="separator" />
+
+      <section>
+        <div class="main__textblock center">
+          <h2 class="main__heading">Have an idea for a project?</h2>
+          <p class="main__para">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas hic
+            architecto nihil exercitationem, totam perferendis?
+          </p>
+          <button class="button button--main">Get in touch</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <i class="fab fa-twitter footer__icon"></i>
+        <i class="fab fa-github footer__icon"></i>
+        <i class="fab fa-codepen footer__icon"></i>
+        <i class="fab fa-linkedin-in footer__icon"></i>
+      </footer>
     </main>
   </body>
 </html>
