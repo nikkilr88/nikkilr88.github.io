@@ -1,3 +1,8 @@
+html {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 body {
   font-family: $main;
   color: #333;
@@ -21,6 +26,14 @@ p {
   padding: 5px;
 }
 
+.center {
+  margin: 0 auto !important;
+  flex-basis: auto !important;
+  max-width: 600px !important;
+  width: 95%;
+  text-align: center;
+}
+
 .fancy {
   color: $purple;
   font-family: $fancy;
@@ -28,7 +41,12 @@ p {
 }
 
 .arrow {
-  position: relative;
-  left: 115px;
-  top: -30px;
+  display: block;
+  position: absolute;
+  margin: 20px 0;
+}
+
+.separator {
+  display: block;
+  margin: 50px auto;
 }
