@@ -1,5 +1,6 @@
 .main {
-  padding: $padding-sm $padding-lg;
+  display: block;
+  padding: $padding-lg;
 
   section {
     display: flex;
@@ -13,20 +14,32 @@
   &__img {
     flex-basis: 50%;
 
+    &:nth-child(1) {
+      margin-left: -50px;
+    }
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+
     img {
+      display: block;
       width: 100%;
       position: relative;
-      left: -50px;
     }
   }
+
   &__textblock {
     flex-basis: 50%;
   }
+
   &__heading {
-    font-size: 4.4em;
-    color: $lightgray;
+    font-size: 4em;
+    color: $lightgray2;
   }
+
   &__para {
     font-size: 2em;
+    line-height: 30px;
   }
 }
