@@ -57,7 +57,7 @@ p {
 
 .navbar {
   font-size: 20px;
-  color: #aaa;
+  color: #999;
   padding: 40px 90px; }
   .navbar ul {
     list-style: none;
@@ -67,7 +67,7 @@ p {
   .navbar__logo {
     margin-right: auto; }
   .navbar__link {
-    margin-right: 25px; }
+    margin-right: 35px; }
     .navbar__link:last-child {
       margin: 0; }
 
@@ -124,7 +124,7 @@ p {
         flex-basis: 50%; }
   .main__heading {
     font-size: 4em;
-    color: #aaa; }
+    color: #999; }
   .main__para {
     font-size: 2em;
     line-height: 30px; }
@@ -132,7 +132,9 @@ p {
 .footer {
   text-align: center;
   margin: 0 90px 90px; }
+  .footer a {
+    text-decoration: none; }
   .footer__icon {
     font-size: 2.5em;
     margin: 0 25px;
-    color: #aaa; }
+    color: #999; }
