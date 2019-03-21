@@ -28,9 +28,9 @@
     <nav class="navbar">
       <ul>
         <li class="navbar__logo">< DevNikki /></li>
-        <li class="navbar__link">Home</li>
         <li class="navbar__link">About</li>
-        <li class="navbar__link">Contact</li>
+        <li class="navbar__link"><a href="#projects">Projects</a></li>
+        <li class="navbar__link"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -58,11 +58,11 @@
     <main class="main">
       <section>
         <!-- Image -->
-        <div class="main__img">
+        <div class="main__img padding">
           <img src="./images/responsive.svg" alt="responsive devices" />
         </div>
         <!-- Textblock -->
-        <div class="main__textblock">
+        <div class="main__textblock padding">
           <h2 class="main__heading">Beautiful & Responsive</h2>
           <p class="main__para">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
@@ -77,7 +77,7 @@
 
       <section>
         <!-- Textblock -->
-        <div class="main__textblock">
+        <div class="main__textblock padding">
           <h2 class="main__heading">Designed with you in mind</h2>
           <p class="main__para">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
@@ -89,28 +89,31 @@
           </p>
         </div>
         <!-- Image -->
-        <div class="main__img auto-left">
+        <div class="main__img auto-left padding">
           <img src="./images/design-process.svg" alt="responsive devices" />
         </div>
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="main__textblock">
           <h2 class="main__heading center">A few of my favorite projects...</h2>
         </div>
 
-        <div class="projects__wrapper">
+        <div class="projects__wrapper padding">
           <div class="project">
             <figure>
               <img src="/images/devcasts.png" alt="dev casts app screenshot" />
             </figure>
             <div class="project__text">
-              <h3>DevCasts</h3>
-              <span>Node</span>
-              <span>React</span>
+              <div class="project__title">
+                <h3>DevCasts</h3>
+                <span>Node</span>
+                <span>React</span>
+              </div>
               <p>
                 DevCasts is a podcast player featuring some of my favorite
-                developer podcasts.
+                developer podcasts. Features include basic audio and volume
+                control and uninterrupted play when switching channels.
               </p>
               <div class="project__btns">
                 <button>
@@ -130,11 +133,13 @@
               <img src="/images/bot.png" alt="twitter bot screenshot" />
             </figure>
             <div class="project__text">
-              <h3>Twitter Bot</h3>
-              <span>Node</span>
+              <div class="project__title">
+                <h3>Twitter Bot</h3>
+                <span>Node</span>
+              </div>
               <p>
                 This Twitter bot tweets articles, tracks and retweets popular
-                dev hashtags, and connects to the YouTube API to search and post
+                dev hashtags. It connects to the YouTube API to search and post
                 dev tutorials from selected channels.
               </p>
               <div class="project__btns">
@@ -155,8 +160,10 @@
               />
             </figure>
             <div class="project__text">
-              <h3>Switchr</h3>
-              <span>React</span>
+              <div class="project__title">
+                <h3>Switchr</h3>
+                <span>React</span>
+              </div>
               <p>
                 Switchr is a Chrome extension that toggles other extensions on
                 and off with just a click. Extensions are sorted by enabled
@@ -178,7 +185,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer__textblock">
         <h2 class="footer__heading">Have an idea for a project?</h2>
         <p class="footer__para">
