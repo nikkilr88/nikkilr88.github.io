@@ -15,7 +15,7 @@
     margin-bottom: 100px;
   }
 
-  div:not(.project) {
+  div:not(.project__btns) {
     padding: 0 25px;
   }
 
@@ -51,80 +51,8 @@
 
 .projects {
   &__wrapper {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.project {
-  flex-basis: 30%;
-  background: #fff;
-  text-align: center;
-  padding: $padding-sm;
-  margin-top: $padding-md;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  position: relative;
-
-  &:hover .project__btns,
-  &:hover img {
-    opacity: 1;
-  }
-
-  h3 {
-    font-size: 1.6rem;
     margin-top: $padding-sm;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  &__icon {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    top: -25px;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to bottom right, $purple, darken($purple, 5%));
-    color: #fff;
-    font-size: 1rem;
-    display: none;
-  }
-
-  &__btns {
-    position: absolute;
-    padding: 0 !important;
-    width: 100%;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-
-    button {
-      padding: 5px 10px;
-      border-radius: 100px;
-      border: none;
-      margin: 0 2px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      color: #fff;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      background: $purple;
-    }
+    display: flex;
+    flex-direction: column;
   }
 }
