@@ -10,6 +10,10 @@ body {
   font-size: 9px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,4 +49,8 @@ p {
   display: block;
   position: absolute;
   margin: 20px 0;
+}
+
+.padding {
+  padding: 0 25px;
 }
