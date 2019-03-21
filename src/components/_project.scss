@@ -1,0 +1,62 @@
+.project {
+  display: flex;
+  flex-direction: row;
+  margin-top: $padding-lg;
+
+  &__text {
+    padding: 0 0 0 50px !important;
+  }
+
+  span {
+    display: inline-block;
+    background: #dedede;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 50px;
+    margin: 2px;
+    font-size: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  figure {
+    flex: 0 0 400px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__btns {
+    a {
+      color: $lightgray;
+    }
+
+    button {
+      background: none;
+      border: none;
+      border-bottom: 1px dotted $lightgray;
+      padding: 10px 2px 0;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: $lightgray;
+    }
+  }
+}
