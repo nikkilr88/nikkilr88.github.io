@@ -8,6 +8,9 @@ body {
   color: #333;
   font-size: 9px; }
 
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +44,9 @@ p {
   position: absolute;
   margin: 20px 0; }
 
+.padding {
+  padding: 0 25px; }
+
 .button {
   padding: 18px 24px;
   border: none;
@@ -65,6 +71,16 @@ p {
   margin-top: 90px; }
   .project__text {
     padding: 0 0 0 50px !important; }
+  .project__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .project span {
     display: inline-block;
     background: #dedede;
@@ -97,8 +113,8 @@ p {
     background: none;
     border: none;
     border-bottom: 1px dotted #a0a0a0;
-    padding: 10px 2px 0;
-    margin-right: 10px;
+    padding: 5px 3px;
+    margin: 15px 15px 0 0;
     cursor: pointer;
     font-size: 1rem;
     color: #a0a0a0; }
@@ -107,6 +123,9 @@ p {
   font-size: 20px;
   color: #999;
   padding: 40px 90px; }
+  .navbar a {
+    color: inherit;
+    text-decoration: none; }
   .navbar ul {
     list-style: none;
     display: -webkit-box;
@@ -158,8 +177,6 @@ p {
     margin-bottom: 150px; }
   .main section:last-child {
     margin-bottom: 100px; }
-  .main div:not(.project__btns) {
-    padding: 0 25px; }
   .main__img {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
@@ -230,7 +247,16 @@ p {
     background: white;
     border-radius: 50%;
     -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); }
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .footer__icon:hover {
+      background: #6c63ff;
+      color: #eee;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
 
 form {
   -ms-flex-preferred-size: 40%;
