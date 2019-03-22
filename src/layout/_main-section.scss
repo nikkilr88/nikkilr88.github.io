@@ -1,6 +1,6 @@
 .main {
   display: block;
-  padding: $padding-lg $padding-lg 0;
+  padding: 125px $padding-lg 0;
 
   section:not(.projects) {
     display: flex;
@@ -8,7 +8,7 @@
   }
 
   section {
-    margin-bottom: 150px;
+    margin-bottom: 125px;
   }
 
   section:last-child {
@@ -35,20 +35,20 @@
 
   &__heading {
     font-size: 4em;
-    color: $lightgray;
+    color: $darkgray;
     margin-bottom: $padding-sm;
+    font-weight: bold;
   }
 
   &__para {
     font-size: 2em;
     line-height: 30px;
+    color: $lightgray3;
   }
 }
 
 .projects {
   &__wrapper {
     margin-top: $padding-sm;
-    display: flex;
-    flex-direction: column;
   }
 }
