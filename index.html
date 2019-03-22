@@ -44,26 +44,29 @@
           and
           <span class="fancy">design dabbler</span>
         </h1>
-        <button class="button button--main">View my work</button>
+        <button class="button button--main">Get in touch</button>
         <!-- Arrow -->
-        <img class="arrow" src="./images/arrow.png" alt="arrow down" />
+        <img class="arrow" src="./images/Arrow.svg" alt="arrow down" />
       </div>
       <!-- Image -->
       <div class="hero__image">
-        <img src="./images/dev-girl-no-mic.svg" alt="developer woman" />
+        <!-- <img src="./images/dev-girl-no-mic.svg" alt="developer woman" /> -->
       </div>
+      <figure class="hero__curve">
+        <img src="./images/portfolio-curve.png" alt="" />
+      </figure>
     </header>
 
     <!-- Main -->
     <main class="main">
       <section>
         <!-- Image -->
-        <div class="main__img padding">
+        <div class="main__img padding negative-left">
           <img src="./images/responsive.svg" alt="responsive devices" />
         </div>
         <!-- Textblock -->
         <div class="main__textblock padding">
-          <h2 class="main__heading">Beautiful & Responsive</h2>
+          <h2 class="main__heading">Beautiful & Mobile-friendly</h2>
           <p class="main__para">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             suscipit explicabo consectetur.
@@ -96,7 +99,7 @@
 
       <section class="projects" id="projects">
         <div class="main__textblock">
-          <h2 class="main__heading center">A few of my favorite projects...</h2>
+          <h2 class="main__heading center">Some of my work...</h2>
         </div>
 
         <div class="projects__wrapper padding">
@@ -112,8 +115,8 @@
               </div>
               <p>
                 DevCasts is a podcast player featuring some of my favorite
-                developer podcasts. Features include basic audio and volume
-                control and uninterrupted play when switching channels.
+                developer shows. Features include basic audio and volume control
+                and uninterrupted play when switching channels.
               </p>
               <div class="project__btns">
                 <button>
@@ -136,11 +139,12 @@
               <div class="project__title">
                 <h3>Twitter Bot</h3>
                 <span>Node</span>
+                <span>Heroku</span>
               </div>
               <p>
-                This Twitter bot tweets articles, tracks and retweets popular
-                dev hashtags. It connects to the YouTube API to search and post
-                dev tutorials from selected channels.
+                This bot tweets articles and tracks / retweets popular developer
+                hashtags. It connects to the YouTube API to search and post
+                coding tutorials from selected channels.
               </p>
               <div class="project__btns">
                 <button>
@@ -186,42 +190,47 @@
 
     <!-- Footer -->
     <footer class="footer" id="contact">
-      <div class="footer__textblock">
-        <h2 class="footer__heading">Have an idea for a project?</h2>
-        <p class="footer__para">
-          Get in touch, I would love to hear about it! If you're still not
-          convinced, you can find more about me and my work on my social media
-          below.
-        </p>
-        <div>
-          <a href="https://twitter.com/nikkilr88" target="_blank">
-            <i class="fab fa-twitter footer__icon"></i>
-          </a>
-          <a href="https://github.com/nikkilr88" target="_blank">
-            <i class="fab fa-github footer__icon"></i>
-          </a>
-          <a href="https://codepen.io/nikkilr88/" target="_blank">
-            <i class="fab fa-codepen footer__icon"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/nicole-sattler-285910142/"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin-in footer__icon"></i>
-          </a>
+      <div class="footer__text-wrapper">
+        <div class="footer__textblock">
+          <h2 class="footer__heading">Have an idea for a project?</h2>
+          <p class="footer__para">
+            Get in touch, I would love to hear about it! If you're still not
+            convinced, you can find more about me and my work on my social media
+            below.
+          </p>
         </div>
+        <form action="https://node-sender.glitch.me/" method="POST">
+          <!-- <div class="form-group"></div> -->
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="E-mail" required />
+          <textarea
+            name="message"
+            placeholder="How can I help you?"
+            required
+          ></textarea>
+          <button class="button button--main footer__btn">Get in touch</button>
+        </form>
       </div>
 
-      <form action="https://node-sender.glitch.me/" method="POST">
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="E-mail" required />
-        <textarea
-          name="message"
-          placeholder="How can I help you?"
-          required
-        ></textarea>
-        <button class="button button--main">Get in touch</button>
-      </form>
+      <div class="footer__icons">
+        <a href="https://twitter.com/nikkilr88" target="_blank">
+          <i class="fab fa-twitter footer__icon"></i>
+        </a>
+        <a href="https://github.com/nikkilr88" target="_blank">
+          <i class="fab fa-github footer__icon"></i>
+        </a>
+        <a href="https://codepen.io/nikkilr88/" target="_blank">
+          <i class="fab fa-codepen footer__icon"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/nicole-sattler-285910142/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in footer__icon"></i>
+        </a>
+      </div>
+
+      <div class="footer__bg"></div>
     </footer>
   </body>
 </html>
