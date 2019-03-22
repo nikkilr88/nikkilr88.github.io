@@ -6,6 +6,19 @@
 
   &__text {
     flex-basis: 50%;
+    color: #555;
+  }
+
+  &__curve {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__image {
@@ -20,6 +33,7 @@
   }
 
   &__heading {
-    font-size: 5em;
+    font-size: 4.5em;
+    font-weight: bold;
   }
 }
