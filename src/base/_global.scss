@@ -8,6 +8,7 @@ body {
   background: #f9f9f9;
   color: #333;
   font-size: 9px;
+  position: relative;
 }
 
 html {
@@ -31,6 +32,10 @@ p {
   padding: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .center {
   margin: 0 auto !important;
   flex-basis: auto !important;
@@ -43,14 +48,25 @@ p {
   color: $purple;
   font-family: $fancy;
   font-size: 60px;
+  font-weight: normal;
 }
 
 .arrow {
   display: block;
   position: absolute;
-  margin: 20px 0;
+  margin-top: 25px;
+  left: 115px;
+  height: 125px;
 }
 
 .padding {
   padding: 0 25px;
+}
+
+.negative-left {
+  margin-left: -50px;
+}
+
+.form-group {
+  display: flex;
 }
