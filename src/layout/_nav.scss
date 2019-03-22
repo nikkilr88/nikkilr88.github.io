@@ -1,7 +1,9 @@
 .navbar {
-  font-size: 20px;
+  font-size: 1.8em;
   color: $lightgray2;
   padding: $padding-md $padding-lg;
+  z-index: 999;
+  position: relative;
 
   a {
     color: inherit;
@@ -13,12 +15,18 @@
     display: flex;
   }
 
+  li {
+    font-weight: 600;
+  }
+
   &__logo {
     margin-right: auto;
+    color: #afafaf;
   }
 
   &__link {
     margin-right: 35px;
+    color: #eee;
     &:last-child {
       margin: 0;
     }
