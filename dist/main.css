@@ -83,7 +83,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 90px; }
+  .project:hover .project__overlay {
+    opacity: 0; }
   .project__text {
     padding: 0 0 0 50px !important; }
   .project__title {
@@ -95,7 +100,32 @@ a {
             align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    color: #555; }
+  .project__overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ebebfa;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23333333' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .project__overlay .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: #fff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      opacity: 0.8; }
   .project span {
     display: inline-block;
     background: #dedede;
@@ -110,20 +140,22 @@ a {
     margin-right: 10px; }
   .project p {
     font-size: 1.1rem;
+    line-height: 30px;
+    color: #717171;
     padding: 5px 0;
     width: 100%; }
-  .project a {
-    text-decoration: none;
-    color: #fff; }
   .project figure {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 400px;
-            flex: 0 0 400px; }
+            flex: 0 0 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; }
   .project img {
     width: 100%;
     height: auto; }
   .project__btns a {
-    color: #a0a0a0; }
+    color: #717171; }
   .project__btns button {
     background: none;
     border: none;
@@ -230,7 +262,7 @@ form {
 
 .main {
   display: block;
-  padding: 125px 90px 0; }
+  padding: 125px 90px 125px; }
   .main section:not(.projects) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -241,7 +273,7 @@ form {
   .main section {
     margin-bottom: 125px; }
   .main section:last-child {
-    margin-bottom: 100px; }
+    margin-bottom: 0; }
   .main__img {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
@@ -262,18 +294,17 @@ form {
   .main__para {
     font-size: 2em;
     line-height: 30px;
-    color: #777; }
+    color: #717171; }
 
 .projects__wrapper {
   margin-top: 25px; }
 
 .footer {
   text-align: center;
-  padding: 90px 90px;
   position: relative; }
   .footer__bg {
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -287,8 +318,9 @@ form {
     z-index: -1; }
   .footer__text-wrapper {
     background: #fff;
-    padding: 75px 50px;
-    width: 80%;
+    padding: 75px;
+    max-width: 900px;
+    width: 95%;
     margin: 0 auto;
     -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
             box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
@@ -302,10 +334,10 @@ form {
   .footer__para {
     font-size: 2em;
     line-height: 30px;
+    color: #717171;
     margin: 0 auto 50px auto;
     width: 65%;
-    text-align: center;
-    color: #777; }
+    text-align: center; }
   .footer__icons {
     margin-top: 75px; }
   .footer__icon {
@@ -327,3 +359,5 @@ form {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
+  .footer a:last-child .footer__icon {
+    margin-right: 0; }
