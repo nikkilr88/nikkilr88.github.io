@@ -1,11 +1,10 @@
 .footer {
   text-align: center;
-  padding: $padding-lg $padding-lg;
   position: relative;
 
   &__bg {
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -22,8 +21,9 @@
 
   &__text-wrapper {
     background: #fff;
-    padding: 75px 50px;
-    width: 80%;
+    padding: 75px;
+    max-width: 900px;
+    width: 95%;
     margin: 0 auto;
     box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -38,12 +38,10 @@
   }
 
   &__para {
-    font-size: 2em;
-    line-height: 30px;
+    @include para(2em);
     margin: 0 auto 50px auto;
     width: 65%;
     text-align: center;
-    color: $lightgray3;
   }
 
   &__icons {
@@ -67,5 +65,9 @@
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  a:last-child .footer__icon {
+    margin-right: 0;
   }
 }
