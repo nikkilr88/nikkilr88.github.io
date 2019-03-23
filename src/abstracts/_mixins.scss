@@ -1,0 +1,5 @@
+@mixin para($size) {
+  font-size: $size;
+  line-height: 30px;
+  color: $lightgray3;
+}
