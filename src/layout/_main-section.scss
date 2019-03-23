@@ -1,6 +1,6 @@
 .main {
   display: block;
-  padding: 125px $padding-lg 0;
+  padding: 125px $padding-lg 125px;
 
   section:not(.projects) {
     display: flex;
@@ -12,7 +12,7 @@
   }
 
   section:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 
   &__img {
@@ -41,9 +41,7 @@
   }
 
   &__para {
-    font-size: 2em;
-    line-height: 30px;
-    color: $lightgray3;
+    @include para(2em);
   }
 }
 
