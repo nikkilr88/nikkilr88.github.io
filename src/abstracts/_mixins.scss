@@ -3,3 +3,9 @@
   line-height: 30px;
   color: $lightgray3;
 }
+
+@mixin mobile() {
+  @media (max-width: 925px) {
+    @content;
+  }
+}
