@@ -1,8 +1,32 @@
+.projects {
+  &__wrapper {
+    margin-top: $padding-sm;
+  }
+
+  h2 {
+    margin-bottom: $padding-lg !important;
+
+    @include mobile() {
+      margin-bottom: $padding-md !important;
+    }
+  }
+}
+
 .project {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: $padding-lg;
+  margin-bottom: $padding-lg;
+
+  @include mobile() {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover .project__overlay {
     opacity: 0;
@@ -10,6 +34,10 @@
 
   &__text {
     padding: 0 0 0 50px !important;
+
+    @include mobile() {
+      padding: 0 !important;
+    }
   }
 
   &__title {
@@ -70,6 +98,11 @@
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+
+    @include mobile() {
+      flex: 0 0 auto;
+      margin-bottom: 15px;
+    }
   }
 
   img {

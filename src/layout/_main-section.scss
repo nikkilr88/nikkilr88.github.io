@@ -1,22 +1,37 @@
 .main {
   display: block;
-  padding: 125px $padding-lg 125px;
+  padding: 125px $padding-md 125px;
 
-  section:not(.projects) {
-    display: flex;
-    align-items: center;
+  @include mobile() {
+    padding: 5px;
   }
 
-  section {
-    margin-bottom: 125px;
+  article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: $padding-md;
+    }
+
+    &:last-of-type {
+      margin-bottom: $padding-lg;
+    }
   }
 
   section:last-child {
     margin-bottom: 0;
   }
 
+  // Side images
   &__img {
     flex-basis: 50%;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
 
     &:nth-child(2) {
       margin-left: auto;
@@ -29,8 +44,13 @@
     }
   }
 
+  // Text
   &__textblock {
     flex-basis: 50%;
+
+    @include mobile() {
+      order: 1;
+    }
   }
 
   &__heading {
@@ -38,15 +58,13 @@
     color: $darkgray;
     margin-bottom: $padding-sm;
     font-weight: bold;
+
+    @include mobile {
+      font-size: 3.5em;
+    }
   }
 
   &__para {
     @include para(2em);
-  }
-}
-
-.projects {
-  &__wrapper {
-    margin-top: $padding-sm;
   }
 }
