@@ -1,12 +1,15 @@
 .navbar {
-  font-size: 1.8em;
+  font-size: 1rem;
   color: $lightgray2;
-  padding: $padding-md $padding-lg;
+  padding: $padding-md;
   z-index: 999;
   position: relative;
 
   @include mobile {
     padding: 25px;
+    background: #222;
+    margin-bottom: $padding-md;
+    font-size: 0.85rem;
   }
 
   a {
@@ -17,15 +20,25 @@
   ul {
     list-style: none;
     display: flex;
+
+    @include mobile() {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   li {
     font-weight: 600;
+    display: inline-block;
   }
 
   &__logo {
     margin-right: auto;
-    color: #afafaf;
+    color: $lightgray;
+
+    @include mobile() {
+      margin: 0 0 $padding-sm 0;
+    }
   }
 
   &__link {
@@ -33,6 +46,10 @@
     color: #eee;
     &:last-child {
       margin: 0;
+    }
+
+    @include mobile() {
+      color: $lightgray;
     }
   }
 }
