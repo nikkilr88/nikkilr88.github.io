@@ -57,6 +57,13 @@
       width: 95%;
     }
   }
+
+  &__button {
+    display: inline-block;
+    margin: 15px 0;
+    color: #eee;
+    font-weight: bold;
+  }
 }
 
 .fancy {
