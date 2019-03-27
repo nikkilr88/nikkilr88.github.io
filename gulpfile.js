@@ -13,7 +13,7 @@ gulp.task('prefixer', () =>
         browsers: ['last 4 versions']
       })
     )
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('css'))
 )
 
 gulp.task('watch:styles', () => {
