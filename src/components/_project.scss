@@ -40,13 +40,6 @@
     }
   }
 
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: #555;
-  }
-
   &__overlay {
     content: '';
     position: absolute;
@@ -71,16 +64,6 @@
     }
   }
 
-  span {
-    display: inline-block;
-    background: #dedede;
-    color: #333;
-    padding: 2px 5px;
-    border-radius: 50px;
-    margin: 2px;
-    font-size: 0.75rem;
-  }
-
   h3 {
     font-size: 1.5rem;
     display: inline-block;
@@ -91,9 +74,20 @@
     }
   }
 
+  span {
+    display: inline-block;
+    background: #dedede;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 50px;
+    margin: 2px;
+    font-size: 0.75rem;
+  }
+
   p {
     @include para(1.1rem);
-    padding: 5px 0;
+    padding: 0;
+    margin: 10px 0 15px 0;
     width: 100%;
   }
 
