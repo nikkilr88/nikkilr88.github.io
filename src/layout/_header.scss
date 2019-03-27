@@ -1,25 +1,23 @@
 .hero {
-  padding: $padding-lg;
+  padding: $padding-md $padding-md $padding-lg;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #555;
 
   @include mobile() {
     padding: 25px;
-  }
-
-  .arrow {
-    @include mobile() {
-      display: none;
-    }
+    background: none;
+    background-size: cover;
+    margin-bottom: $padding-sm;
   }
 
   &__text {
     flex-basis: 50%;
-    color: #555;
+    color: inherit;
 
     @include mobile() {
-      flex-basis: auto;
+      flex-basis: 100%;
       text-align: center;
     }
   }
@@ -41,11 +39,41 @@
   }
 
   &__heading {
-    font-size: 4.5em;
+    font-size: 2.6rem;
     font-weight: bold;
 
     @include mobile {
-      font-size: 4em;
+      font-size: 1.8rem;
     }
+  }
+
+  &__sub-heading {
+    @include para(2.5em);
+    width: 70%;
+    margin: 15px 0 25px 0;
+
+    @include mobile {
+      margin: 25px auto;
+      width: 95%;
+    }
+  }
+}
+
+.fancy {
+  color: $purple;
+  font-family: $fancy;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  margin-top: 25px;
+  left: 65px;
+  height: 125px;
+
+  @include mobile() {
+    display: none;
   }
 }
