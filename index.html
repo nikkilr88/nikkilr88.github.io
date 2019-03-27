@@ -28,9 +28,11 @@
     <nav class="navbar">
       <ul>
         <li class="navbar__logo">< DevNikki /></li>
-        <li class="navbar__link">About</li>
-        <li class="navbar__link"><a href="#projects">Projects</a></li>
-        <li class="navbar__link"><a href="#contact">Contact</a></li>
+        <div>
+          <li class="navbar__link">About</li>
+          <li class="navbar__link"><a href="#projects">Projects</a></li>
+          <li class="navbar__link"><a href="#contact">Contact</a></li>
+        </div>
       </ul>
     </nav>
 
@@ -39,14 +41,20 @@
       <!-- Textblock -->
       <div class="hero__text">
         <h1 class="hero__heading">
-          JavaScript developer
+          JavaScript {developer}
           <br />
           and
           <span class="fancy">design dabbler</span>
         </h1>
-        <button class="button button--main">Get in touch</button>
+        <h2 class="hero__sub-heading">
+          I create websites and web apps. Click the button below to get in
+          touch, or scroll down to learn more.
+        </h2>
+        <button class="button button--main">Let's do this!</button>
         <!-- Arrow -->
-        <img class="arrow" src="./images/Arrow.svg" alt="arrow down" />
+        <figure>
+          <img class="arrow" src="./images/Arrow.svg" alt="arrow down" />
+        </figure>
       </div>
       <!-- Image -->
       <figure class="hero__curve">
@@ -96,7 +104,7 @@
 
       <section class="projects" id="projects">
         <div class="main__textblock">
-          <h2 class="main__heading center">Recent work</h2>
+          <h2 class="main__heading center">Featured work</h2>
         </div>
 
         <div class="projects__wrapper padding">
@@ -149,6 +157,7 @@
               <div class="project__title">
                 <h3>Twitter Bot</h3>
                 <span>Node</span>
+                <span>API</span>
                 <span>Heroku</span>
               </div>
               <p>
@@ -187,6 +196,7 @@
               <div class="project__title">
                 <h3>Switchr</h3>
                 <span>React</span>
+                <span>API</span>
               </div>
               <p>
                 Switchr is a Chrome extension that toggles other extensions on
@@ -195,10 +205,6 @@
                 looking for.
               </p>
 
-              <p>
-                (The new tab page in the screenshot is another one of my
-                creations.)
-              </p>
               <div class="project__btns">
                 <button>
                   <a
@@ -221,9 +227,8 @@
         <div class="footer__textblock">
           <h2 class="footer__heading">Have an idea for a project?</h2>
           <p class="footer__para">
-            Get in touch, I would love to hear about it! If you're still not
-            convinced, you can find more about me and my work on my social media
-            below.
+            I would love to hear about it! If you're still not convinced, you
+            can find more about me and my work on my social media below.
           </p>
         </div>
         <form action="https://node-sender.glitch.me/" method="POST">
