@@ -14,8 +14,8 @@
     width: 100%;
     background: linear-gradient(
         to right,
-        rgba(108, 99, 255, 0.8),
-        rgba(87, 89, 136, 0.8)
+        rgba($purple, 0.8),
+        rgba($purple2, 0.8)
       ),
       url('../../images/laptop2.jpg');
     background-size: cover;
@@ -34,18 +34,18 @@
     position: relative;
 
     @include mobile {
-      padding: 25px 5px;
+      padding: 25px 25px 75px;
     }
   }
 
   &__heading {
-    font-size: 4em;
+    font-size: 2.3rem;
     color: $darkgray;
     font-weight: bold;
     text-align: center;
 
     @include mobile {
-      font-size: 3.5em;
+      font-size: 1.5rem;
     }
   }
 
@@ -61,12 +61,15 @@
   }
 
   &__icons {
-    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+    margin: $padding-md auto 0 auto;
+    padding: 10px 0;
+    max-width: 500px;
   }
 
   &__icon {
     font-size: 2.7em;
-    margin-right: $padding-md;
     padding: 15px;
     color: #eee;
     transition: all 0.2s;
