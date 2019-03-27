@@ -30,7 +30,7 @@
     flex-basis: 50%;
 
     @include mobile {
-      margin-bottom: $padding-md;
+      margin-bottom: $padding-sm + 5;
     }
 
     &:nth-child(2) {
@@ -66,5 +66,9 @@
 
   &__para {
     @include para(2em);
+
+    @include mobile() {
+      padding: 5px 0;
+    }
   }
 }
