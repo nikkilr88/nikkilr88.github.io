@@ -30,6 +30,9 @@ p {
 a {
   text-decoration: none; }
 
+button {
+  font-weight: bold; }
+
 .center {
   margin: 0 auto !important;
   -ms-flex-preferred-size: auto !important;
@@ -38,24 +41,14 @@ a {
   width: 95%;
   text-align: center; }
 
-.fancy {
-  color: #6c63ff;
-  font-family: "Grand Hotel";
-  font-size: 3.2rem;
-  font-weight: normal; }
-
-.arrow {
-  display: block;
-  position: absolute;
-  margin-top: 25px;
-  left: 115px;
-  height: 125px; }
-
 .padding {
   padding: 0 25px; }
 
 .negative-left {
   margin-left: -50px; }
+  @media (max-width: 925px) {
+    .negative-left {
+      margin-left: 0; } }
 
 .form-group {
   display: -webkit-box;
@@ -82,7 +75,7 @@ a {
   margin-bottom: 90px !important; }
   @media (max-width: 925px) {
     .projects h2 {
-      margin-bottom: 40px !important; } }
+      margin-bottom: 50px !important; } }
 
 .project {
   display: -webkit-box;
@@ -157,9 +150,12 @@ a {
     margin: 2px;
     font-size: 0.75rem; }
   .project h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     display: inline-block;
     margin-right: 10px; }
+    @media (max-width: 925px) {
+      .project h3 {
+        font-size: 1.3rem; } }
   .project p {
     font-size: 1.1rem;
     line-height: 30px;
@@ -220,6 +216,11 @@ form {
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
     margin-bottom: 10px; }
+    @media (max-width: 925px) {
+      form input {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%; } }
   form textarea {
     height: 150px;
     resize: none;
@@ -229,14 +230,17 @@ form {
     margin-bottom: 0; }
 
 .navbar {
-  font-size: 1.8em;
+  font-size: 1rem;
   color: #999;
-  padding: 40px 90px;
+  padding: 50px;
   z-index: 999;
   position: relative; }
   @media (max-width: 925px) {
     .navbar {
-      padding: 25px; } }
+      padding: 25px;
+      background: #222;
+      margin-bottom: 50px;
+      font-size: 0.85rem; } }
   .navbar a {
     color: inherit;
     text-decoration: none; }
@@ -245,19 +249,35 @@ form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media (max-width: 925px) {
+      .navbar ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .navbar li {
-    font-weight: 600; }
+    font-weight: 600;
+    display: inline-block; }
   .navbar__logo {
     margin-right: auto;
-    color: #afafaf; }
+    color: #a0a0a0; }
+    @media (max-width: 925px) {
+      .navbar__logo {
+        margin: 0 0 25px 0; } }
   .navbar__link {
     margin-right: 35px;
     color: #eee; }
     .navbar__link:last-child {
       margin: 0; }
+    @media (max-width: 925px) {
+      .navbar__link {
+        color: #a0a0a0; } }
 
 .hero {
-  padding: 90px;
+  padding: 50px 50px 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,21 +286,22 @@ form {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  color: #555; }
   @media (max-width: 925px) {
     .hero {
-      padding: 25px; } }
-  @media (max-width: 925px) {
-    .hero .arrow {
-      display: none; } }
+      padding: 25px;
+      background: none;
+      background-size: cover;
+      margin-bottom: 25px; } }
   .hero__text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    color: #555; }
+    color: inherit; }
     @media (max-width: 925px) {
       .hero__text {
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
         text-align: center; } }
   .hero__curve {
     position: absolute;
@@ -294,15 +315,41 @@ form {
       display: block;
       width: 100%; }
   .hero__heading {
-    font-size: 4.5em;
+    font-size: 2.6rem;
     font-weight: bold; }
     @media (max-width: 925px) {
       .hero__heading {
-        font-size: 4em; } }
+        font-size: 1.8rem; } }
+  .hero__sub-heading {
+    font-size: 2.5em;
+    line-height: 30px;
+    color: #717171;
+    width: 70%;
+    margin: 15px 0 25px 0; }
+    @media (max-width: 925px) {
+      .hero__sub-heading {
+        margin: 25px auto;
+        width: 95%; } }
+
+.fancy {
+  color: #6c63ff;
+  font-family: "Grand Hotel";
+  font-size: 1.2em;
+  font-weight: normal; }
+
+.arrow {
+  display: block;
+  position: absolute;
+  margin-top: 25px;
+  left: 65px;
+  height: 125px; }
+  @media (max-width: 925px) {
+    .arrow {
+      display: none; } }
 
 .main {
   display: block;
-  padding: 125px 40px 125px; }
+  padding: 125px 50px 125px; }
   @media (max-width: 925px) {
     .main {
       padding: 5px; } }
@@ -320,7 +367,7 @@ form {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-bottom: 40px; } }
+        margin-bottom: 50px; } }
     .main article:last-of-type {
       margin-bottom: 90px; }
   .main section:last-child {
@@ -330,7 +377,7 @@ form {
         flex-basis: 50%; }
     @media (max-width: 925px) {
       .main__img {
-        margin-bottom: 25px; } }
+        margin-bottom: 50px; } }
     .main__img:nth-child(2) {
       margin-left: auto; }
     .main__img img {
@@ -346,13 +393,13 @@ form {
             -ms-flex-order: 1;
                 order: 1; } }
   .main__heading {
-    font-size: 4em;
+    font-size: 2.3rem;
     color: #555;
     margin-bottom: 25px;
     font-weight: bold; }
     @media (max-width: 925px) {
       .main__heading {
-        font-size: 3.5em; } }
+        font-size: 1.5rem; } }
   .main__para {
     font-size: 2em;
     line-height: 30px;
@@ -390,15 +437,15 @@ form {
     position: relative; }
     @media (max-width: 925px) {
       .footer__text-wrapper {
-        padding: 25px 5px; } }
+        padding: 25px 25px 75px; } }
   .footer__heading {
-    font-size: 4em;
+    font-size: 2.3rem;
     color: #555;
     font-weight: bold;
     text-align: center; }
     @media (max-width: 925px) {
       .footer__heading {
-        font-size: 3.5em; } }
+        font-size: 1.5rem; } }
   .footer__para {
     font-size: 2em;
     line-height: 30px;
@@ -410,10 +457,16 @@ form {
       .footer__para {
         width: 90%; } }
   .footer__icons {
-    margin-top: 75px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 50px auto 0 auto;
+    padding: 10px 0;
+    max-width: 500px; }
   .footer__icon {
     font-size: 2.7em;
-    margin-right: 40px;
     padding: 15px;
     color: #eee;
     -webkit-transition: all 0.2s;
