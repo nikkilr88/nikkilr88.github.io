@@ -21,8 +21,7 @@ html {
 h1,
 h2,
 h3 {
-  font-weight: normal;
-  margin-bottom: 7px; }
+  font-weight: normal; }
 
 p {
   padding: 5px; }
@@ -69,7 +68,7 @@ button {
     background: #ec7580; }
 
 .projects__wrapper {
-  margin-top: 25px; }
+  margin-top: 20px; }
 
 .projects h2 {
   margin-bottom: 90px !important; }
@@ -266,7 +265,7 @@ form {
     color: #a0a0a0; }
     @media (max-width: 925px) {
       .navbar__logo {
-        margin: 0 0 25px 0; } }
+        margin: 0 0 20px 0; } }
   .navbar__link {
     margin-right: 35px;
     color: #eee; }
@@ -293,7 +292,7 @@ form {
       padding: 25px;
       background: none;
       background-size: cover;
-      margin-bottom: 25px; } }
+      margin-bottom: 20px; } }
   .hero__text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -393,9 +392,9 @@ form {
             -ms-flex-order: 1;
                 order: 1; } }
   .main__heading {
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: #555;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: bold; }
     @media (max-width: 925px) {
       .main__heading {
@@ -439,10 +438,11 @@ form {
       .footer__text-wrapper {
         padding: 25px 25px 75px; } }
   .footer__heading {
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: #555;
     font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
     @media (max-width: 925px) {
       .footer__heading {
         font-size: 1.5rem; } }
