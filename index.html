@@ -3,7 +3,10 @@
   <head>
     <!-- Meta shizz -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Web Fonts -->
@@ -19,20 +22,18 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="dist/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <title>DevNikki</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
+      <span class="navbar__logo">< DevNikki /></span>
       <ul>
-        <li class="navbar__logo">< DevNikki /></li>
-        <div>
-          <li class="navbar__link">About</li>
-          <li class="navbar__link"><a href="#projects">Projects</a></li>
-          <li class="navbar__link"><a href="#contact">Contact</a></li>
-        </div>
+        <li class="navbar__link"><a href="#main">About</a></li>
+        <li class="navbar__link"><a href="#projects">Projects</a></li>
+        <li class="navbar__link"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -50,7 +51,9 @@
           I create websites and web apps. Click the button below to get in
           touch, or scroll down to learn more.
         </h2>
-        <button class="button button--main">Let's do this!</button>
+        <a class="hero__button button button--main" href="#contact">
+          Let's do this!
+        </a>
         <!-- Arrow -->
         <figure>
           <img class="arrow" src="./images/Arrow.svg" alt="arrow down" />
@@ -63,7 +66,7 @@
     </header>
 
     <!-- Main -->
-    <main class="main">
+    <main class="main" id="main">
       <article>
         <!-- Image -->
         <div class="main__img padding negative-left">
@@ -108,6 +111,7 @@
         </div>
 
         <div class="projects__wrapper padding">
+          <!-- PROJECT ONE -->
           <div class="project">
             <figure>
               <div class="project__overlay">
@@ -116,7 +120,7 @@
               <img src="/images/devcasts.png" alt="dev casts app screenshot" />
             </figure>
             <div class="project__text">
-              <div class="project__title">
+              <div class="project__title-wrapper">
                 <h3>DevCasts</h3>
                 <span>Node</span>
                 <span>React</span>
@@ -146,6 +150,8 @@
               </div>
             </div>
           </div>
+
+          <!-- PROJECT TWO -->
           <div class="project">
             <figure>
               <div class="project__overlay">
@@ -154,7 +160,7 @@
               <img src="/images/bot.png" alt="twitter bot screenshot" />
             </figure>
             <div class="project__text">
-              <div class="project__title">
+              <div class="project__title-wrapper">
                 <h3>Twitter Bot</h3>
                 <span>Node</span>
                 <span>API</span>
@@ -182,6 +188,8 @@
               </div>
             </div>
           </div>
+
+          <!-- PROJECT THREE -->
           <div class="project">
             <figure>
               <div class="project__overlay">
@@ -193,7 +201,7 @@
               />
             </figure>
             <div class="project__text">
-              <div class="project__title">
+              <div class="project__title-wrapper">
                 <h3>Switchr</h3>
                 <span>React</span>
                 <span>API</span>
@@ -264,5 +272,7 @@
 
       <div class="footer__bg"></div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
