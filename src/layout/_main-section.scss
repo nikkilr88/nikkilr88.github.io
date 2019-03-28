@@ -1,23 +1,26 @@
 .main {
   display: block;
-  padding: 125px $padding-md 125px;
+  margin: 0 $padding-md 150px;
 
   @include mobile() {
-    padding: 5px;
+    margin: 5px 5px $padding-md;
   }
 
   article {
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+
+    &:last-of-type {
+      @include mobile {
+        margin-bottom: $padding-lg;
+      }
+    }
 
     @include mobile {
       flex-direction: column;
-      margin-bottom: $padding-md;
-    }
-
-    &:last-of-type {
-      margin-bottom: $padding-lg;
+      margin: 0 auto $padding-md auto;
+      max-width: 550px;
     }
   }
 
