@@ -5,6 +5,7 @@
   z-index: 999;
   position: relative;
   display: flex;
+  align-items: center;
 
   @include mobile {
     flex-direction: column;
@@ -32,10 +33,24 @@
 
   &__logo {
     margin-right: auto;
-    color: $lightgray;
+    height: 40px;
+
+    &-mobile {
+      display: none;
+    }
 
     @include mobile() {
-      margin: 0 0 $padding-sm 0;
+      display: none;
+
+      &-mobile {
+        display: block;
+        margin: 0 0 $padding-sm 0;
+        height: 40px;
+      }
+    }
+
+    img {
+      height: 100%;
     }
   }
 
