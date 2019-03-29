@@ -312,7 +312,7 @@ form {
       background: none;
       background-size: cover; } }
   .hero__text {
-    width: 50%;
+    width: 55%;
     color: inherit; }
     @media (max-width: 925px) {
       .hero__text {
@@ -359,16 +359,6 @@ form {
   font-family: "Grand Hotel";
   font-size: 1.2em;
   font-weight: normal; }
-
-.arrow {
-  display: block;
-  position: absolute;
-  margin-top: 25px;
-  left: 65px;
-  height: 125px; }
-  @media (max-width: 925px) {
-    .arrow {
-      display: none; } }
 
 .main {
   display: block;
