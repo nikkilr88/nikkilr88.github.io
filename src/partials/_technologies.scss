@@ -1,0 +1,35 @@
+.technologies {
+  background: linear-gradient(111deg, #6c63ff 25.05%, #6159e5 67.1%);
+  color: #f3f3f3;
+  text-align: center;
+  padding: $padding-lg;
+  position: relative;
+
+  &__heading {
+    font-size: 28px;
+    opacity: 0.75;
+  }
+
+  &__icons {
+    margin: 75px 0 0;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 10px solid white;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+
+  .fab {
+    margin: 0 15px;
+  }
+}
