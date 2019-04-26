@@ -34,11 +34,12 @@
 
   &__sub-heading {
     @include para(2.8em);
-    width: 70%;
-    margin: 15px auto 25px auto;
+    width: 65%;
+    margin: 15px auto 45px auto;
+    font-family: 'Lato';
 
     @include mobile {
-      margin: 25px auto;
+      margin: 0 auto 25px auto;
       width: 95%;
     }
   }
@@ -56,4 +57,10 @@
   font-family: $fancy;
   font-size: 1.2em;
   font-weight: normal;
+}
+
+#br {
+  @include mobile() {
+    display: none;
+  }
 }
