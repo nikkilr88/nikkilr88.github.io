@@ -1,10 +1,4 @@
 .projects {
-  margin: $padding-lg 0;
-
-  &__wrapper {
-    margin-top: $padding-sm;
-  }
-
   h2 {
     font-size: 2.8rem;
     margin-bottom: $padding-md !important;
@@ -19,8 +13,8 @@
 
   @include mobile() {
     flex-direction: column;
-    max-width: 550px;
     margin: 0 auto $padding-lg auto;
+    text-align: center;
   }
 
   &:last-child {
@@ -32,8 +26,7 @@
     text-align: right;
 
     @include mobile() {
-      text-align: left;
-      margin-bottom: 10px;
+      margin: 0 auto 10px auto;
       display: flex;
     }
   }
