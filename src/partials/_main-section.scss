@@ -1,59 +1,9 @@
 .main {
   display: block;
-  margin: 0 $padding-md 125px;
+  margin: $padding-lg $padding-lg 125px $padding-lg;
 
   @include mobile() {
-    margin: 5px 5px $padding-md;
-  }
-
-  article {
-    display: flex;
-    align-items: center;
-    margin-bottom: 150px;
-
-    &:last-of-type {
-      @include mobile {
-        margin-bottom: $padding-lg;
-      }
-    }
-
-    @include mobile {
-      flex-direction: column;
-      margin: 0 auto $padding-md auto;
-      max-width: 550px;
-    }
-  }
-
-  section:last-child {
-    margin-bottom: 0;
-  }
-
-  // Side images
-  &__img {
-    flex-basis: 50%;
-
-    @include mobile {
-      margin-bottom: $padding-sm + 5;
-    }
-
-    &:nth-child(2) {
-      margin-left: auto;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      position: relative;
-    }
-  }
-
-  // Text
-  &__textblock {
-    flex-basis: 50%;
-
-    @include mobile() {
-      order: 1;
-    }
+    margin: $padding-lg 35px;
   }
 
   &__heading {
