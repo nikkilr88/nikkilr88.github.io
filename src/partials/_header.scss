@@ -3,7 +3,7 @@
   color: #555;
 
   @include mobile() {
-    margin: 25px 25px $padding-md 25px;
+    margin: $padding-lg $padding-sm;
     background: none;
     background-size: cover;
   }

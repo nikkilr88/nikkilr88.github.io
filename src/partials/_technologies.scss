@@ -5,6 +5,10 @@
   padding: $padding-lg;
   position: relative;
 
+  @include mobile() {
+    padding: 50px;
+  }
+
   &__heading {
     font-size: 28px;
     opacity: 0.75;
@@ -15,6 +19,10 @@
     font-size: 35px;
     display: flex;
     justify-content: space-evenly;
+
+    @include mobile() {
+      margin: 50px 0 0;
+    }
   }
 
   &:after {
