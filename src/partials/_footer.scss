@@ -12,13 +12,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(
-        to right,
-        rgba($purple, 0.8),
-        rgba($purple2, 0.8)
-      ),
-      url('../../images/laptop2.jpg');
-    background-size: cover;
+    background: linear-gradient(111deg, #6c63ff 25.05%, #6159e5 67.1%);
     clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
     z-index: -1;
   }
@@ -40,22 +34,19 @@
   }
 
   &__heading {
-    font-size: 2rem;
+    font-size: 2.8rem;
     color: $darkgray;
     font-weight: bold;
     text-align: center;
     margin-bottom: $padding-sm;
-
-    @include mobile {
-      font-size: 1.5rem;
-    }
   }
 
   &__para {
-    @include para(2em);
+    @include para(2.2em);
     margin: 0 auto 50px auto;
     width: 65%;
     text-align: center;
+    font-family: 'Lato';
 
     @include mobile() {
       width: 90%;
