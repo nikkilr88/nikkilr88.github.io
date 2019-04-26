@@ -1,6 +1,6 @@
 .main {
   display: block;
-  margin: 0 $padding-md 150px;
+  margin: 0 $padding-md 125px;
 
   @include mobile() {
     margin: 5px 5px $padding-md;
