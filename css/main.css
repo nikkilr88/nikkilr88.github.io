@@ -40,15 +40,6 @@ button {
   width: 95%;
   text-align: center; }
 
-.padding {
-  padding: 0 25px; }
-
-.negative-left {
-  margin-left: -50px; }
-  @media (max-width: 925px) {
-    .negative-left {
-      margin-left: 0; } }
-
 .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,13 +76,9 @@ button {
     color: inherit;
     font-weight: 100; }
 
-.projects {
-  margin: 90px 0; }
-  .projects__wrapper {
-    margin-top: 20px; }
-  .projects h2 {
-    font-size: 2.8rem;
-    margin-bottom: 50px !important; }
+.projects h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px !important; }
 
 .project {
   display: -webkit-box;
@@ -111,8 +98,8 @@ button {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      max-width: 550px;
-      margin: 0 auto 90px auto; } }
+      margin: 0 auto 90px auto;
+      text-align: center; } }
   .project:last-child {
     margin-bottom: 0; }
   .project__title-wrapper {
@@ -122,8 +109,7 @@ button {
     text-align: right; }
     @media (max-width: 925px) {
       .project__title-wrapper {
-        text-align: left;
-        margin-bottom: 10px;
+        margin: 0 auto 10px auto;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
@@ -248,7 +234,7 @@ form {
     position: relative; }
     .navbar__link a {
       text-decoration: none;
-      color: #777; }
+      color: #adadad; }
     .navbar__link:last-child {
       margin: 0; }
     .navbar__link:hover a {
@@ -281,7 +267,7 @@ form {
   color: #555; }
   @media (max-width: 925px) {
     .hero {
-      margin: 25px 25px 50px 25px;
+      margin: 90px 20px;
       background: none;
       background-size: cover; } }
   .hero__text {
@@ -331,51 +317,10 @@ form {
 
 .main {
   display: block;
-  margin: 0 50px 125px; }
+  margin: 90px 90px 125px 90px; }
   @media (max-width: 925px) {
     .main {
-      margin: 5px 5px 50px; } }
-  .main article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 150px; }
-    @media (max-width: 925px) {
-      .main article:last-of-type {
-        margin-bottom: 90px; } }
-    @media (max-width: 925px) {
-      .main article {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin: 0 auto 50px auto;
-        max-width: 550px; } }
-  .main section:last-child {
-    margin-bottom: 0; }
-  .main__img {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-    @media (max-width: 925px) {
-      .main__img {
-        margin-bottom: 25px; } }
-    .main__img:nth-child(2) {
-      margin-left: auto; }
-    .main__img img {
-      display: block;
-      width: 100%;
-      position: relative; }
-  .main__textblock {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-    @media (max-width: 925px) {
-      .main__textblock {
-        -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-                order: 1; } }
+      margin: 90px 35px; } }
   .main__heading {
     font-size: 2rem;
     color: #555;
@@ -400,6 +345,9 @@ form {
   text-align: center;
   padding: 90px;
   position: relative; }
+  @media (max-width: 925px) {
+    .technologies {
+      padding: 50px; } }
   .technologies__heading {
     font-size: 28px;
     opacity: 0.75; }
@@ -412,6 +360,9 @@ form {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly; }
+    @media (max-width: 925px) {
+      .technologies__icons {
+        margin: 50px 0 0; } }
   .technologies:after {
     content: '';
     position: absolute;
@@ -457,7 +408,7 @@ form {
     position: relative; }
     @media (max-width: 925px) {
       .footer__text-wrapper {
-        padding: 25px 25px 75px;
+        padding: 50px 20px 90px 20px;
         max-width: 550px; } }
   .footer__heading {
     font-size: 2.8rem;
