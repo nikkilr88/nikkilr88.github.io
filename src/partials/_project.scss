@@ -1,19 +1,13 @@
-.projects {
-  h2 {
-    font-size: 2.8rem;
-    margin-bottom: $padding-md !important;
-  }
-}
-
 .project {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-bottom: $padding-lg;
+  margin: 0 auto $padding-lg auto;
+  width: 90%;
 
   @include mobile() {
     flex-direction: column;
-    margin: 0 auto $padding-lg auto;
+    margin: 0 auto $padding-md auto;
     text-align: center;
   }
 
@@ -40,8 +34,9 @@
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
+    font-weight: bold;
 
     @include mobile() {
       display: inline-block;
@@ -54,15 +49,14 @@
     display: inline-block;
     background: #dedede;
     color: #333;
-    padding: 2px 5px;
+    padding: 2px 10px;
     border-radius: 50px;
     margin: 2px;
     font-size: 1.4rem;
   }
 
   p {
-    @include para(2.2rem);
-    font-family: 'Lato';
+    @include para(2rem);
     padding: 0;
     margin: 0 0 15px 0;
     width: 100%;
