@@ -16,6 +16,10 @@
   @include mobile() {
     flex: 0 0 100%;
     margin-bottom: $padding-md;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 5px;
   }
 
   &:last-child {
