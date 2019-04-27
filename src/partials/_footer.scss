@@ -82,4 +82,16 @@
   a:last-child .footer__icon {
     margin-right: 0;
   }
+
+  &__attribution {
+    color: #fff;
+    opacity: 0.5;
+    padding: 10px;
+    line-height: 2;
+
+    a {
+      color: inherit;
+      border-bottom: 1px dotted #fff;
+    }
+  }
 }
