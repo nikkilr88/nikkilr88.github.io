@@ -132,7 +132,9 @@ button {
     padding: 2px 10px;
     border-radius: 50px;
     margin: 2px;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    -ms-flex-item-align: center;
+        align-self: center; }
   .project p {
     font-size: 2rem;
     line-height: 1.4;
@@ -297,7 +299,7 @@ form {
     font-family: 'Lato'; }
     @media (max-width: 925px) {
       .hero__sub-heading {
-        margin: 0 auto 25px auto;
+        margin: 15px auto 25px auto;
         width: 95%; } }
   .hero__button {
     display: inline-block;
@@ -316,13 +318,17 @@ form {
     display: none; } }
 
 .main {
-  display: block;
-  margin: 120px 90px; }
-  @media (max-width: 925px) {
-    .main {
-      margin: 90px 35px; } }
+  display: block; }
   .main section {
-    margin-bottom: 120px; }
+    padding: 120px 90px 0; }
+    @media (max-width: 925px) {
+      .main section {
+        padding: 90px 35px 0; } }
+    .main section:last-child {
+      padding-bottom: 120px; }
+      @media (max-width: 925px) {
+        .main section:last-child {
+          padding-bottom: 0; } }
   .main__heading {
     font-size: 2.8rem;
     margin-bottom: 90px !important;
@@ -355,7 +361,9 @@ form {
     opacity: 0.75;
     color: #fff; }
   .technologies__icons {
-    margin: 75px 0 0;
+    margin: 75px auto 0;
+    max-width: 900px;
+    width: 100%;
     font-size: 35px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -373,7 +381,7 @@ form {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    border-top: 10px solid white;
+    border-top: 10px solid #f8f8f8;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent; }
@@ -403,7 +411,11 @@ form {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
-      margin-bottom: 50px; } }
+      margin-bottom: 50px;
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #eee;
+      border-radius: 5px; } }
   .service:last-child {
     margin-bottom: 0; }
   .service__heading {
@@ -495,3 +507,11 @@ form {
             transform: translateX(-50%); }
   .footer a:last-child .footer__icon {
     margin-right: 0; }
+  .footer__attribution {
+    color: #fff;
+    opacity: 0.5;
+    padding: 10px;
+    line-height: 2; }
+    .footer__attribution a {
+      color: inherit;
+      border-bottom: 1px dotted #fff; }
