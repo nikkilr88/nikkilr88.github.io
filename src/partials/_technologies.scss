@@ -12,13 +12,14 @@
   &__heading {
     font-size: 28px;
     opacity: 0.75;
+    color: #fff;
   }
 
   &__icons {
     margin: 75px 0 0;
     font-size: 35px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     @include mobile() {
       margin: 50px 0 0;
