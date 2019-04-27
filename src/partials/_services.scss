@@ -1,0 +1,34 @@
+.services {
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+}
+
+.service {
+  text-align: center;
+  flex: 0 0 30%;
+
+  @include mobile() {
+    flex: 0 0 100%;
+    margin-bottom: $padding-md;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    margin: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    @include para(2rem);
+  }
+}
