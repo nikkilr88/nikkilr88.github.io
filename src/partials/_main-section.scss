@@ -1,13 +1,20 @@
 .main {
   display: block;
-  margin: $padding-xl $padding-lg;
-
-  @include mobile() {
-    margin: $padding-lg 35px;
-  }
 
   section {
-    margin-bottom: $padding-xl;
+    padding: $padding-xl $padding-lg 0;
+
+    @include mobile() {
+      padding: $padding-lg 35px 0;
+    }
+
+    &:last-child {
+      padding-bottom: $padding-xl;
+
+      @include mobile() {
+        padding-bottom: 0;
+      }
+    }
   }
 
   &__heading {
