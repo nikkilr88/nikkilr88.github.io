@@ -1,19 +1,22 @@
 .main {
   display: block;
-  margin: $padding-lg $padding-lg 125px $padding-lg;
+  margin: $padding-xl $padding-lg;
 
   @include mobile() {
     margin: $padding-lg 35px;
   }
 
+  section {
+    margin-bottom: $padding-xl;
+  }
+
   &__heading {
-    font-size: 2rem;
-    color: $darkgray;
-    margin-bottom: $padding-sm;
+    font-size: 2.8rem;
+    margin-bottom: $padding-lg !important;
     font-weight: bold;
 
-    @include mobile {
-      font-size: 1.5rem;
+    @include mobile() {
+      margin-bottom: $padding-md !important;
     }
   }
 
