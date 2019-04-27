@@ -16,7 +16,9 @@
   }
 
   &__icons {
-    margin: 75px 0 0;
+    margin: 75px auto 0;
+    max-width: 900px;
+    width: 100%;
     font-size: 35px;
     display: flex;
     justify-content: space-around;
@@ -32,7 +34,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-top: 10px solid white;
+    border-top: 10px solid #f8f8f8;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent;
