@@ -1,8 +1,55 @@
-form {
+.form {
   text-align: left;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+
+  &-group {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+
+    @include mobile() {
+      flex: 1 1 100%;
+    }
+  }
+
+  %label {
+    position: absolute;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+    color: #999;
+  }
+
+  input + label {
+    @extend %label;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  textarea + label {
+    @extend %label;
+    left: 30px;
+    top: 35px;
+  }
+
+  input:focus + label,
+  input.notEmpty + label {
+    font-size: 1.3rem;
+    transform: translate(-10px, -50px);
+    color: $purple;
+    font-weight: bold;
+  }
+
+  textarea:focus + label,
+  textarea.notEmpty + label {
+    font-size: 1.3rem;
+    transform: translate(-10px, -25px);
+    color: $purple;
+    font-weight: bold;
+  }
 
   input,
   textarea {
@@ -10,19 +57,20 @@ form {
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 2em;
-    margin: 5px;
+    font-size: 2rem;
+    margin: 25px 5px;
     border: none;
     border-bottom: 2px solid #eee;
-  }
-
-  input {
-    flex: 1 1 45%;
-    margin-bottom: 10px;
+    outline: none;
 
     @include mobile() {
-      flex: 1 1 100%;
+      margin: 15px 5px;
     }
+  }
+
+  input:focus,
+  textarea:focus {
+    border-bottom: 2px solid $purple;
   }
 
   textarea {
