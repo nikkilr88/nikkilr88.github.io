@@ -1,5 +1,9 @@
 .technologies {
-  background: linear-gradient(111deg, #6c63ff 25.05%, #6159e5 67.1%);
+  background: linear-gradient(
+    to bottom right,
+    $purple,
+    darken($purple, 10%)
+  );
   color: #f3f3f3;
   text-align: center;
   padding: $padding-lg;
