@@ -97,7 +97,8 @@ button {
           -ms-flex-direction: column;
               flex-direction: column;
       margin: 0 auto 50px auto;
-      text-align: center; } }
+      text-align: center;
+      max-width: 500px; } }
   .project:last-child {
     margin-bottom: 0; }
   .project__title-wrapper {
@@ -138,7 +139,7 @@ button {
   .project p {
     font-size: 2rem;
     line-height: 1.4;
-    color: #777;
+    color: #6d6d6d;
     font-family: 'Roboto';
     padding: 0;
     margin: 0 0 15px 0;
@@ -147,7 +148,7 @@ button {
     margin: 15px 5px 0 0;
     font-size: 1.4rem; }
 
-form {
+.form {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,32 +159,74 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  form input,
-  form textarea {
+  .form-group {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative; }
+    @media (max-width: 925px) {
+      .form-group {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%; } }
+  .form input + label, .form textarea + label {
+    position: absolute;
+    font-size: 1.6rem;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #999; }
+  .form input + label {
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .form textarea + label {
+    left: 30px;
+    top: 35px; }
+  .form input:focus + label,
+  .form input.notEmpty + label {
+    font-size: 1.3rem;
+    -webkit-transform: translate(-10px, -50px);
+        -ms-transform: translate(-10px, -50px);
+            transform: translate(-10px, -50px);
+    color: #817bd8;
+    font-weight: bold; }
+  .form textarea:focus + label,
+  .form textarea.notEmpty + label {
+    font-size: 1.3rem;
+    -webkit-transform: translate(-10px, -25px);
+        -ms-transform: translate(-10px, -25px);
+            transform: translate(-10px, -25px);
+    color: #817bd8;
+    font-weight: bold; }
+  .form input,
+  .form textarea {
     font-family: "Quicksand";
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 2em;
-    margin: 5px;
+    font-size: 2rem;
+    margin: 25px 5px;
     border: none;
-    border-bottom: 2px solid #eee; }
-  form input {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 45%;
-            flex: 1 1 45%;
-    margin-bottom: 10px; }
+    border-bottom: 2px solid #eee;
+    outline: none; }
     @media (max-width: 925px) {
-      form input {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 100%;
-                flex: 1 1 100%; } }
-  form textarea {
+      .form input,
+      .form textarea {
+        margin: 15px 5px; } }
+  .form input:focus,
+  .form textarea:focus {
+    border-bottom: 2px solid #817bd8; }
+  .form textarea {
     height: 150px;
     resize: none;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
-  form .button {
+  .form .button {
     margin-bottom: 0; }
 
 .navbar {
@@ -252,7 +295,7 @@ form {
       left: 0;
       width: 100%;
       height: 2px;
-      background: #777;
+      background: #6d6d6d;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s;
@@ -261,7 +304,7 @@ form {
               transform: scale(0); }
     @media (max-width: 925px) {
       .navbar__link {
-        color: #777; } }
+        color: #6d6d6d; } }
 
 .hero {
   margin: 50px 50px 100px;
@@ -292,7 +335,7 @@ form {
   .hero__sub-heading {
     font-size: 2.8em;
     line-height: 1.4;
-    color: #777;
+    color: #6d6d6d;
     font-family: 'Roboto';
     width: 65%;
     margin: 15px auto 45px auto;
@@ -339,16 +382,17 @@ form {
   .main__para {
     font-size: 2em;
     line-height: 1.4;
-    color: #777;
+    color: #6d6d6d;
     font-family: 'Roboto'; }
     @media (max-width: 925px) {
       .main__para {
         padding: 5px 0; } }
 
 .technologies {
-  background: -webkit-linear-gradient(339deg, #6c63ff 25.05%, #6159e5 67.1%);
-  background: -o-linear-gradient(339deg, #6c63ff 25.05%, #6159e5 67.1%);
-  background: linear-gradient(111deg, #6c63ff 25.05%, #6159e5 67.1%);
+  background: -webkit-gradient(linear, left top, right bottom, from(#817bd8), to(#5b54cc));
+  background: -webkit-linear-gradient(top left, #817bd8, #5b54cc);
+  background: -o-linear-gradient(top left, #817bd8, #5b54cc);
+  background: linear-gradient(to bottom right, #817bd8, #5b54cc);
   color: #f3f3f3;
   text-align: center;
   padding: 90px;
@@ -405,17 +449,18 @@ form {
   text-align: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
-          flex: 0 0 30%; }
+          flex: 0 0 30%;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 5px; }
   @media (max-width: 925px) {
     .service {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
-      margin-bottom: 50px;
-      background: #fff;
-      padding: 25px;
-      border: 1px solid #eee;
-      border-radius: 5px; } }
+      margin: 0 auto 50px;
+      max-width: 500px; } }
   .service:last-child {
     margin-bottom: 0; }
   .service__heading {
@@ -425,7 +470,7 @@ form {
   .service p {
     font-size: 2rem;
     line-height: 1.4;
-    color: #777;
+    color: #6d6d6d;
     font-family: 'Roboto'; }
 
 .footer {
@@ -440,9 +485,10 @@ form {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: -webkit-linear-gradient(339deg, #6c63ff 25.05%, #6159e5 67.1%);
-    background: -o-linear-gradient(339deg, #6c63ff 25.05%, #6159e5 67.1%);
-    background: linear-gradient(111deg, #6c63ff 25.05%, #6159e5 67.1%);
+    background: -webkit-gradient(linear, left top, right bottom, from(#817bd8), to(#5b54cc));
+    background: -webkit-linear-gradient(top left, #817bd8, #5b54cc);
+    background: -o-linear-gradient(top left, #817bd8, #5b54cc);
+    background: linear-gradient(to bottom right, #817bd8, #5b54cc);
     -webkit-clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
     z-index: -1; }
@@ -469,7 +515,7 @@ form {
   .footer__para {
     font-size: 2.2em;
     line-height: 1.4;
-    color: #777;
+    color: #6d6d6d;
     font-family: 'Roboto';
     margin: 0 auto 50px auto;
     width: 65%;
