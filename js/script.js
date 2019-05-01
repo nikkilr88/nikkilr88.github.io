@@ -36,15 +36,19 @@ function handleFormSubmit(e) {
     .post('https://node-sender.glitch.me/', data)
     .then(function(res) {
       displayMsg.innerHTML = res.data.success
-        ? `<div class="success">${res.data.success}</div>`
-        : `<div class="error">${res.data.error}</div>`
+        ? `<div class="msg success"><i class="far fa-times-circle"></i><span>${
+            res.data.success
+          }</span></div>`
+        : `<div class="msg error"><i class="far fa-times-circle"></i><span>${
+            res.data.error
+          }</span></div>`
 
       if (res.data.success) {
         resetForm()
       }
     })
     .catch(function(err) {
-      displayMsg.innerHTML = `<div class="error">${err}</div>`
+      displayMsg.innerHTML = `<div class="error"><i class="far fa-times-circle"></i>${err}</div>`
     })
 }
 
