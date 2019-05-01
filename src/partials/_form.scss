@@ -32,7 +32,7 @@
   textarea + label {
     @extend %label;
     left: 30px;
-    top: 35px;
+    top: 55px;
   }
 
   input:focus + label,
@@ -46,7 +46,7 @@
   textarea:focus + label,
   textarea.notEmpty + label {
     font-size: 1.3rem;
-    transform: translate(-10px, -25px);
+    transform: translate(-10px, -45px);
     color: $purple;
     font-weight: bold;
   }
@@ -82,4 +82,24 @@
   .button {
     margin-bottom: 0;
   }
+}
+
+.error {
+  background: #ec7580;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.success {
+  background: #2ecc71;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: bold;
+  font-size: 1.4rem;
 }
