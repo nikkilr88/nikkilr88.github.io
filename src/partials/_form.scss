@@ -84,22 +84,28 @@
   }
 }
 
-.error {
-  background: #ec7580;
+.msg {
+  position: relative;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
   color: rgba(255, 255, 255, 0.85);
   font-weight: bold;
   font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.msg .far {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error {
+  background: #ec7580;
 }
 
 .success {
   background: #2ecc71;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: bold;
-  font-size: 1.4rem;
 }
