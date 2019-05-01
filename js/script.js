@@ -26,15 +26,14 @@ form.addEventListener('submit', handleFormSubmit)
 function handleFormSubmit(e) {
   e.preventDefault()
 
-  axios.defaults.headers.post['Content-Type'] =
-    'application/x-www-form-urlencoded'
+  const data = {
+    name: name.value,
+    email: email.value,
+    message: msg.value
+  }
 
   axios
-    .post('https://node-sender.glitch.me/', {
-      name: name.value,
-      email: email.value,
-      message: msg.value
-    })
+    .post('https://node-sender.glitch.me/', data)
     .then(function(res) {
       displayMsg.innerHTML = res.data.success
         ? `<div class="success">${res.data.success}</div>`
@@ -45,7 +44,7 @@ function handleFormSubmit(e) {
       }
     })
     .catch(function(err) {
-      displayMsg.innerText = err
+      displayMsg.innerHTML = `<div class="error">${err}</div>`
     })
 }
 
