@@ -11,16 +11,16 @@
 
 .service {
   text-align: center;
-  flex: 0 0 30%;
+  width: 30%;
   background: #fff;
   padding: 25px;
   border: 1px solid #eee;
   border-radius: 5px;
 
   @include mobile() {
-    flex: 0 0 100%;
-    margin: 0 auto $padding-md;
     max-width: 500px;
+    width: 100%;
+    margin: 0 auto $padding-md;
   }
 
   &:last-child {
