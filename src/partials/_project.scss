@@ -6,7 +6,7 @@
   width: 90%;
 
   @include mobile() {
-    flex-direction: column;
+    display: block;
     margin: 0 auto $padding-md auto;
     text-align: center;
     max-width: 500px;
@@ -23,6 +23,7 @@
     @include mobile() {
       margin: 0 auto 10px auto;
       display: flex;
+      justify-content: center;
     }
   }
 
