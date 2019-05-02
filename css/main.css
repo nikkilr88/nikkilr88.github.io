@@ -92,10 +92,7 @@ button {
   width: 90%; }
   @media (max-width: 925px) {
     .project {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      display: block;
       margin: 0 auto 50px auto;
       text-align: center;
       max-width: 500px; } }
@@ -111,7 +108,10 @@ button {
         margin: 0 auto 10px auto;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; } }
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
   .project__text {
     margin: 0 0 0 50px; }
     @media (max-width: 925px) {
@@ -471,20 +471,16 @@ button {
 
 .service {
   text-align: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+  width: 30%;
   background: #fff;
   padding: 25px;
   border: 1px solid #eee;
   border-radius: 5px; }
   @media (max-width: 925px) {
     .service {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 100%;
-              flex: 0 0 100%;
-      margin: 0 auto 50px;
-      max-width: 500px; } }
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto 50px; } }
   .service:last-child {
     margin-bottom: 0; }
   .service__heading {
