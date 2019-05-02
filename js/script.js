@@ -48,7 +48,7 @@ function handleFormSubmit(e) {
       }
     })
     .catch(function(err) {
-      displayMsg.innerHTML = `<div class="error"><i class="far fa-times-circle"></i>${err}</div>`
+      displayMsg.innerHTML = `<div class="msg error"><i class="far fa-times-circle"></i>${err}</div>`
     })
 }
 
