@@ -36,17 +36,11 @@
   }
 
   input:focus + label,
-  input.notEmpty + label {
-    font-size: 1.3rem;
-    transform: translate(-10px, -50px);
-    color: $purple;
-    font-weight: bold;
-  }
-
+  input.notEmpty + label,
   textarea:focus + label,
   textarea.notEmpty + label {
     font-size: 1.3rem;
-    transform: translate(-10px, -45px);
+    transform: translate(-10px, -50px);
     color: $purple;
     font-weight: bold;
   }
