@@ -102,18 +102,15 @@ button {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
-    text-align: right; }
+    padding-left: 10px;
+    border-left: 3px solid #eee; }
     @media (max-width: 925px) {
       .project__title-wrapper {
         margin: 0 auto 10px auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
+        text-align: center;
+        border: none; } }
   .project__text {
-    margin: 0 0 0 50px; }
+    margin: 0 0 0 65px; }
     @media (max-width: 925px) {
       .project__text {
         margin: 0; } }
@@ -123,16 +120,16 @@ button {
     font-weight: bold; }
     @media (max-width: 925px) {
       .project__title {
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 0; } }
+        display: block;
+        margin: 0 0 10px; } }
   .project span {
     display: inline-block;
-    background: #dedede;
-    color: #333;
+    background: #e8e8e8;
+    color: #6d6d6d;
+    font-family: 'Roboto';
     padding: 2px 10px;
     border-radius: 50px;
-    margin: 2px;
+    margin: 5px 2px;
     font-size: 1.4rem;
     -ms-flex-item-align: center;
         align-self: center; }
@@ -188,19 +185,13 @@ button {
     left: 30px;
     top: 55px; }
   .form input:focus + label,
-  .form input.notEmpty + label {
+  .form input.notEmpty + label,
+  .form textarea:focus + label,
+  .form textarea.notEmpty + label {
     font-size: 1.3rem;
     -webkit-transform: translate(-10px, -50px);
         -ms-transform: translate(-10px, -50px);
             transform: translate(-10px, -50px);
-    color: #817bd8;
-    font-weight: bold; }
-  .form textarea:focus + label,
-  .form textarea.notEmpty + label {
-    font-size: 1.3rem;
-    -webkit-transform: translate(-10px, -45px);
-        -ms-transform: translate(-10px, -45px);
-            transform: translate(-10px, -45px);
     color: #817bd8;
     font-weight: bold; }
   .form input,
