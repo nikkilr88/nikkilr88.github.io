@@ -18,17 +18,18 @@
 
   &__title-wrapper {
     flex: 0 0 20%;
-    text-align: right;
+    padding-left: 10px;
+    border-left: 3px solid #eee;
 
     @include mobile() {
       margin: 0 auto 10px auto;
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      border: none;
     }
   }
 
   &__text {
-    margin: 0 0 0 50px;
+    margin: 0 0 0 65px;
 
     @include mobile() {
       margin: 0;
@@ -41,19 +42,19 @@
     font-weight: bold;
 
     @include mobile() {
-      display: inline-block;
-      margin-right: 10px;
-      margin-bottom: 0;
+      display: block;
+      margin: 0 0 10px;
     }
   }
 
   span {
     display: inline-block;
-    background: #dedede;
-    color: #333;
+    background: #e8e8e8;
+    color: #6d6d6d;
+    font-family: 'Roboto';
     padding: 2px 10px;
     border-radius: 50px;
-    margin: 2px;
+    margin: 5px 2px;
     font-size: 1.4rem;
     align-self: center;
   }
