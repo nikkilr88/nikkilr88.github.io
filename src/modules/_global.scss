@@ -1,5 +1,4 @@
 html {
-  max-width: 1500px;
   margin: 0 auto;
   font-size: 62.5%;
 }
@@ -50,4 +49,9 @@ button {
 
 .form-group {
   display: flex;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 }
