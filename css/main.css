@@ -250,14 +250,19 @@ button {
 .navbar {
   font-size: 1.8rem;
   padding: 50px;
+  width: 100%;
   z-index: 999;
-  position: relative;
+  position: fixed;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
   @media (max-width: 925px) {
     .navbar {
       -webkit-box-orient: vertical;
@@ -325,7 +330,7 @@ button {
         color: #6d6d6d; } }
 
 .hero {
-  margin: 50px 50px 100px;
+  margin: 175px 50px 100px;
   color: #555; }
   @media (max-width: 925px) {
     .hero {
