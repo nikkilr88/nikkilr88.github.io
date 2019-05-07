@@ -1,10 +1,13 @@
 .navbar {
   font-size: 1.8rem;
   padding: $padding-md;
+  width: 100%;
   z-index: 999;
-  position: relative;
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
+  transition: all 0.2s;
 
   @include mobile {
     flex-direction: column;
