@@ -13,9 +13,10 @@
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    background: #222;
+    background: #f9f9f9;
     margin-bottom: $padding-md;
     font-size: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
   }
 
   ul {
