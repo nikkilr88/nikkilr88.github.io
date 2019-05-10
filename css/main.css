@@ -273,9 +273,11 @@ button {
           -ms-flex-align: center;
               align-items: center;
       padding: 25px;
-      background: #222;
+      background: #f9f9f9;
       margin-bottom: 50px;
-      font-size: 1.8rem; } }
+      font-size: 1.8rem;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
+              box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px; } }
   .navbar ul {
     list-style: none; }
   .navbar li,
@@ -334,7 +336,7 @@ button {
   color: #555; }
   @media (max-width: 925px) {
     .hero {
-      margin: 90px 20px;
+      margin: 190px 20px 90px;
       background: none;
       background-size: cover; } }
   .hero__text {
