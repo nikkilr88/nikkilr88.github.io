@@ -1,7 +1,7 @@
 .services {
   &__wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @include mobile() {
       flex-direction: column;

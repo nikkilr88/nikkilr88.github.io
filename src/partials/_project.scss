@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: flex-start;
   margin: 0 auto $padding-lg auto;
-  width: 90%;
 
   @include mobile() {
     display: block;
