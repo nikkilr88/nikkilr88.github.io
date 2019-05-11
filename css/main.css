@@ -91,8 +91,7 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0 auto 90px auto;
-  width: 90%; }
+  margin: 0 auto 90px auto; }
   @media (max-width: 925px) {
     .project {
       display: block;
@@ -461,8 +460,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (max-width: 925px) {
     .services__wrapper {
       -webkit-box-orient: vertical;
