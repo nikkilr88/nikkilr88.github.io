@@ -55,3 +55,27 @@ button {
   max-width: 1500px;
   margin: 0 auto;
 }
+
+.go-top {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: $purple;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1.5rem;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(80px);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.show-go-top {
+  transform: translateX(0);
+  opacity: 1;
+}
