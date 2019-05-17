@@ -39,9 +39,15 @@
 
       <!-- Nav links -->
       <ul>
-        <li class="navbar__link"><a href="#main">About</a></li>
-        <li class="navbar__link"><a href="#projects">Projects</a></li>
-        <li class="navbar__link"><a href="#contact">Contact</a></li>
+        <li class="navbar__link">
+          <a href="#main" data-goto="#main">About</a>
+        </li>
+        <li class="navbar__link">
+          <a href="#projects" data-goto="#projects">Projects</a>
+        </li>
+        <li class="navbar__link">
+          <a href="#contact" data-goto="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
 
@@ -91,27 +97,27 @@
             <img src="./images/Design.svg" alt="design" />
             <h3 class="service__heading">Design</h3>
             <p>
-              Colors and shapes and pen tools, oh my! I'm not a designer,
-              but recently I've been flirting quite a bit with it. Figma is
-              my go-to software.
+              Colors and shapes and pen tools, oh my! I'm not a designer, but
+              recently I've been flirting quite a bit with it. Figma is my go-to
+              software.
             </p>
           </div>
           <div class="service">
             <img src="./images/App.svg" alt="app" />
             <h3 class="service__heading">Web Apps</h3>
             <p>
-              Single pages apps, progressive web apps, Chrome extensions...
-              I love it all. My favorite framework is React, and I'm
-              currently learning Gatsby.
+              Single pages apps, progressive web apps, Chrome extensions... I
+              love it all. My favorite framework is React, and I'm currently
+              learning Gatsby.
             </p>
           </div>
           <div class="service">
             <img src="./images/Service.svg" alt="service" />
             <h3 class="service__heading">Node Services & Apps</h3>
             <p>
-              I use Node.js and Express to build out backend and fullstack
-              apps. I have coded bots, APIs and basic services to send
-              templated e-mails.
+              I use Node.js and Express to build out backend and fullstack apps.
+              I have coded bots, APIs and basic services to send templated
+              e-mails.
             </p>
           </div>
         </div>
@@ -136,8 +142,8 @@
           <div class="project__text">
             <p>
               DevCasts is a podcast player featuring some of my favorite
-              developer shows. Features include basic audio and volume
-              control and uninterrupted play when switching channels.
+              developer shows. Features include basic audio and volume control
+              and uninterrupted play when switching channels.
             </p>
             <!-- Buttons -->
             <div class="project__btns">
@@ -173,9 +179,9 @@
           <!-- Description -->
           <div class="project__text">
             <p>
-              This bot tweets articles and tracks / retweets popular
-              developer hashtags. It connects to the YouTube API to search
-              and post coding tutorials from selected channels.
+              This bot tweets articles and tracks / retweets popular developer
+              hashtags. It connects to the YouTube API to search and post coding
+              tutorials from selected channels.
             </p>
             <p>
               To avoid retweeting spam posts, it counts hashtags and only
@@ -212,10 +218,10 @@
           <!-- Description -->
           <div class="project__text">
             <p>
-              Switchr is a Chrome extension that toggles other extensions
-              on and off with just a click. Extensions are sorted by
-              enabled status, and there is a popup search to easily find
-              what you're looking for.
+              Switchr is a Chrome extension that toggles other extensions on and
+              off with just a click. Extensions are sorted by enabled status,
+              and there is a popup search to easily find what you're looking
+              for.
             </p>
             <!-- Buttons -->
             <div class="project__btns">
@@ -241,9 +247,8 @@
         <div class="footer__textblock">
           <h2 class="footer__heading">Have an idea for a project?</h2>
           <p class="footer__para">
-            I would love to hear about it! If you're still not convinced,
-            you can find more about me and my work on my social media
-            below.
+            I would love to hear about it! If you're still not convinced, you
+            can find more about me and my work on my social media below.
           </p>
         </div>
 
@@ -354,6 +359,8 @@
 
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>
 
     <!-- Local scripts -->
     <script src="./js/script.js"></script>
