@@ -5,6 +5,22 @@ const name = document.querySelector('#name')
 const email = document.querySelector('#email')
 const msg = document.querySelector('#message')
 const displayMsg = document.querySelector('#display-msg')
+const navLinks = document.querySelectorAll('nav li a')
+
+// Add click listener on nav links
+Array.prototype.slice.call(navLinks).forEach(function(link) {
+  link.addEventListener('click', handleNavClick)
+})
+
+// Handle nav link clicks
+function handleNavClick(e) {
+  const scrollTo = e.target.getAttribute('data-goto')
+
+  // Polyfill code for smooth scroll
+  document.querySelector(scrollTo).scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 
 // Listen for window scroll
 window.addEventListener('scroll', handleScroll)
