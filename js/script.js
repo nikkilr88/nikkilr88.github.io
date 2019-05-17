@@ -6,6 +6,14 @@ const email = document.querySelector('#email')
 const msg = document.querySelector('#message')
 const displayMsg = document.querySelector('#display-msg')
 const navLinks = document.querySelectorAll('nav li a')
+const goTop = document.querySelector('.go-top')
+
+// Scroll to top shizz
+goTop.addEventListener('click', goToTop)
+
+function goToTop() {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+}
 
 // Add click listener on nav links
 Array.prototype.slice.call(navLinks).forEach(function(link) {
@@ -32,11 +40,18 @@ function handleScroll(e) {
     this.scrollY || this.scrollTop || document.documentElement.scrollTop
   const windowWidth = window.innerWidth
 
+  // Show / hide go to top button
+  if (scrollPos > 1000) {
+    goTop.classList.add('show-go-top')
+  } else {
+    goTop.classList.remove('show-go-top')
+  }
+
   // Early return if screen width is less than 925
   if (windowWidth < 925) return
 
   // Apply styles based on position
-  if (scrollPos > 100) {
+  if (scrollPos > 50) {
     nav.style.padding = '25px'
     nav.style.boxShadow = 'rgba(0, 0, 0, 0.5) 0px 5px 10px -10px'
     nav.style.background = '#f9f9f9'
