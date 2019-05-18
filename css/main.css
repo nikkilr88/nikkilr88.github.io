@@ -358,6 +358,9 @@ button {
               transform: scale(0); }
       @media (max-width: 925px) {
         .navbar__link:after {
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none;
           -webkit-transform: none;
               -ms-transform: none;
                   transform: none;
