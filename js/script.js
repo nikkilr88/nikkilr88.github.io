@@ -32,6 +32,7 @@ function handleNavClick(e) {
 
 // Listen for window scroll
 window.addEventListener('scroll', handleScroll)
+window.addEventListener('resize', handleScroll)
 
 // Scroll handler
 function handleScroll(e) {
