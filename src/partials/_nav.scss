@@ -92,6 +92,7 @@
       transform: scale(0);
 
       @include mobile() {
+        transition: none;
         transform: none;
         opacity: 0;
       }
