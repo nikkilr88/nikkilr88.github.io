@@ -356,6 +356,12 @@ button {
       -webkit-transform: scale(0);
           -ms-transform: scale(0);
               transform: scale(0); }
+      @media (max-width: 925px) {
+        .navbar__link:after {
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          opacity: 0; } }
     @media (max-width: 925px) {
       .navbar__link {
         color: #6d6d6d; } }
