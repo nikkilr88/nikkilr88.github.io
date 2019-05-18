@@ -38,7 +38,7 @@ function handleScroll(e) {
   // Grab scroll position and window width
   const scrollPos =
     this.scrollY || this.scrollTop || document.documentElement.scrollTop
-  const windowWidth = window.innerWidth
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth
 
   // Show / hide go to top button
   if (scrollPos > 1000) {
