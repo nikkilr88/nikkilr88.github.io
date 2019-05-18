@@ -10,11 +10,14 @@
   .container {
     display: flex;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   @include mobile {
-    flex-direction: column;
-    align-items: center;
     padding: 25px;
     background: #f9f9f9;
     margin-bottom: $padding-md;
