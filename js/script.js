@@ -48,10 +48,22 @@ function handleScroll(e) {
   }
 
   // Early return if screen width is less than 925
-  if (windowWidth < 925) return
+  if (windowWidth < 925) {
+    setNavStyles('solid')
+    return
+  }
 
   // Apply styles based on position
   if (scrollPos > 50) {
+    setNavStyles('transparent')
+  } else {
+    setNavStyles('solid')
+  }
+}
+
+// I don't think this needs a comment
+function setNavStyles(style) {
+  if (style === 'solid') {
     nav.style.padding = '25px'
     nav.style.boxShadow = 'rgba(0, 0, 0, 0.5) 0px 5px 10px -10px'
     nav.style.background = '#f9f9f9'
