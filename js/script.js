@@ -55,9 +55,9 @@ function handleScroll(e) {
 
   // Apply styles based on position
   if (scrollPos > 50) {
-    setNavStyles('transparent')
-  } else {
     setNavStyles('solid')
+  } else {
+    setNavStyles('transparent')
   }
 }
 
