@@ -90,6 +90,11 @@
       background: $lightgray;
       transition: all 0.2s;
       transform: scale(0);
+
+      @include mobile() {
+        transform: none;
+        opacity: 0;
+      }
     }
 
     @include mobile() {
