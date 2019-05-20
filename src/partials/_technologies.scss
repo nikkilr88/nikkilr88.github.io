@@ -1,9 +1,5 @@
 .technologies {
-  background: linear-gradient(
-    to bottom right,
-    $purple,
-    darken($purple, 10%)
-  );
+  background: linear-gradient(to bottom right, $purple, darken($purple, 10%));
   color: #f3f3f3;
   text-align: center;
   padding: $padding-lg;
@@ -17,6 +13,12 @@
     font-size: 28px;
     opacity: 0.75;
     color: #fff;
+  }
+
+  &__icon-wrapper {
+    h4 {
+      font-size: 1.2rem;
+    }
   }
 
   &__icons {
