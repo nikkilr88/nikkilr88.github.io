@@ -471,7 +471,10 @@ button {
     opacity: 0.75;
     color: #fff; }
   .technologies__icon-wrapper:hover h4 {
-    opacity: 1; }
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
   .technologies__icon-wrapper h4 {
     font-size: 1.3rem;
     padding: 3px;
@@ -480,10 +483,13 @@ button {
     color: #817bd8;
     border-radius: 3px;
     position: relative;
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
     opacity: 0;
-    -webkit-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s; }
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
     .technologies__icon-wrapper h4:after {
       content: '';
       position: absolute;
