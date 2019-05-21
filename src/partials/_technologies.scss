@@ -16,10 +16,11 @@
   }
 
   &__icon-wrapper {
+    position: relative;
+
     &:hover {
       h4 {
         opacity: 1;
-        transform: scale(1);
       }
     }
 
@@ -30,10 +31,12 @@
       background: #eee;
       color: $purple;
       border-radius: 3px;
-      position: relative;
-      transform: scale(0.75);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       opacity: 0;
       transition: all 0.2s;
+      backface-visibility: hidden;
 
       &:after {
         content: '';
