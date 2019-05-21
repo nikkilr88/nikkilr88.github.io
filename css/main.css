@@ -533,8 +533,6 @@ button {
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent; }
-  .technologies .fab {
-    margin: 0 15px; }
 
 .services__wrapper {
   display: -webkit-box;
