@@ -335,13 +335,16 @@ button {
       color: #adadad; }
     .navbar__link:last-child {
       margin: 0; }
-    .navbar__link:hover a {
-      color: #817bd8; }
     .navbar__link:hover:after {
       -webkit-transform: scale(1);
           -ms-transform: scale(1);
               transform: scale(1);
       background: #817bd8; }
+    .navbar__link:hover a {
+      color: #817bd8; }
+      @media (max-width: 925px) {
+        .navbar__link:hover a {
+          color: #adadad; } }
     .navbar__link:after {
       position: absolute;
       content: '';
