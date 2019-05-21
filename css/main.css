@@ -465,7 +465,7 @@ button {
   position: relative; }
   @media (max-width: 925px) {
     .technologies {
-      padding: 50px; } }
+      padding: 50px 25px; } }
   .technologies__heading {
     font-size: 28px;
     opacity: 0.75;
