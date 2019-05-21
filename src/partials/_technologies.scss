@@ -19,6 +19,7 @@
     &:hover {
       h4 {
         opacity: 1;
+        transform: scale(1);
       }
     }
 
@@ -30,8 +31,9 @@
       color: $purple;
       border-radius: 3px;
       position: relative;
+      transform: scale(0.75);
       opacity: 0;
-      transition: opacity 0.2s;
+      transition: all 0.2s;
 
       &:after {
         content: '';
