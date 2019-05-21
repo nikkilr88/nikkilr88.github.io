@@ -16,17 +16,34 @@
   }
 
   &__icon-wrapper {
-    @include mobile() {
-      &:hover {
-        h4 {
-          opacity: 1;
-        }
+    &:hover {
+      h4 {
+        opacity: 1;
       }
     }
 
     h4 {
-      font-size: 1.2rem;
-      margin-top: 5px;
+      font-size: 1.3rem;
+      padding: 3px;
+      margin-top: 8px;
+      background: #eee;
+      color: $purple;
+      border-radius: 3px;
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.2s;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #eee;
+        border-left: 5px solid transparent;
+      }
 
       @include mobile() {
         opacity: 0;
