@@ -71,13 +71,19 @@
       margin: 0;
     }
 
-    &:hover a {
-      color: $purple;
-    }
+    &:hover {
+      &:after {
+        transform: scale(1);
+        background: $purple;
+      }
 
-    &:hover:after {
-      transform: scale(1);
-      background: $purple;
+      a {
+        color: $purple;
+
+        @include mobile() {
+          color: #adadad;
+        }
+      }
     }
 
     &:after {

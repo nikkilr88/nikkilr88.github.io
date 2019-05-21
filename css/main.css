@@ -335,13 +335,16 @@ button {
       color: #adadad; }
     .navbar__link:last-child {
       margin: 0; }
-    .navbar__link:hover a {
-      color: #817bd8; }
     .navbar__link:hover:after {
       -webkit-transform: scale(1);
           -ms-transform: scale(1);
               transform: scale(1);
       background: #817bd8; }
+    .navbar__link:hover a {
+      color: #817bd8; }
+      @media (max-width: 925px) {
+        .navbar__link:hover a {
+          color: #adadad; } }
     .navbar__link:after {
       position: absolute;
       content: '';
@@ -467,6 +470,43 @@ button {
     font-size: 28px;
     opacity: 0.75;
     color: #fff; }
+  .technologies__icon-wrapper {
+    position: relative; }
+    .technologies__icon-wrapper:hover h4 {
+      opacity: 1; }
+    .technologies__icon-wrapper h4 {
+      font-size: 1.3rem;
+      padding: 3px;
+      margin-top: 8px;
+      background: #eee;
+      color: #817bd8;
+      border-radius: 3px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      opacity: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; }
+      .technologies__icon-wrapper h4:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #eee;
+        border-left: 5px solid transparent; }
+      @media (max-width: 925px) {
+        .technologies__icon-wrapper h4 {
+          opacity: 0; } }
   .technologies__icons {
     margin: 75px auto 0;
     max-width: 900px;
@@ -475,8 +515,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     @media (max-width: 925px) {
       .technologies__icons {
         margin: 50px 0 0; } }

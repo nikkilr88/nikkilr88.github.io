@@ -1,9 +1,5 @@
 .technologies {
-  background: linear-gradient(
-    to bottom right,
-    $purple,
-    darken($purple, 10%)
-  );
+  background: linear-gradient(to bottom right, $purple, darken($purple, 10%));
   color: #f3f3f3;
   text-align: center;
   padding: $padding-lg;
@@ -19,13 +15,54 @@
     color: #fff;
   }
 
+  &__icon-wrapper {
+    position: relative;
+
+    &:hover {
+      h4 {
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      padding: 3px;
+      margin-top: 8px;
+      background: #eee;
+      color: $purple;
+      border-radius: 3px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.2s;
+      backface-visibility: hidden;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #eee;
+        border-left: 5px solid transparent;
+      }
+
+      @include mobile() {
+        opacity: 0;
+      }
+    }
+  }
+
   &__icons {
     margin: 75px auto 0;
     max-width: 900px;
     width: 100%;
     font-size: 35px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @include mobile() {
       margin: 50px 0 0;
