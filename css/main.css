@@ -114,7 +114,7 @@ button {
   padding: 5px 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 2px solid rgba(129, 123, 216, 0.5);
+  border: 2px solid rgba(129, 123, 216, 0.35);
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
