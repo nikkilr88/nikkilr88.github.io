@@ -6,8 +6,8 @@
   font-family: 'Quicksand';
   cursor: pointer;
   margin: 20px 0;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15),
-    0 15px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.08);
+  font-weight: bold;
 
   &--main {
     color: #fff;
@@ -21,6 +21,14 @@
   &--small {
     padding: 5px 10px;
     box-shadow: none;
+    border: 2px solid rgba($purple, 0.5);
+    transition: all 0.2s;
+
+    &:hover {
+      background: darken($purple, 7);
+      border: 2px solid darken($purple, 7);
+      color: #fff;
+    }
 
     &-solid {
       background: $purple;
@@ -29,13 +37,11 @@
 
     &-outlined {
       background: none;
-      border: 1px solid $purple;
       color: $purple;
     }
   }
 
   a {
     color: inherit;
-    font-weight: 100;
   }
 }

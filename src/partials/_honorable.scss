@@ -1,0 +1,37 @@
+.honorable {
+  padding: 45px;
+  border: 2px solid rgba($purple, 0.35);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mobile() {
+    flex-direction: column;
+  }
+
+  h1 {
+    color: $purple;
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    @include mobile() {
+      margin-bottom: 15px;
+    }
+  }
+
+  a {
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    color: #6d6d6d;
+
+    @include mobile() {
+      margin: 25px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
