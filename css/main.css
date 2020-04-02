@@ -760,7 +760,7 @@ button {
   width: 30%;
   background: #fff;
   padding: 25px;
-  border: 1px solid #eee;
+  border: 1px solid #dedede;
   border-radius: 5px;
 }
 
@@ -912,7 +912,8 @@ button {
 
 .honorable {
   padding: 45px;
-  border: 2px solid rgba(129, 123, 216, 0.35);
+  border: 1px solid #dedede;
+  background: #fff;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
