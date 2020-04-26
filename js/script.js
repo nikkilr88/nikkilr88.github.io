@@ -16,7 +16,7 @@ function goToTop() {
 }
 
 // Add click listener on nav links
-Array.prototype.slice.call(navLinks).forEach(function(link) {
+Array.prototype.slice.call(navLinks).forEach(function (link) {
   link.addEventListener('click', handleNavClick)
 })
 
@@ -26,7 +26,7 @@ function handleNavClick(e) {
 
   // Polyfill code for smooth scroll
   document.querySelector(scrollTo).scrollIntoView({
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
@@ -67,7 +67,7 @@ function setNavStyles(style) {
   if (style === 'solid') {
     nav.style.padding = '25px'
     nav.style.boxShadow = 'rgba(0, 0, 0, 0.5) 0px 5px 10px -10px'
-    nav.style.background = '#f9f9f9'
+    nav.style.background = '#fff'
   } else {
     nav.style.padding = '50px'
     nav.style.boxShadow = 'none'
@@ -76,7 +76,7 @@ function setNavStyles(style) {
 }
 
 // Form input shizz
-Array.prototype.slice.call(inputs).forEach(function(input) {
+Array.prototype.slice.call(inputs).forEach(function (input) {
   input.addEventListener('focusout', handleInputAnimation)
 })
 
@@ -103,19 +103,19 @@ function handleFormSubmit(e) {
   const data = {
     name: name.value,
     email: email.value,
-    message: msg.value
+    message: msg.value,
   }
 
   axios
     .post('https://node-sender.glitch.me/', data)
-    .then(function(res) {
+    .then(function (res) {
       displayData(res)
 
       if (res.data.success) {
         resetForm()
       }
     })
-    .catch(function(err) {
+    .catch(function (err) {
       displayMsg.innerHTML =
         '<div class="msg error"><i class="far fa-times-circle"></i>' +
         err +
@@ -125,7 +125,7 @@ function handleFormSubmit(e) {
 
 // Clear out form
 function resetForm() {
-  Array.prototype.slice.call(inputs).forEach(function(input) {
+  Array.prototype.slice.call(inputs).forEach(function (input) {
     input.classList.remove('notEmpty')
     input.value = ''
   })
