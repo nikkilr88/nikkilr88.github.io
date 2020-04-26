@@ -41,7 +41,7 @@
   textarea.notEmpty + label {
     font-size: 1.3rem;
     transform: translate(-10px, -50px);
-    color: $purple;
+    color: $purple-dark;
     font-weight: bold;
   }
 
@@ -64,7 +64,7 @@
 
   input:focus,
   textarea:focus {
-    border-bottom: 2px solid $purple;
+    border-bottom: 2px solid $purple-dark;
   }
 
   textarea {
@@ -101,5 +101,5 @@
 }
 
 .success {
-  background: $purple;
+  background: $purple-dark;
 }

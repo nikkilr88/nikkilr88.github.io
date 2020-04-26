@@ -14,7 +14,7 @@
 
     <!-- Web Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300|Grand+Hotel|Quicksand|Lato:300"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300|Grand+Hotel|Quicksand:100,700|Lato:300"
       rel="stylesheet"
     />
 
@@ -46,8 +46,10 @@
           <li class="navbar__link">
             <a href="#projects" data-goto="#projects">Projects</a>
           </li>
-          <li class="navbar__link">
-            <a href="#contact" data-goto="#contact">Contact</a>
+          <li class="navbar__link contact">
+            <a class="navbar__contact" href="#contact" data-goto="#contact"
+              >Get in touch</a
+            >
           </li>
         </ul>
       </div>
@@ -58,25 +60,22 @@
       <!-- Textblock -->
       <div class="hero__text">
         <h1 class="hero__heading">
-          I'm a JavaScript
-          <br id="br" />
-          developer and
-          <span class="fancy">design dabbler</span>
+          I'm a <br class="mobile-break" />
+          JavaScript developer
+          <br />
+          with an eye for <span class="purple squiggle">design</span>
         </h1>
         <h2 class="hero__sub-heading">
-          I create websites and web apps. Click the button below to get in
-          touch, or scroll down to learn more.
+          I build beautiful websites and apps.
         </h2>
-        <a class="hero__button button button--main" href="#contact">
-          Tell me about your project
-        </a>
       </div>
+      <img class="hero__illustration" src="./images/devices.svg" alt="" />
     </header>
 
     <!-- Technologies section -->
     <section class="technologies">
       <h3 class="technologies__heading">
-        Technologies & tools I enjoy...
+        The tools I work with
       </h3>
       <div class="technologies__icons">
         <span class="technologies__icon-wrapper">
@@ -106,7 +105,7 @@
     <main class="main" id="main">
       <section class="container services">
         <div class="main__textblock">
-          <h2 class="main__heading center">I'm usually working on...</h2>
+          <h2 class="main__heading center">What I do</h2>
         </div>
 
         <div class="services__wrapper">
@@ -130,10 +129,10 @@
           </div>
           <div class="service">
             <img src="./images/Service.svg" alt="service" />
-            <h3 class="service__heading">Node Services & Apps</h3>
+            <h3 class="service__heading">Microservices & Apps</h3>
             <p>
               I use Node.js and Express to build out backend and fullstack apps.
-              I have coded bots, APIs and basic services to send templated
+              I have coded bots, APIs and microservices to send templated
               e-mails.
             </p>
           </div>
@@ -164,20 +163,21 @@
             </p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-solid">
-                <a href="https://devcasts.netlify.com/" target="_blank">
-                  View live
-                </a>
-              </button>
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/react-podcasts"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                target="_blank"
+                href="https://devcasts.netlify.com/"
+                class="button button--small button--small-solid"
+              >
+                View live
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/nikkilr88/react-podcasts"
+                class="button button--small button--small-outlined"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -203,20 +203,21 @@
             </p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-solid">
-                <a href="https://codesnap.netlify.com/" target="_blank">
-                  View live
-                </a>
-              </button>
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/code-snap"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                target="_blank"
+                href="https://codesnap.netlify.com/"
+                class="button button--small button--small-solid"
+              >
+                View live
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/nikkilr88/code-snap"
+                class="button button--small button--small-outlined"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -240,15 +241,14 @@
             </p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/chrome-ext-toggler"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                target="_blank"
+                href="https://github.com/nikkilr88/chrome-ext-toggler"
+                class="button button--small button--small-outlined"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ h1,
 h2,
 h3 {
   font-weight: normal;
-  color: #555;
+  color: #333;
 }
 
 p {
@@ -60,7 +60,7 @@ button {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: $purple;
+  background: $purple-dark;
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -68,13 +68,21 @@ button {
   line-height: 45px;
   font-size: 1.5rem;
   color: #fff;
-  transform: translateX(70px);
+  transform: scale(0);
   transition: all 0.2s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
 
 .show-go-top {
-  transform: translateX(0);
+  transform: scale(1);
   opacity: 1;
+}
+
+.mobile-break {
+  display: none;
+
+  @include mobile() {
+    display: block;
+  }
 }

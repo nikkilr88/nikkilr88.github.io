@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   padding: 15px 35px;
   border: none;
   border-radius: 100px;
@@ -21,23 +22,23 @@
   &--small {
     padding: 5px 10px;
     box-shadow: none;
-    border: 2px solid rgba($purple, 0.35);
+    border: 2px solid rgba($purple-dark, 0.35);
     transition: all 0.2s;
 
     &:hover {
-      background: darken($purple, 7);
-      border: 2px solid darken($purple, 7);
+      background: darken($purple-dark, 7);
+      border: 2px solid darken($purple-dark, 7);
       color: #fff;
     }
 
     &-solid {
-      background: $purple;
+      background: $purple-dark;
       color: #fff;
     }
 
     &-outlined {
       background: none;
-      color: $purple;
+      color: $purple-dark;
     }
   }
 

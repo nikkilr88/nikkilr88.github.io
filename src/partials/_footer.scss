@@ -12,11 +12,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(
-      to bottom right,
-      $purple,
-      darken($purple, 10%)
-    );
+    background: linear-gradient(to bottom right, $purple-light, $purple-dark);
     clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
     z-index: -1;
   }

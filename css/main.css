@@ -25,7 +25,7 @@ h1,
 h2,
 h3 {
   font-weight: normal;
-  color: #555;
+  color: #333;
 }
 
 p {
@@ -64,7 +64,7 @@ button {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: #817bd8;
+  background: #8e44ad;
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -72,9 +72,9 @@ button {
   line-height: 45px;
   font-size: 1.5rem;
   color: #fff;
-  -webkit-transform: translateX(70px);
-      -ms-transform: translateX(70px);
-          transform: translateX(70px);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -83,13 +83,24 @@ button {
 }
 
 .show-go-top {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
 
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 925px) {
+  .mobile-break {
+    display: block;
+  }
+}
+
 .button {
+  display: inline-block;
   padding: 15px 35px;
   border: none;
   border-radius: 100px;
@@ -114,26 +125,26 @@ button {
   padding: 5px 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 2px solid rgba(129, 123, 216, 0.35);
+  border: 2px solid rgba(142, 68, 173, 0.35);
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .button--small:hover {
-  background: #675fd0;
-  border: 2px solid #675fd0;
+  background: #793a93;
+  border: 2px solid #793a93;
   color: #fff;
 }
 
 .button--small-solid {
-  background: #817bd8;
+  background: #8e44ad;
   color: #fff;
 }
 
 .button--small-outlined {
   background: none;
-  color: #817bd8;
+  color: #8e44ad;
 }
 
 .button a {
@@ -223,14 +234,14 @@ button {
 .project p {
   font-size: 2rem;
   line-height: 1.4;
-  color: #6d6d6d;
+  color: #333;
   font-family: 'Roboto';
   padding: 0;
   margin: 0 0 15px 0;
   width: 100%;
 }
 
-.project__btns button {
+.project__btns a {
   margin: 15px 5px 0 0;
   font-size: 1.4rem;
 }
@@ -295,7 +306,7 @@ button {
   -webkit-transform: translate(-10px, -50px);
       -ms-transform: translate(-10px, -50px);
           transform: translate(-10px, -50px);
-  color: #817bd8;
+  color: #8e44ad;
   font-weight: bold;
 }
 
@@ -321,7 +332,7 @@ button {
 
 .form input:focus,
 .form textarea:focus {
-  border-bottom: 2px solid #817bd8;
+  border-bottom: 2px solid #8e44ad;
 }
 
 .form textarea {
@@ -360,7 +371,7 @@ button {
 }
 
 .success {
-  background: #817bd8;
+  background: #8e44ad;
 }
 
 .navbar {
@@ -409,6 +420,12 @@ button {
 
 .navbar ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar li,
@@ -444,31 +461,27 @@ button {
 .navbar__link {
   margin-right: 35px;
   position: relative;
+  -webkit-transition: width 0.05s;
+  -o-transition: width 0.05s;
+  transition: width 0.05s;
 }
 
 .navbar__link a {
   text-decoration: none;
-  color: #adadad;
+  color: inherit;
 }
 
 .navbar__link:last-child {
   margin: 0;
 }
 
-.navbar__link:hover:after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  background: #817bd8;
-}
-
-.navbar__link:hover a {
-  color: #817bd8;
-}
-
-@media (max-width: 925px) {
-  .navbar__link:hover a {
-    color: #adadad;
+@media (hover: hover) {
+  .navbar__link:hover:not(.contact):after {
+    width: 100%;
+    background: #8e44ad;
+  }
+  .navbar__link:hover:not(.contact) a {
+    color: #8e44ad;
   }
 }
 
@@ -477,50 +490,72 @@ button {
   content: '';
   bottom: -5px;
   left: 0;
-  width: 100%;
   height: 2px;
-  background: #6d6d6d;
+  background: #8e44ad;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-
-@media (max-width: 925px) {
-  .navbar__link:after {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-    opacity: 0;
-  }
+  width: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 @media (max-width: 925px) {
   .navbar__link {
-    color: #6d6d6d;
+    color: #333;
+  }
+}
+
+.navbar__contact {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #8e44ad !important;
+  border: 2px solid #8e44ad;
+  background: -webkit-linear-gradient(45deg, #a661c2, #8e44ad 50%, #fff 50%);
+  background: -o-linear-gradient(45deg, #a661c2, #8e44ad 50%, #fff 50%);
+  background: linear-gradient(45deg, #a661c2, #8e44ad 50%, #fff 50%);
+  background-size: 300%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+
+@media (max-width: 925px) {
+  .navbar__contact {
+    padding: 0;
+    color: inherit !important;
+    color: inherit;
+    border: none;
+  }
+}
+
+@media (hover: hover) {
+  .navbar__contact:hover {
+    color: #fff !important;
+    background-position: 0;
   }
 }
 
 .hero {
-  margin: 175px 50px 100px;
+  margin: 175px 50px 0;
   color: #555;
 }
 
 @media (max-width: 925px) {
   .hero {
-    margin: 190px 20px 90px;
+    margin: 190px 20px 0;
     background: none;
     background-size: cover;
   }
 }
 
 .hero__text {
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   color: inherit;
   text-align: center;
   max-width: 950px;
@@ -531,57 +566,69 @@ button {
   .hero__text {
     max-width: 550px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 75px auto;
     text-align: center;
   }
 }
 
 .hero__heading {
-  font-size: 4.5rem;
-  font-weight: bold;
+  font-size: 45px;
+  font-weight: 900;
+  margin-bottom: 35px;
+  line-height: 1.5;
 }
 
 @media (max-width: 925px) {
   .hero__heading {
-    font-size: 3.7rem;
+    font-size: 35px;
+    margin-bottom: 35px;
   }
 }
 
 .hero__sub-heading {
-  font-size: 2.8em;
+  font-size: 28px;
   line-height: 1.4;
-  color: #6d6d6d;
+  color: #333;
   font-family: 'Roboto';
   width: 65%;
-  margin: 15px auto 45px auto;
+  margin: 15px auto;
   font-family: 'Lato';
 }
 
 @media (max-width: 925px) {
   .hero__sub-heading {
-    margin: 15px auto 25px auto;
-    width: 95%;
+    margin: 15px auto;
+    width: 85%;
   }
 }
 
-.hero__button {
-  display: inline-block;
-  margin: 15px 0;
-  color: #eee;
-  font-weight: bold;
+.hero__illustration {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -1px;
 }
 
-.fancy {
-  color: #817bd8;
-  font-family: "Grand Hotel";
-  font-size: 1.2em;
-  font-weight: normal;
+.purple {
+  color: #8e44ad;
 }
 
-@media (max-width: 925px) {
-  #br {
-    display: none;
-  }
+.squiggle {
+  position: relative;
+}
+
+.squiggle:after {
+  content: '';
+  background-image: url("/images/squiggle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  display: block;
+  bottom: -22px;
+  left: 0;
 }
 
 .main {
@@ -623,7 +670,7 @@ button {
 .main__para {
   font-size: 2em;
   line-height: 1.4;
-  color: #6d6d6d;
+  color: #333;
   font-family: 'Roboto';
 }
 
@@ -634,11 +681,11 @@ button {
 }
 
 .technologies {
-  background: -webkit-gradient(linear, left top, right bottom, from(#817bd8), to(#5b54cc));
-  background: -webkit-linear-gradient(top left, #817bd8, #5b54cc);
-  background: -o-linear-gradient(top left, #817bd8, #5b54cc);
-  background: linear-gradient(to bottom right, #817bd8, #5b54cc);
-  color: #f3f3f3;
+  background: -webkit-gradient(linear, left top, right bottom, from(#a661c2), to(#8e44ad));
+  background: -webkit-linear-gradient(top left, #a661c2, #8e44ad);
+  background: -o-linear-gradient(top left, #a661c2, #8e44ad);
+  background: linear-gradient(to bottom right, #a661c2, #8e44ad);
+  color: #fff;
   text-align: center;
   padding: 90px;
   position: relative;
@@ -652,7 +699,7 @@ button {
 
 .technologies__heading {
   font-size: 28px;
-  opacity: 0.75;
+  opacity: 0.9;
   color: #fff;
 }
 
@@ -669,7 +716,7 @@ button {
   padding: 3px;
   margin-top: 8px;
   background: #eee;
-  color: #817bd8;
+  color: #8e44ad;
   border-radius: 3px;
   position: absolute;
   left: 50%;
@@ -723,20 +770,6 @@ button {
   }
 }
 
-.technologies:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-top: 10px solid #f8f8f8;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-}
-
 .services__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -785,7 +818,7 @@ button {
 .service p {
   font-size: 2rem;
   line-height: 1.4;
-  color: #6d6d6d;
+  color: #333;
   font-family: 'Roboto';
 }
 
@@ -806,10 +839,10 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right bottom, from(#817bd8), to(#5b54cc));
-  background: -webkit-linear-gradient(top left, #817bd8, #5b54cc);
-  background: -o-linear-gradient(top left, #817bd8, #5b54cc);
-  background: linear-gradient(to bottom right, #817bd8, #5b54cc);
+  background: -webkit-gradient(linear, left top, right bottom, from(#a661c2), to(#8e44ad));
+  background: -webkit-linear-gradient(top left, #a661c2, #8e44ad);
+  background: -o-linear-gradient(top left, #a661c2, #8e44ad);
+  background: linear-gradient(to bottom right, #a661c2, #8e44ad);
   -webkit-clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
   z-index: -1;
@@ -836,7 +869,7 @@ button {
 
 .footer__heading {
   font-size: 2.8rem;
-  color: #555;
+  color: #222;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -845,7 +878,7 @@ button {
 .footer__para {
   font-size: 2.2em;
   line-height: 1.4;
-  color: #6d6d6d;
+  color: #333;
   font-family: 'Roboto';
   margin: 0 auto 50px auto;
   width: 65%;
@@ -938,7 +971,7 @@ button {
 }
 
 .honorable h1 {
-  color: #817bd8;
+  color: #8e44ad;
   font-weight: bold;
   font-size: 1.8rem;
 }

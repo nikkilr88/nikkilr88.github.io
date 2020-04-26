@@ -1,15 +1,15 @@
 .hero {
-  margin: 175px $padding-md 100px;
+  margin: 175px $padding-md 0;
   color: #555;
 
   @include mobile() {
-    margin: 190px $padding-sm $padding-lg;
+    margin: 190px $padding-sm 0;
     background: none;
     background-size: cover;
   }
 
   &__text {
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
     color: inherit;
     text-align: center;
     max-width: 950px;
@@ -18,49 +18,61 @@
     @include mobile() {
       max-width: 550px;
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 75px auto;
       text-align: center;
     }
   }
 
   &__heading {
-    font-size: 4.5rem;
-    font-weight: bold;
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 35px;
+    line-height: 1.5;
 
-    @include mobile {
-      font-size: 3.7rem;
+    @include mobile() {
+      font-size: 35px;
+      margin-bottom: 35px;
     }
   }
 
   &__sub-heading {
-    @include para(2.8em);
+    @include para(28px);
     width: 65%;
-    margin: 15px auto 45px auto;
+    margin: 15px auto;
     font-family: 'Lato';
 
     @include mobile {
-      margin: 15px auto 25px auto;
-      width: 95%;
+      margin: 15px auto;
+      width: 85%;
     }
   }
 
-  &__button {
-    display: inline-block;
-    margin: 15px 0;
-    color: #eee;
-    font-weight: bold;
+  &__illustration {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -1px;
   }
 }
 
-.fancy {
-  color: $purple;
-  font-family: $fancy;
-  font-size: 1.2em;
-  font-weight: normal;
+.purple {
+  color: $purple-dark;
 }
 
-#br {
-  @include mobile() {
-    display: none;
-  }
+.squiggle {
+  position: relative;
+}
+
+.squiggle:after {
+  content: '';
+  background-image: url('/images/squiggle.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  display: block;
+  bottom: -22px;
+  left: 0;
 }
