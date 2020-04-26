@@ -10,6 +10,7 @@
 
   @include mobile() {
     flex-direction: column;
+    padding: 45px 25px;
   }
 
   h1 {
@@ -23,9 +24,9 @@
   }
 
   a {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: 'Roboto';
-    color: #6d6d6d;
+    color: inherit;
 
     @include mobile() {
       margin: 25px 0;

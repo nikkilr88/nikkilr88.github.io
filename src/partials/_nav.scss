@@ -40,23 +40,33 @@
   &__logo {
     margin-right: auto;
     height: 35px;
-
-    &-mobile {
-      display: none;
-    }
+    display: flex;
+    align-items: center;
 
     @include mobile() {
-      display: none;
-
-      &-mobile {
-        display: block;
-        margin: 0 0 $padding-sm 0;
-        height: 40px;
-      }
+      display: block;
+      margin: 0 0 $padding-sm 0;
+      height: 40px;
     }
 
     img {
       height: 100%;
+      margin-right: 5px;
+
+      @include mobile() {
+        height: 100%;
+        margin-right: 0;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-family: 'Quicksand';
+      color: $purple-dark;
+
+      @include mobile() {
+        display: none;
+      }
     }
   }
 
@@ -67,7 +77,7 @@
 
     a {
       text-decoration: none;
-      color: inherit;
+      color: #555;
     }
 
     &:last-child {
@@ -116,17 +126,15 @@
       45deg,
       $purple-light,
       $purple-dark 50%,
-      #fff 50%
+      transparent 50%
     );
     background-size: 300%;
     background-position: 100%;
-    background-repeat: no-repeat;
     transition: background-position 0.5s;
 
     @include mobile() {
       padding: 0;
-      color: inherit !important;
-      color: inherit;
+      color: #555 !important;
       border: none;
     }
 

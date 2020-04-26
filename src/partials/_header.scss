@@ -1,3 +1,6 @@
+$enterUpTranslate: 50px;
+$enterUpOpacity: 0;
+
 .hero {
   margin: 175px $padding-md 0;
   color: #555;
@@ -28,6 +31,9 @@
     font-weight: 900;
     margin-bottom: 35px;
     line-height: 1.5;
+    transform: translateY($enterUpTranslate);
+    opacity: $enterUpOpacity;
+    animation: 0.35s enterUp ease-in-out forwards;
 
     @include mobile() {
       font-size: 35px;
@@ -40,6 +46,9 @@
     width: 65%;
     margin: 15px auto;
     font-family: 'Lato';
+    transform: translateY($enterUpTranslate);
+    opacity: $enterUpOpacity;
+    animation: 0.35s enterUp 0.05s ease-in-out forwards;
 
     @include mobile {
       margin: 15px auto;
@@ -49,10 +58,18 @@
 
   &__illustration {
     max-width: 600px;
+    min-height: 250px;
     width: 100%;
     display: block;
     margin: 0 auto;
     margin-bottom: -1px;
+    transform: translateY($enterUpTranslate);
+    opacity: $enterUpOpacity;
+    animation: 0.35s enterUp 0.1s ease-in-out forwards;
+
+    @include mobile() {
+      min-height: 0;
+    }
   }
 }
 
@@ -75,4 +92,15 @@
   display: block;
   bottom: -22px;
   left: 0;
+}
+
+@keyframes enterUp {
+  0% {
+    opacity: $enterUpOpacity;
+    transform: translateY($enterUpTranslate);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

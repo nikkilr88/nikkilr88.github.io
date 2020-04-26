@@ -22,12 +22,12 @@
   &--small {
     padding: 5px 10px;
     box-shadow: none;
-    border: 2px solid rgba($purple-dark, 0.35);
+    border: 2px solid $purple-dark;
     transition: all 0.2s;
 
     &:hover {
-      background: darken($purple-dark, 7);
-      border: 2px solid darken($purple-dark, 7);
+      background: darken($purple-dark, 15);
+      border: 2px solid darken($purple-dark, 15);
       color: #fff;
     }
 
