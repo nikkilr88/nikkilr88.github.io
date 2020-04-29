@@ -6,7 +6,7 @@ html {
 body {
   font-family: "Quicksand";
   background: #f9f9f9;
-  color: #333;
+  color: #4b4b4b;
   position: relative;
 }
 
@@ -22,10 +22,8 @@ html {
 }
 
 h1,
-h2,
 h3 {
-  font-weight: normal;
-  color: #333;
+  font-weight: 700;
 }
 
 p {
@@ -109,17 +107,14 @@ button {
   font-family: 'Quicksand';
   cursor: pointer;
   margin: 20px 0;
-  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(52, 52, 52, 0.08);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(52, 52, 52, 0.08);
   font-weight: bold;
 }
 
 .button--main {
   color: #fff;
-  background: -webkit-gradient(linear, left top, right bottom, from(#f0949d), to(#e85663));
-  background: -webkit-linear-gradient(left top, #f0949d, #e85663);
-  background: -o-linear-gradient(left top, #f0949d, #e85663);
-  background: linear-gradient(to right bottom, #f0949d, #e85663);
+  background: #ff637c;
 }
 
 .button--small {
@@ -235,7 +230,6 @@ button {
 .project p {
   font-size: 2rem;
   line-height: 1.4;
-  color: #333;
   font-family: 'Roboto';
   padding: 0;
   margin: 0 0 15px 0;
@@ -376,7 +370,7 @@ button {
 }
 
 .navbar {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 50px;
   width: 100%;
   z-index: 999;
@@ -385,6 +379,7 @@ button {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  font-weight: bold;
 }
 
 .navbar .container {
@@ -455,7 +450,7 @@ button {
 }
 
 .navbar__logo img {
-  height: 100%;
+  height: 30px;
   margin-right: 5px;
 }
 
@@ -467,7 +462,7 @@ button {
 }
 
 .navbar__logo p {
-  font-size: 18px;
+  font-size: 1.6rem;
   font-family: 'Quicksand';
   color: #8e44ad;
 }
@@ -488,7 +483,7 @@ button {
 
 .navbar__link a {
   text-decoration: none;
-  color: #555;
+  color: inherit;
 }
 
 .navbar__link:last-child {
@@ -534,9 +529,9 @@ button {
   border-radius: 50px;
   color: #8e44ad !important;
   border: 2px solid #8e44ad;
-  background: -webkit-linear-gradient(45deg, #a661c2, #8e44ad 50%, transparent 50%);
-  background: -o-linear-gradient(45deg, #a661c2, #8e44ad 50%, transparent 50%);
-  background: linear-gradient(45deg, #a661c2, #8e44ad 50%, transparent 50%);
+  background: -webkit-linear-gradient(45deg, #8e44ad 50%, transparent 50%);
+  background: -o-linear-gradient(45deg, #8e44ad 50%, transparent 50%);
+  background: linear-gradient(45deg, #8e44ad 50%, transparent 50%);
   background-size: 300%;
   background-position: 100%;
   -webkit-transition: background-position 0.5s;
@@ -560,8 +555,8 @@ button {
 }
 
 .hero {
-  margin: 175px 50px 0;
-  color: #555;
+  position: relative;
+  margin: 170px 50px 0;
 }
 
 @media (max-width: 925px) {
@@ -573,7 +568,7 @@ button {
 }
 
 .hero__text {
-  margin: 0 auto 100px auto;
+  margin: 0 auto 90px auto;
   color: inherit;
   text-align: center;
   max-width: 950px;
@@ -584,22 +579,22 @@ button {
   .hero__text {
     max-width: 550px;
     width: 100%;
-    margin: 0 auto 75px auto;
     text-align: center;
+    margin: 0 auto 75px auto;
   }
 }
 
 .hero__heading {
-  font-size: 45px;
+  font-size: 4.4rem;
   font-weight: 900;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   line-height: 1.5;
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
-  -webkit-animation: 0.35s enterUp ease-in-out forwards;
-          animation: 0.35s enterUp ease-in-out forwards;
+  -webkit-animation: 0.5s enterUp ease-in-out forwards;
+          animation: 0.5s enterUp ease-in-out forwards;
 }
 
 @media (max-width: 925px) {
@@ -610,19 +605,19 @@ button {
 }
 
 .hero__sub-heading {
-  font-size: 28px;
+  font-size: 2.8rem;
   line-height: 1.4;
-  color: #333;
   font-family: 'Roboto';
   width: 65%;
-  margin: 15px auto;
+  margin: 0 auto 25px auto;
   font-family: 'Lato';
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
-  -webkit-animation: 0.35s enterUp 0.05s ease-in-out forwards;
-          animation: 0.35s enterUp 0.05s ease-in-out forwards;
+  -webkit-animation: 0.5s enterUp 0.05s ease-in-out forwards;
+          animation: 0.5s enterUp 0.05s ease-in-out forwards;
+  font-weight: normal;
 }
 
 @media (max-width: 925px) {
@@ -633,24 +628,40 @@ button {
 }
 
 .hero__illustration {
-  max-width: 600px;
+  position: relative;
+  max-width: 585px;
   min-height: 250px;
   width: 100%;
   display: block;
   margin: 0 auto;
-  margin-bottom: -1px;
+  margin-bottom: -4px;
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
-  -webkit-animation: 0.35s enterUp 0.1s ease-in-out forwards;
-          animation: 0.35s enterUp 0.1s ease-in-out forwards;
+  -webkit-animation: 0.5s enterUp 0.1s ease-in-out forwards;
+          animation: 0.5s enterUp 0.1s ease-in-out forwards;
 }
 
 @media (max-width: 925px) {
   .hero__illustration {
     min-height: 0;
   }
+}
+
+.hero__blob {
+  position: absolute;
+  bottom: -75px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  max-width: 525px;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: 0.5s fadeIn 0.1s ease-in-out forwards;
+          animation: 0.5s fadeIn 0.1s ease-in-out forwards;
 }
 
 .purple {
@@ -670,7 +681,7 @@ button {
   height: 20px;
   width: 100%;
   display: block;
-  bottom: -22px;
+  bottom: -18px;
   left: 0;
 }
 
@@ -697,6 +708,24 @@ button {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -739,7 +768,6 @@ button {
 .main__para {
   font-size: 2em;
   line-height: 1.4;
-  color: #333;
   font-family: 'Roboto';
 }
 
@@ -750,10 +778,10 @@ button {
 }
 
 .technologies {
-  background: -webkit-gradient(linear, left top, right bottom, from(#a661c2), to(#8e44ad));
-  background: -webkit-linear-gradient(top left, #a661c2, #8e44ad);
-  background: -o-linear-gradient(top left, #a661c2, #8e44ad);
-  background: linear-gradient(to bottom right, #a661c2, #8e44ad);
+  background: -webkit-gradient(linear, left top, right bottom, from(#c77ae6), to(#8e44ad));
+  background: -webkit-linear-gradient(top left, #c77ae6, #8e44ad);
+  background: -o-linear-gradient(top left, #c77ae6, #8e44ad);
+  background: linear-gradient(to bottom right, #c77ae6, #8e44ad);
   color: #fff;
   text-align: center;
   padding: 90px;
@@ -891,7 +919,6 @@ button {
 .service p {
   font-size: 2rem;
   line-height: 1.4;
-  color: #333;
   font-family: 'Roboto';
 }
 
@@ -912,10 +939,10 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right bottom, from(#a661c2), to(#8e44ad));
-  background: -webkit-linear-gradient(top left, #a661c2, #8e44ad);
-  background: -o-linear-gradient(top left, #a661c2, #8e44ad);
-  background: linear-gradient(to bottom right, #a661c2, #8e44ad);
+  background: -webkit-gradient(linear, left top, right bottom, from(#c77ae6), to(#8e44ad));
+  background: -webkit-linear-gradient(top left, #c77ae6, #8e44ad);
+  background: -o-linear-gradient(top left, #c77ae6, #8e44ad);
+  background: linear-gradient(to bottom right, #c77ae6, #8e44ad);
   -webkit-clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
   z-index: -1;
@@ -924,8 +951,7 @@ button {
 .footer__text-wrapper {
   background: #fff;
   padding: 75px;
-  max-width: 900px;
-  width: 95%;
+  max-width: calc(1500px - 180px);
   margin: 0 auto;
   -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
@@ -936,13 +962,11 @@ button {
 @media (max-width: 925px) {
   .footer__text-wrapper {
     padding: 50px 20px 90px 20px;
-    max-width: 550px;
   }
 }
 
 .footer__heading {
   font-size: 2.8rem;
-  color: #222;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -951,7 +975,6 @@ button {
 .footer__para {
   font-size: 2.2em;
   line-height: 1.4;
-  color: #333;
   font-family: 'Roboto';
   margin: 0 auto 50px auto;
   width: 65%;
@@ -983,6 +1006,8 @@ button {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .footer__icon:hover {
@@ -1015,6 +1040,17 @@ button {
 .footer__attribution a {
   color: inherit;
   border-bottom: 1px dotted #fff;
+}
+
+.footer .container {
+  padding: 0 90px;
+}
+
+@media (max-width: 925px) {
+  .footer .container {
+    padding: 0;
+    width: 95%;
+  }
 }
 
 .honorable {

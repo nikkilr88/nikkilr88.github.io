@@ -6,7 +6,7 @@ html {
 body {
   font-family: $main;
   background: #f9f9f9;
-  color: #333;
+  color: #4b4b4b;
   position: relative;
 }
 
@@ -21,10 +21,8 @@ html {
 }
 
 h1,
-h2,
 h3 {
-  font-weight: normal;
-  color: #333;
+  font-weight: 700;
 }
 
 p {
