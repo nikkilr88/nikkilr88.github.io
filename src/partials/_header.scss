@@ -71,6 +71,7 @@ $enterUpOpacity: 0;
 
     @include mobile() {
       min-height: 0;
+      margin-bottom: -1px;
     }
   }
 
