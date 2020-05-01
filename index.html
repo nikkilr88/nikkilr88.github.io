@@ -10,12 +10,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Tab icon -->
-    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="images/Logo.svg" />
 
     <!-- Web Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300|Grand+Hotel|Quicksand:500,700|Lato:300"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
 
     <link
@@ -67,9 +72,9 @@
           <br />
           with an eye for <span class="purple squiggle">design</span>
         </h1>
-        <h2 class="hero__sub-heading">
+        <p class="hero__sub-heading">
           I build beautiful websites and apps.
-        </h2>
+        </p>
       </div>
       <img class="hero__blob" src="./images/Blob.svg" alt="" />
       <img class="hero__illustration" src="./images/devices.svg" alt="" />
@@ -77,9 +82,9 @@
 
     <!-- Technologies section -->
     <section class="technologies">
-      <h3 class="technologies__heading">
+      <h2 class="technologies__heading">
         My toolbox
-      </h3>
+      </h2>
       <div class="technologies__icons">
         <div class="technologies__icon-wrapper">
           <i class="fab fa-js"></i>
@@ -117,17 +122,17 @@
             <h3 class="service__heading">UI Design</h3>
             <p>
               Colors and shapes and pen tools, oh my! I'm not a professional,
-              but I've been dabbling for quite a while. Figma and Gravit are my
-              go-tos.
+              but I've been dabbling with design for quite a while. Figma and
+              Gravit are my go-tos.
             </p>
           </div>
           <div class="service">
             <img src="./images/App.svg" alt="app" />
             <h3 class="service__heading">Websites & SPAs</h3>
             <p>
-              Single page apps, progressive web apps, Chrome extensions... I
-              love it all! My favorite framework is React, and I'm currently
-              learning Gatsby.
+              Websites, single page apps, progressive web apps, Chrome
+              extensions... I love it all! My favorite framework is React, and I
+              have a new found love for Gatsby.
             </p>
           </div>
           <div class="service">
@@ -178,7 +183,7 @@
                 href="https://github.com/nikkilr88/react-podcasts"
                 class="button button--small button--small-outlined"
               >
-                <i class="fab fa-github"></i>
+                <i class="devicon-github-plain"></i>
                 GitHub
               </a>
             </div>
@@ -218,7 +223,7 @@
                 href="https://github.com/nikkilr88/code-snap"
                 class="button button--small button--small-outlined"
               >
-                <i class="fab fa-github"></i>
+                <i class="devicon-github-plain"></i>
                 GitHub
               </a>
             </div>
@@ -229,47 +234,60 @@
         <div class="project">
           <!-- Heading -->
           <div class="project__title-wrapper">
-            <h3 class="project__title">Switchr</h3>
+            <h3 class="project__title">YT Downloader</h3>
             <span>React</span>
-            <span>API</span>
+            <span>Electron</span>
             <span>Parcel</span>
           </div>
           <!-- Description -->
           <div class="project__text">
             <p>
-              Switchr is a Chrome extension that toggles other extensions on and
-              off with just a click. Extensions are sorted by enabled status,
-              and there is a popup search to easily find what you're looking
-              for.
+              A desktop application to download YouTube videos. This basic
+              version of the app let's the user download one video at a time in
+              either MP3 or MP4 format.
             </p>
+            <p>Currently only availble on Windows.</p>
             <!-- Buttons -->
             <div class="project__btns">
               <a
                 target="_blank"
-                href="https://github.com/nikkilr88/chrome-ext-toggler"
+                href="https://github.com/nikkilr88/yt-mp3-react/releases"
+                class="button button--small button--small-solid"
+              >
+                <i class="devicon-windows8-original"></i> Download</a
+              >
+              <a
+                target="_blank"
+                href="https://github.com/nikkilr88/yt-mp3-react"
                 class="button button--small button--small-outlined"
               >
-                <i class="fab fa-github"></i>
+                <i class="devicon-github-plain"></i>
                 GitHub
               </a>
             </div>
           </div>
         </div>
 
+        <!-- Honorable Mentions -->
         <div class="honorable">
-          <h1>Honorable Mentions</h1>
+          <h2 class="honorable__heading">Honorable Mentions</h2>
           <a
             href="https://www.devnikki.com/frontend-mentor-challenges/"
             target="_blank"
+            class="honorable__link"
             >⚡ Frontend Mentor Challenges</a
           >
           <a
             href="https://www.npmjs.com/package/sarcastic-string"
             target="_blank"
+            class="honorable__link"
             >⚡ Sarcastic String</a
           >
-          <a href="https://twitter.com/GitLit000" target="_blank"
-            >⚡ Twitter Bot</a
+          <a
+            href="https://github.com/nikkilr88/chrome-ext-toggler"
+            target="_blank"
+            class="honorable__link"
+            >⚡ Switchr</a
           >
         </div>
       </section>
@@ -371,7 +389,7 @@
             href="https://thenounproject.com/search/?q=design&i=2084639#_=_"
             target="_blank"
           >
-            Andi Nur Abdillah, ID
+            Andi Nur Abdillah
           </a>
 
           | App icon by
@@ -379,7 +397,7 @@
             href="https://thenounproject.com/search/?q=web%20app&i=325781"
             target="_blank"
           >
-            Ben Davis, RO
+            Ben Davis
           </a>
 
           | Development icon by
@@ -387,7 +405,7 @@
             href="https://thenounproject.com/search/?q=development&creator=3463109&i=1959082"
             target="_blank"
           >
-            mynamepong, TH
+            mynamepong
           </a>
         </p>
       </div>

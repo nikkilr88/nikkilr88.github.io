@@ -953,8 +953,8 @@ button {
   padding: 75px;
   max-width: calc(1500px - 180px);
   margin: 0 auto;
-  -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   position: relative;
 }
@@ -1081,29 +1081,29 @@ button {
   }
 }
 
-.honorable h1 {
+.honorable__heading {
   color: #8e44ad;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media (max-width: 925px) {
-  .honorable h1 {
+  .honorable__heading {
     margin-bottom: 15px;
   }
 }
 
-.honorable a {
+.honorable__link {
   font-size: 1.5rem;
   font-family: 'Roboto';
   color: inherit;
 }
 
 @media (max-width: 925px) {
-  .honorable a {
+  .honorable__link {
     margin: 25px 0;
   }
-  .honorable a:last-child {
+  .honorable__link:last-child {
     margin-bottom: 0;
   }
 }
