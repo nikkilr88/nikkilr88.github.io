@@ -8,6 +8,10 @@ const displayMsg = document.querySelector('#display-msg')
 const navLinks = document.querySelectorAll('nav li a')
 const goTop = document.querySelector('.go-top')
 
+const faders = document.querySelectorAll('.fadeInOnScroll')
+const techs = document.querySelectorAll('.technologies__icon-wrapper')
+const services = document.querySelectorAll('.service')
+
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
 
@@ -147,3 +151,49 @@ function displayData(res) {
       res.data.error +
       '</span></div>'
 }
+
+// Intersection observer -- Fade in on scroll
+const options = {
+  rootMargin: '0px 0px -100px 0px',
+}
+
+const observer = new IntersectionObserver(fadeInOnScroll, options)
+
+function fadeInOnScroll(entries, observer) {
+  let techOffset = 100
+  let serviceOffset = 100
+
+  entries.forEach(function (entry) {
+    // Early return if the element is not visible on screen
+    if (!entry.isIntersecting) return
+
+    // Show tech icons
+    if (entry.target.classList.contains('technologies__icon-wrapper')) {
+      setTimeout(function () {
+        entry.target.classList.add('fadeIn')
+      }, techOffset)
+
+      techOffset += 100
+    }
+    // Show services
+    else if (entry.target.classList.contains('service')) {
+      setTimeout(function () {
+        entry.target.classList.add('fadeIn')
+      }, serviceOffset)
+
+      serviceOffset += 200
+    }
+    // Show everything else
+    else {
+      entry.target.classList.add('fadeIn')
+    }
+
+    // This is to stop watching or "observing" the element
+    // Everything above this will only run once
+    observer.unobserve(entry.target)
+  })
+}
+
+faders.forEach(function (fader) {
+  observer.observe(fader)
+})

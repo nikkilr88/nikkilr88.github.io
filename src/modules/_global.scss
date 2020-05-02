@@ -78,6 +78,17 @@ button {
   opacity: 1;
 }
 
+.hidden {
+  opacity: 0 !important;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
 .mobile-break {
   display: none;
 
