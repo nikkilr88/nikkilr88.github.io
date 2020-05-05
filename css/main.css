@@ -293,7 +293,7 @@ button {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  color: #999;
+  color: #6d6d6d;
 }
 
 .form input + label {

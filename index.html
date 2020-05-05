@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="JavaScript developer with an eye for design. I build beautiful websites and apps."
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
@@ -41,20 +45,23 @@
       <div class="container">
         <!-- Logos -->
         <div class="navbar__logo">
-          <img src="images/Logo.svg" alt="logo" />
+          <img src="images/Logo.svg" alt="DevNikki logo" />
           <p>DevNikki</p>
         </div>
 
         <!-- Nav links -->
         <ul>
           <li class="navbar__link">
-            <a href="#main" data-goto="#main">About</a>
+            <a href="#main" aria-label="Go to about section ">About</a>
           </li>
           <li class="navbar__link">
-            <a href="#projects" data-goto="#projects">Projects</a>
+            <a href="#projects" aria-label="Go to projects section">Projects</a>
           </li>
           <li class="navbar__link contact">
-            <a class="navbar__contact" href="#contact" data-goto="#contact"
+            <a
+              class="navbar__contact"
+              href="#contact"
+              aria-label="Go to contact section"
               >Say hello 👋</a
             >
           </li>
@@ -76,8 +83,12 @@
           I build beautiful websites and apps.
         </p>
       </div>
-      <img class="hero__blob" src="./images/Blob.svg" alt="" />
-      <img class="hero__illustration" src="./images/devices.svg" alt="" />
+      <img class="hero__blob" src="./images/Blob.svg" alt="Circle blob" />
+      <img
+        class="hero__illustration"
+        src="./images/devices.svg"
+        alt="Computer and mobile devices with design software and websites"
+      />
     </header>
 
     <!-- Technologies section -->
@@ -120,7 +131,7 @@
 
         <div class="services__wrapper">
           <div class="service fadeInOnScroll hidden">
-            <img src="./images/Design.svg" alt="design" />
+            <img src="./images/Design.svg" alt="Design tools icon" />
             <h3 class="service__heading">UI Design</h3>
             <p>
               Colors and shapes and pen tools, oh my! I'm not a professional,
@@ -129,7 +140,7 @@
             </p>
           </div>
           <div class="service fadeInOnScroll hidden">
-            <img src="./images/App.svg" alt="app" />
+            <img src="./images/App.svg" alt="Web app icon" />
             <h3 class="service__heading">Websites & SPAs</h3>
             <p>
               Websites, single page apps, progressive web apps, Chrome
@@ -138,7 +149,7 @@
             </p>
           </div>
           <div class="service fadeInOnScroll hidden">
-            <img src="./images/Service.svg" alt="service" />
+            <img src="./images/Service.svg" alt="Computer with cogs icon" />
             <h3 class="service__heading">Backend Apps</h3>
             <p>
               I use Node.js and Express to build out backend and fullstack apps.
@@ -175,15 +186,19 @@
             <div class="project__btns">
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://devcasts.netlify.com/"
                 class="button button--small button--small-solid"
+                aria-label="Go to DevCasts project website"
               >
                 View live
               </a>
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://github.com/nikkilr88/react-podcasts"
                 class="button button--small button--small-outlined"
+                aria-label="Go to DevCasts GitHub repo"
               >
                 <i class="devicon-github-plain"></i>
                 GitHub
@@ -215,15 +230,19 @@
             <div class="project__btns">
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://codesnap.netlify.com/"
                 class="button button--small button--small-solid"
+                aria-label="Go to Code Snap project website"
               >
                 View live
               </a>
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://github.com/nikkilr88/code-snap"
                 class="button button--small button--small-outlined"
+                aria-label="Go to Code Snap GitHub repo"
               >
                 <i class="devicon-github-plain"></i>
                 GitHub
@@ -253,15 +272,19 @@
             <div class="project__btns">
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://github.com/nikkilr88/yt-mp3-react/releases"
                 class="button button--small button--small-solid"
+                aria-label="Download Youtube Downloader app for Windows"
               >
                 <i class="devicon-windows8-original"></i> Download</a
               >
               <a
                 target="_blank"
+                rel="noopener"
                 href="https://github.com/nikkilr88/yt-mp3-react"
                 class="button button--small button--small-outlined"
+                aria-label="Go to Youtube Downloader GitHub repo"
               >
                 <i class="devicon-github-plain"></i>
                 GitHub
@@ -276,19 +299,25 @@
           <a
             href="https://www.devnikki.com/frontend-mentor-challenges/"
             target="_blank"
+            rel="noopener"
             class="honorable__link"
+            aria-label="Go to Frontend Mentor Challenges project website"
             >⚡ Frontend Mentor Challenges</a
           >
           <a
             href="https://www.npmjs.com/package/sarcastic-string"
             target="_blank"
+            rel="noopener"
             class="honorable__link"
+            aria-label="Go to Sarcastic String npm page"
             >⚡ Sarcastic String</a
           >
           <a
             href="https://github.com/nikkilr88/chrome-ext-toggler"
             target="_blank"
+            rel="noopener"
             class="honorable__link"
+            aria-label="Go to Switchr GitHub repo"
             >⚡ Switchr</a
           >
         </div>
@@ -359,18 +388,21 @@
       </div>
       <!-- Social icons -->
       <div class="footer__icons">
-        <a href="https://twitter.com/nikkilr88" target="_blank">
+        <a href="https://twitter.com/nikkilr88" target="_blank" rel="noopener" aria-label="Go to DevNikki's Twitter"
+        >
           <i class="fab fa-twitter footer__icon"></i>
         </a>
-        <a href="https://github.com/nikkilr88" target="_blank">
+        <a href="https://github.com/nikkilr88" target="_blank" rel="noopener" aria-label="Go to DevNikki's GitHub>
           <i class="fab fa-github footer__icon"></i>
         </a>
-        <a href="https://codepen.io/nikkilr88/" target="_blank">
+        <a href="https://codepen.io/nikkilr88/" target="_blank" rel="noopener" aria-label="Go to DevNikki's Codepen>
           <i class="fab fa-codepen footer__icon"></i>
         </a>
         <a
           href="https://linkedin.com/in/nicole-sattler-285910142/"
           target="_blank"
+          rel="noopener"
+          aria-label="Go to DevNikki's Linkedin
         >
           <i class="fab fa-linkedin-in footer__icon"></i>
         </a>
@@ -382,7 +414,7 @@
           Devices illustration by
           <a
             href="https://www.figma.com/community/file/810922307190314237"
-            target="_blank"
+            target="_blank" rel="noopener"
             >realvjy</a
           >
 
@@ -390,6 +422,7 @@
           <a
             href="https://thenounproject.com/search/?q=design&i=2084639#_=_"
             target="_blank"
+            rel="noopener"
           >
             Andi Nur Abdillah
           </a>
@@ -398,6 +431,7 @@
           <a
             href="https://thenounproject.com/search/?q=web%20app&i=325781"
             target="_blank"
+            rel="noopener"
           >
             Ben Davis
           </a>
@@ -406,6 +440,7 @@
           <a
             href="https://thenounproject.com/search/?q=development&creator=3463109&i=1959082"
             target="_blank"
+            rel="noopener"
           >
             mynamepong
           </a>
@@ -424,6 +459,9 @@
 
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <!-- Intersection Observer polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.10.0/intersection-observer.js"></script>
 
     <!-- Smooth scroll polyfill -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>

@@ -9,8 +9,6 @@ const navLinks = document.querySelectorAll('nav li a')
 const goTop = document.querySelector('.go-top')
 
 const faders = document.querySelectorAll('.fadeInOnScroll')
-const techs = document.querySelectorAll('.technologies__icon-wrapper')
-const services = document.querySelectorAll('.service')
 
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
@@ -163,7 +161,9 @@ function fadeInOnScroll(entries, observer) {
   let techOffset = 100
   let serviceOffset = 100
 
-  entries.forEach(function (entry) {
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i]
+
     // Early return if the element is not visible on screen
     if (!entry.isIntersecting) return
 
@@ -173,7 +173,7 @@ function fadeInOnScroll(entries, observer) {
         entry.target.classList.add('fadeIn')
       }, techOffset)
 
-      techOffset += 100
+      techOffset += 200
     }
     // Show services
     else if (entry.target.classList.contains('service')) {
@@ -181,7 +181,7 @@ function fadeInOnScroll(entries, observer) {
         entry.target.classList.add('fadeIn')
       }, serviceOffset)
 
-      serviceOffset += 200
+      serviceOffset += 300
     }
     // Show everything else
     else {
@@ -191,9 +191,9 @@ function fadeInOnScroll(entries, observer) {
     // This is to stop watching or "observing" the element
     // Everything above this will only run once
     observer.unobserve(entry.target)
-  })
+  }
 }
 
-faders.forEach(function (fader) {
-  observer.observe(fader)
-})
+for (let i = 0; i < faders.length; i++) {
+  observer.observe(faders[i])
+}
