@@ -1,7 +1,6 @@
 const gulp = require('gulp')
 const wait = require('gulp-wait')
 const sass = require('gulp-sass')
-const purgecss = require('gulp-purgecss')
 const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
 
@@ -13,11 +12,6 @@ gulp.task('sass', () =>
     .pipe(
       autoprefixer({
         browserList: ['defaults', 'last 4 versions'],
-      })
-    )
-    .pipe(
-      purgecss({
-        content: ['index.html'],
       })
     )
     .pipe(minifyCSS())
