@@ -1,14 +1,15 @@
-const nav = document.querySelector('.navbar')
 const form = document.querySelector('.form')
-const inputs = document.querySelectorAll('.form-input')
 const name = document.querySelector('#name')
+const nav = document.querySelector('.navbar')
 const email = document.querySelector('#email')
 const msg = document.querySelector('#message')
-const displayMsg = document.querySelector('#display-msg')
-const navLinks = document.querySelectorAll('nav li a')
 const goTop = document.querySelector('.go-top')
-
+const navLinks = document.querySelectorAll('nav li a')
+const inputs = document.querySelectorAll('.form-input')
+const displayMsg = document.querySelector('#display-msg')
 const faders = document.querySelectorAll('.fadeInOnScroll')
+
+// TODO: Covert over to es6
 
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
@@ -24,7 +25,7 @@ Array.prototype.slice.call(navLinks).forEach(function (link) {
 
 // Handle nav link clicks
 function handleNavClick(e) {
-  const scrollTo = e.target.getAttribute('data-goto')
+  const scrollTo = e.target.getAttribute('href')
 
   // Polyfill code for smooth scroll
   document.querySelector(scrollTo).scrollIntoView({
@@ -38,9 +39,11 @@ window.addEventListener('resize', handleScroll)
 
 // Scroll handler
 function handleScroll(e) {
-  // Grab scroll position and window width
+  // Grab scroll position
   const scrollPos =
     this.scrollY || this.scrollTop || document.documentElement.scrollTop
+
+  // Grab window width
   const windowWidth = window.innerWidth || document.documentElement.clientWidth
 
   // Show / hide go to top button
@@ -52,8 +55,7 @@ function handleScroll(e) {
 
   // Early return if screen width is less than 925
   if (windowWidth < 925) {
-    setNavStyles('solid')
-    return
+    return setNavStyles('solid')
   }
 
   // Apply styles based on position
@@ -64,17 +66,9 @@ function handleScroll(e) {
   }
 }
 
-// I don't think this needs a comment
 function setNavStyles(style) {
-  if (style === 'solid') {
-    nav.style.padding = '25px'
-    nav.style.boxShadow = 'rgba(0, 0, 0, 0.5) 0px 5px 10px -10px'
-    nav.style.background = '#fff'
-  } else {
-    nav.style.padding = '50px'
-    nav.style.boxShadow = 'none'
-    nav.style.background = 'none'
-  }
+  nav.classList.remove('navbar--solid', 'navbar--transparent')
+  nav.classList.add(`navbar--${style}`)
 }
 
 // Form input shizz
@@ -87,7 +81,6 @@ function handleInputAnimation(e) {
   // Grab input value
   const val = e.target.value
 
-  // Keey form label if if input is not empty
   if (val) {
     e.target.classList.add('notEmpty')
   } else {
@@ -152,7 +145,7 @@ function displayData(res) {
 
 // Intersection observer -- Fade in on scroll
 const options = {
-  rootMargin: '0px 0px -100px 0px',
+  rootMargin: '0px 0px -75px 0px',
 }
 
 const observer = new IntersectionObserver(fadeInOnScroll, options)

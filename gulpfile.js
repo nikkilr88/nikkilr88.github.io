@@ -4,6 +4,8 @@ const sass = require('gulp-sass')
 const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
 
+// TODO: Add task to transpile es6 to es5
+
 gulp.task('sass', () =>
   gulp
     .src('src/main.scss')
