@@ -6,17 +6,32 @@
   position: relative;
 
   @include mobile() {
-    padding: 50px 25px;
+    padding: 65px 25px;
   }
 
   &__heading {
     font-size: 28px;
     opacity: 0.9;
     color: #fff;
+    margin-bottom: $padding-sm;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Lato';
+    font-weight: 400;
   }
 
   &__icon-wrapper {
     position: relative;
+    font-size: 30px;
+
+    @include mobile() {
+      font-size: 25px;
+    }
 
     &:hover {
       span {

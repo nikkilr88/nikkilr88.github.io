@@ -68,6 +68,7 @@ function handleScroll(e) {
 
 function setNavStyles(style) {
   nav.classList.remove('navbar--solid', 'navbar--transparent')
+  // TODO: Currently does not work in IE - Change to es5 or wait and use gulp to transpile everything
   nav.classList.add(`navbar--${style}`)
 }
 

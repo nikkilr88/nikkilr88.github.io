@@ -10,7 +10,7 @@
 
   &--solid {
     padding: 20px $padding-md;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.97);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
   }
 
@@ -22,7 +22,6 @@
 
   @include mobile {
     padding: 25px;
-    background: #f9f9f9;
     margin-bottom: $padding-md;
     font-size: 1.8rem;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
@@ -36,18 +35,17 @@
 
   &__logo {
     margin-right: auto;
-    height: 35px;
     display: flex;
     align-items: center;
 
     @include mobile() {
       display: block;
       margin: 0 0 $padding-sm 0;
-      height: 40px;
     }
 
     img {
-      height: 30px;
+      width: 30px;
+      height: auto;
       margin-right: 5px;
 
       @include mobile() {

@@ -60,11 +60,11 @@ $enterUpOpacity: 0;
   &__illustration {
     position: relative;
     max-width: 585px;
-    min-height: 250px;
+    // min-height: 250px;
     width: 100%;
     display: block;
     margin: 0 auto;
-    margin-bottom: -4px;
+    margin-bottom: -1px;
     transform: translateY($enterUpTranslate);
     opacity: $enterUpOpacity;
     animation: 0.5s enterUp 0.1s ease-in-out forwards;
