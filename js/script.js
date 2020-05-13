@@ -152,7 +152,6 @@ const options = {
 const observer = new IntersectionObserver(fadeInOnScroll, options)
 
 function fadeInOnScroll(entries, observer) {
-  let techOffset = 100
   let serviceOffset = 100
 
   for (let i = 0; i < entries.length; i++) {
@@ -162,15 +161,7 @@ function fadeInOnScroll(entries, observer) {
     if (!entry.isIntersecting) return
 
     // Show tech icons
-    if (entry.target.classList.contains('technologies__icon-wrapper')) {
-      setTimeout(function () {
-        entry.target.classList.add('fadeIn')
-      }, techOffset)
-
-      techOffset += 200
-    }
-    // Show services
-    else if (entry.target.classList.contains('service')) {
+    if (entry.target.classList.contains('service')) {
       setTimeout(function () {
         entry.target.classList.add('fadeIn')
       }, serviceOffset)
