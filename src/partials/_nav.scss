@@ -6,7 +6,8 @@
   position: fixed;
   top: 0;
   transition: all 0.2s;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: $secondary;
 
   &--solid {
     padding: 20px $padding-md;
@@ -54,10 +55,11 @@
       }
     }
 
-    p {
+    span {
       font-size: 1.6rem;
-      font-family: 'Quicksand';
+      font-family: $secondary;
       color: $purple-dark;
+      font-weight: 500;
 
       @include mobile() {
         display: none;
@@ -66,7 +68,6 @@
   }
 
   &__link {
-    font-weight: 600;
     display: inline-block;
     margin-right: 35px;
     position: relative;

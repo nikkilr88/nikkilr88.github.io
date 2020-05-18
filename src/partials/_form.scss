@@ -47,7 +47,7 @@
 
   input,
   textarea {
-    font-family: $main;
+    font-family: $secondary;
     display: block;
     width: 100%;
     padding: 15px;
@@ -97,7 +97,7 @@
 }
 
 .error {
-  background: $redorange;
+  background: $pink;
 }
 
 .success {

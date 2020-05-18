@@ -15,8 +15,13 @@
 
     <!-- Web Fonts -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@500;700&family=Roboto:wght@300;500;900&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300|Grand+Hotel|Quicksand:500,700|Lato:300&display=swap"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap"
+      rel="stylesheet"
     />
 
     <link
@@ -43,7 +48,7 @@
         <!-- Logos -->
         <div class="navbar__logo">
           <img src="images/Logo.svg" alt="DevNikki logo" />
-          <p>DevNikki</p>
+          <span>DevNikki</span>
         </div>
 
         <!-- Nav links -->
@@ -59,7 +64,7 @@
               href="#contact"
               class="navbar__contact"
               aria-label="Go to contact section"
-              >Say hello</a
+              >Say hello 👋</a
             >
           </li>
         </ul>
@@ -74,7 +79,7 @@
           I'm a <br class="mobile-break" />
           JavaScript developer
           <br />
-          with an eye for <span class="purple squiggle">design</span>
+          with an eye for <span class="squiggle">design</span>
         </h1>
         <p class="hero__sub-heading">
           I build beautiful websites and apps.
@@ -90,14 +95,16 @@
 
     <!-- About section -->
     <section class="about">
-      <h2 class="about__heading">
+      <!-- <h2 class="about__heading">
         Hi there!
-      </h2>
+      </h2> -->
       <p>
-        I'm Nikki! I'm a self-taught JavaScript developer and (wannabe) UI
-        designer. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-        ducimus, labore fugit vitae consectetur magni.
+        <strong>Hi there, I'm Nikki!</strong> I'm a self-taught JavaScript
+        developer and (wannabe) UI designer. My passion is building websites and
+        web apps that are beautiful, responsive and accessible.
       </p>
+
+      <img class="about__dots" src="/images/Dots.svg" alt="" />
     </section>
 
     <!-- Main -->
@@ -114,9 +121,9 @@
             <img src="./images/color-wheel.svg" alt="Design color wheel" />
             <h3 class="service__heading">UI Design</h3>
             <p>
-              Colors and shapes and pen tools, oh my! I'm not a professional,
-              but I've been dabbling for quite a while. Figma and Gravit are my
-              go-tos.
+              Colors and shapes and pen tools, oh my! I'm not a professional
+              (yet), but I've been dabbling for quite a while. Figma and Gravit
+              are my go-tos.
             </p>
           </div>
           <div class="service fadeInOnScroll hidden">

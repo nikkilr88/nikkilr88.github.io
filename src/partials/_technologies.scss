@@ -1,11 +1,31 @@
 .about {
-  background: linear-gradient(to bottom right, $purple-light, $purple-dark);
   color: #fff;
   text-align: center;
   padding: $padding-lg;
+  position: relative;
+  // background: linear-gradient(to bottom right, $purple-light, $purple-dark);
 
   @include mobile() {
     padding: 65px 25px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    background: url('/images/Curve.svg'),
+      linear-gradient(to bottom right, $purple-light, $purple-dark);
+    z-index: -1;
+    background-size: 102%;
+    background-position: 0 101%;
+    background-repeat: no-repeat;
+
+    @include mobile() {
+      height: 155%;
+    }
   }
 
   &__heading {
@@ -15,12 +35,19 @@
     margin-bottom: $padding-sm;
   }
 
+  &__dots {
+    margin-top: 35px;
+  }
+
   p {
     font-size: 2rem;
     line-height: 1.5;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
-    font-family: 'Lato';
-    font-weight: 400;
+    font-family: 'Roboto';
+
+    strong {
+      font-weight: 500;
+    }
   }
 }
