@@ -13,12 +13,12 @@
     bottom: 0;
     width: 100%;
     background: linear-gradient(to bottom right, $purple-light, $purple-dark);
-    // clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
     z-index: -1;
   }
 
   &__text-wrapper {
     background: #fff;
+    border: 1px solid #dedede;
     padding: 75px;
     max-width: calc(1500px - 180px);
     margin: 0 auto;
@@ -39,15 +39,12 @@
   }
 
   &__para {
-    @include para(2.2em);
+    @include para(2em);
     margin: 0 auto 50px auto;
-    width: 65%;
+    max-width: 650px;
+    width: 100%;
     text-align: center;
-    font-family: 'Lato';
-
-    @include mobile() {
-      width: 90%;
-    }
+    font-family: 'Roboto';
   }
 
   &__icons {
