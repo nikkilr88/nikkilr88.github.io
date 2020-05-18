@@ -3,7 +3,6 @@
   text-align: center;
   padding: $padding-lg;
   position: relative;
-  // background: linear-gradient(to bottom right, $purple-light, $purple-dark);
 
   @include mobile() {
     padding: 65px 25px;
@@ -26,13 +25,6 @@
     @include mobile() {
       height: 155%;
     }
-  }
-
-  &__heading {
-    font-size: 28px;
-    opacity: 0.9;
-    color: #fff;
-    margin-bottom: $padding-sm;
   }
 
   &__dots {
