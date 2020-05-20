@@ -19,7 +19,7 @@ function goToTop() {
 }
 
 // Add click listener on nav links
-Array.prototype.slice.call(navLinks).forEach(function (link) {
+Array.from(navLinks).forEach(function (link) {
   link.addEventListener('click', handleNavClick)
 })
 
@@ -68,12 +68,11 @@ function handleScroll(e) {
 
 function setNavStyles(style) {
   nav.classList.remove('navbar--solid', 'navbar--transparent')
-  // TODO: Currently does not work in IE - Change to es5 or wait and use gulp to transpile everything
   nav.classList.add(`navbar--${style}`)
 }
 
 // Form input shizz
-Array.prototype.slice.call(inputs).forEach(function (input) {
+Array.from(inputs).forEach(function (input) {
   input.addEventListener('focusout', handleInputAnimation)
 })
 
@@ -121,7 +120,7 @@ function handleFormSubmit(e) {
 
 // Clear out form
 function resetForm() {
-  Array.prototype.slice.call(inputs).forEach(function (input) {
+  Array.from(inputs).forEach(function (input) {
     input.classList.remove('notEmpty')
     input.value = ''
   })
