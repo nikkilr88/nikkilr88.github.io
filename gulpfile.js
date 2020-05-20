@@ -6,6 +6,8 @@ const uglify = require('gulp-uglify')
 const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
 
+const webpack = require('webpack-stream')
+
 gulp.task('sass', () =>
   gulp
     .src('src/scss/main.scss')
@@ -24,11 +26,11 @@ gulp.task('scripts', () => {
   return gulp
     .src(['./src/js/script.js'])
     .pipe(babel())
-    .pipe(uglify())
+    .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('watch:sass', () => {
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
-  gulp.watch('./src/js/script.js', gulp.series(['scripts']))
+  gulp.watch('./src/js/**/*.js', gulp.series(['scripts']))
 })

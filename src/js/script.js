@@ -1,3 +1,11 @@
+import '@babel/polyfill'
+import 'intersection-observer'
+
+import IntersectionObserverAnimations from './intersection-observer/intersection-observer'
+
+const ioa = new IntersectionObserverAnimations()
+ioa.init()
+
 const form = document.querySelector('.form')
 const name = document.querySelector('#name')
 const nav = document.querySelector('.navbar')
@@ -7,7 +15,6 @@ const goTop = document.querySelector('.go-top')
 const navLinks = document.querySelectorAll('nav li a')
 const inputs = document.querySelectorAll('.form-input')
 const displayMsg = document.querySelector('#display-msg')
-const faders = document.querySelectorAll('.fadeInOnScroll')
 
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
@@ -137,47 +144,7 @@ function buildMessageTemplate(className, message) {
   return `<div class="msg ${className}"><i class="far fa-times-circle"></i><span>${message}</span></div>`
 }
 
-function displayData(res) {
-  displayMsg.innerHTML = res.data.success
-    ? buildMessageTemplate('success', res.data.success)
-    : buildMessageTemplate('error', res.data.error)
-}
-
-// Intersection observer -- Fade in on scroll
-const options = {
-  rootMargin: '0px 0px -75px 0px',
-}
-
-const observer = new IntersectionObserver(fadeInOnScroll, options)
-
-function fadeInOnScroll(entries, observer) {
-  let serviceOffset = 100
-
-  for (let i = 0; i < entries.length; i++) {
-    const entry = entries[i]
-
-    // Early return if the element is not visible on screen
-    if (!entry.isIntersecting) return
-
-    // Show tech icons
-    if (entry.target.classList.contains('service')) {
-      setTimeout(function () {
-        entry.target.classList.add('fadeIn')
-      }, serviceOffset)
-
-      serviceOffset += 300
-    }
-    // Show everything else
-    else {
-      entry.target.classList.add('fadeIn')
-    }
-
-    // This is to stop watching or "observing" the element
-    // Everything above this will only run once
-    observer.unobserve(entry.target)
-  }
-}
-
-for (let i = 0; i < faders.length; i++) {
-  observer.observe(faders[i])
+function displayData() {
+  let className = res.data.success ? 'success' : 'error'
+  buildMessageTemplate(className, res.data.error)
 }
