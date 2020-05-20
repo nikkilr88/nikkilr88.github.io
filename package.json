@@ -9,7 +9,6 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
     "concurrently": "^5.2.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -17,10 +16,9 @@
     "gulp-cli": "^2.2.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "gulp-wait": "^0.0.2",
     "live-server": "^1.2.1"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.8.7"
-  }
+  "dependencies": {}
 }

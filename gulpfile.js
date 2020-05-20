@@ -1,11 +1,10 @@
 const gulp = require('gulp')
 const wait = require('gulp-wait')
 const sass = require('gulp-sass')
+const babel = require('gulp-babel')
+const uglify = require('gulp-uglify')
 const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
-const babel = require('gulp-babel')
-
-// TODO: Add task to transpile es6 to es5
 
 gulp.task('sass', () =>
   gulp
@@ -24,20 +23,12 @@ gulp.task('sass', () =>
 gulp.task('scripts', () => {
   return gulp
     .src(['./src/js/script.js'])
-    .pipe(
-      babel({
-        presets: [
-          '@babel/preset-env',
-          {
-            modules: true,
-          },
-        ].map(require.resolve),
-      })
-    )
+    .pipe(babel())
+    .pipe(uglify())
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('watch:sass', () => {
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
-  gulp.watch('./src/js/**/*.js', gulp.series(['scripts']))
+  gulp.watch('./src/js/script.js', gulp.series(['scripts']))
 })

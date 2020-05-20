@@ -9,8 +9,6 @@ const inputs = document.querySelectorAll('.form-input')
 const displayMsg = document.querySelector('#display-msg')
 const faders = document.querySelectorAll('.fadeInOnScroll')
 
-// TODO: Covert over to es6
-
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
 
@@ -19,7 +17,7 @@ function goToTop() {
 }
 
 // Add click listener on nav links
-Array.from(navLinks).forEach(function (link) {
+Array.prototype.slice.call(navLinks).forEach(function (link) {
   link.addEventListener('click', handleNavClick)
 })
 
@@ -67,12 +65,14 @@ function handleScroll(e) {
 }
 
 function setNavStyles(style) {
-  nav.classList.remove('navbar--solid', 'navbar--transparent')
+  nav.classList.remove('navbar--solid')
+  nav.classList.remove('navbar--transparent')
+
   nav.classList.add(`navbar--${style}`)
 }
 
 // Form input shizz
-Array.from(inputs).forEach(function (input) {
+Array.prototype.slice.call(inputs).forEach(function (input) {
   input.addEventListener('focusout', handleInputAnimation)
 })
 
@@ -120,7 +120,7 @@ function handleFormSubmit(e) {
 
 // Clear out form
 function resetForm() {
-  Array.from(inputs).forEach(function (input) {
+  Array.prototype.slice.call(inputs).forEach(function (input) {
     input.classList.remove('notEmpty')
     input.value = ''
   })
@@ -133,14 +133,14 @@ function hideDisplayMsg() {
   displayMsg.innerHTML = ''
 }
 
+function buildMessageTemplate(className, message) {
+  return `<div class="msg ${className}"><i class="far fa-times-circle"></i><span>${message}</span></div>`
+}
+
 function displayData(res) {
   displayMsg.innerHTML = res.data.success
-    ? '<div class="msg success"><i class="far fa-times-circle"></i><span>' +
-      res.data.success +
-      '</span></div>'
-    : '<div class="msg error"><i class="far fa-times-circle"></i><span>' +
-      res.data.error +
-      '</span></div>'
+    ? buildMessageTemplate('success', res.data.success)
+    : buildMessageTemplate('error', res.data.error)
 }
 
 // Intersection observer -- Fade in on scroll
