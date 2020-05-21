@@ -1,20 +1,21 @@
 import '@babel/polyfill'
 import 'intersection-observer'
 
+// !: Import classes
 import IntersectionObserverAnimations from './intersection-observer/intersection-observer'
+import ContactForm from './contact-form/contact-form'
 
+// !: Initiate classes
 const ioa = new IntersectionObserverAnimations()
 ioa.init()
 
-const form = document.querySelector('.form')
-const name = document.querySelector('#name')
+const contactForm = new ContactForm()
+contactForm.init()
+
 const nav = document.querySelector('.navbar')
-const email = document.querySelector('#email')
-const msg = document.querySelector('#message')
 const goTop = document.querySelector('.go-top')
 const navLinks = document.querySelectorAll('nav li a')
 const inputs = document.querySelectorAll('.form-input')
-const displayMsg = document.querySelector('#display-msg')
 
 // Scroll to top shizz
 goTop.addEventListener('click', goToTop)
@@ -78,6 +79,7 @@ function setNavStyles(style) {
   nav.classList.add(`navbar--${style}`)
 }
 
+// TODO: Add to contact form class
 // Form input shizz
 Array.prototype.slice.call(inputs).forEach(function (input) {
   input.addEventListener('focusout', handleInputAnimation)
@@ -93,58 +95,4 @@ function handleInputAnimation(e) {
   } else {
     e.target.classList.remove('notEmpty')
   }
-}
-
-// Form action shizz
-form.addEventListener('submit', handleFormSubmit)
-
-// Send form data to backend
-function handleFormSubmit(e) {
-  e.preventDefault()
-
-  const data = {
-    name: name.value,
-    email: email.value,
-    message: msg.value,
-  }
-
-  axios
-    .post('https://node-sender.glitch.me/', data)
-    .then(function (res) {
-      displayData(res)
-
-      if (res.data.success) {
-        resetForm()
-      }
-    })
-    .catch(function (err) {
-      displayMsg.innerHTML =
-        '<div class="msg error"><i class="far fa-times-circle"></i>' +
-        err +
-        '</div>'
-    })
-}
-
-// Clear out form
-function resetForm() {
-  Array.prototype.slice.call(inputs).forEach(function (input) {
-    input.classList.remove('notEmpty')
-    input.value = ''
-  })
-}
-
-// Display message shizz
-displayMsg.addEventListener('click', hideDisplayMsg)
-
-function hideDisplayMsg() {
-  displayMsg.innerHTML = ''
-}
-
-function buildMessageTemplate(className, message) {
-  return `<div class="msg ${className}"><i class="far fa-times-circle"></i><span>${message}</span></div>`
-}
-
-function displayData() {
-  let className = res.data.success ? 'success' : 'error'
-  buildMessageTemplate(className, res.data.error)
 }

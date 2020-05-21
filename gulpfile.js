@@ -7,6 +7,7 @@ const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
 
 const webpack = require('webpack-stream')
+const plumber = require('gulp-plumber')
 
 gulp.task('sass', () =>
   gulp
@@ -25,6 +26,7 @@ gulp.task('sass', () =>
 gulp.task('scripts', () => {
   return gulp
     .src(['./src/js/script.js'])
+    .pipe(plumber())
     .pipe(babel())
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('dist'))
