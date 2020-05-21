@@ -32,7 +32,7 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('watch:sass', () => {
+gulp.task('watch', () => {
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
   gulp.watch('./src/js/**/*.js', gulp.series(['scripts']))
 })

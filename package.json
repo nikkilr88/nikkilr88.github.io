@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"gulp watch:sass\" \"live-server\" --names gulp,live-server "
+    "dev": "concurrently \"gulp watch\" \"live-server\" --names gulp,live-server "
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
