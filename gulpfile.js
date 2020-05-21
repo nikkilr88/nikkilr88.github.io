@@ -2,12 +2,11 @@ const gulp = require('gulp')
 const wait = require('gulp-wait')
 const sass = require('gulp-sass')
 const babel = require('gulp-babel')
-const uglify = require('gulp-uglify')
+const rename = require('gulp-rename')
+const plumber = require('gulp-plumber')
+const webpack = require('webpack-stream')
 const minifyCSS = require('gulp-minify-css')
 const autoprefixer = require('gulp-autoprefixer')
-
-const webpack = require('webpack-stream')
-const plumber = require('gulp-plumber')
 
 gulp.task('sass', () =>
   gulp
@@ -20,12 +19,13 @@ gulp.task('sass', () =>
       })
     )
     .pipe(minifyCSS())
+    .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('dist'))
 )
 
 gulp.task('scripts', () => {
   return gulp
-    .src(['./src/js/script.js'])
+    .src(['./src/js/index.js'])
     .pipe(plumber())
     .pipe(babel())
     .pipe(webpack(require('./webpack.config.js')))

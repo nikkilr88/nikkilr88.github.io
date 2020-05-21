@@ -37,7 +37,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./dist/main.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/styles.min.css" />
 
     <title>DevNikki - Web Developer & Design Dabbler</title>
   </head>
@@ -47,7 +47,10 @@
       <div class="container">
         <!-- Logos -->
         <div class="navbar__logo">
-          <img src="images/Logo-Solid.svg" alt="DevNikki logo" />
+          <img
+            src="images/Logo-Solid.svg"
+            alt="DevNikki logo - A 'D' made from two triangles and a half circle with a 'N' in the middle"
+          />
           <span>DevNikki</span>
         </div>
 
@@ -89,7 +92,7 @@
       <img
         class="hero__illustration"
         src="./images/Hero-Illustration.svg"
-        alt="Computer and mobile devices with design software and websites"
+        alt="Computer and mobile devices with design software and websites on screen"
       />
     </header>
 
@@ -104,7 +107,11 @@
         that are beautiful, responsive and accessible.
       </p>
 
-      <img class="about__dots" src="/images/Dots.svg" alt="" />
+      <img
+        class="about__dots"
+        src="/images/Dots.svg"
+        alt="Three dot section divider"
+      />
     </section>
 
     <!-- Main -->
@@ -164,8 +171,8 @@
           <!-- Heading -->
           <div class="project__title-wrapper">
             <h3 class="project__title">DevCasts</h3>
-            <span>Node</span>
             <span>React</span>
+            <span>Node</span>
             <span>Parcel</span>
           </div>
           <!-- Description -->
@@ -471,9 +478,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
     ></script>
 
-    <!-- Intersection Observer polyfill -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.10.0/intersection-observer.js"></script> -->
-
     <!-- Smooth scroll polyfill -->
     <script
       defer
@@ -481,6 +485,6 @@
     ></script>
 
     <!-- Local scripts -->
-    <script defer src="./dist/script.js"></script>
+    <script defer src="./dist/index.min.js"></script>
   </body>
 </html>
