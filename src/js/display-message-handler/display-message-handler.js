@@ -23,7 +23,7 @@ class DisplayMessageHandler {
   }
 
   displayData(res) {
-    let className = res.data
+    const className = res.data
       ? res.data.success
         ? 'success'
         : 'error'

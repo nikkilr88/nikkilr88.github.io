@@ -1,29 +1,31 @@
 class IntersectionObserverAnimations {
+  // TODO: Refactor for loops to for of
+
   init() {
-    this.cacheDOM()
-    this.createObserver()
-    this.observeFaders()
+    this._cacheDOM()
+    this._createObserver()
+    this._observeFaders()
   }
 
-  cacheDOM() {
+  _cacheDOM() {
     this.faders = document.querySelectorAll('.fadeInOnScroll')
   }
 
-  createObserver() {
+  _createObserver() {
     const options = {
       rootMargin: '0px 0px -75px 0px',
     }
 
-    this.observer = new IntersectionObserver(this.fadeInOnScroll, options)
+    this.observer = new IntersectionObserver(this._fadeInOnScroll, options)
   }
 
-  observeFaders() {
+  _observeFaders() {
     for (let i = 0; i < this.faders.length; i++) {
       this.observer.observe(this.faders[i])
     }
   }
 
-  fadeInOnScroll(entries, observer) {
+  _fadeInOnScroll(entries, observer) {
     let serviceOffset = 100
 
     for (let i = 0; i < entries.length; i++) {
