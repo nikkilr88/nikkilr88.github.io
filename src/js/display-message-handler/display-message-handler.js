@@ -22,7 +22,7 @@ class DisplayMessageHandler {
     return `<div class="msg ${className}"><i class="far fa-times-circle"></i><span>${message}</span></div>`
   }
 
-  displayData(res) {
+  showDisplayMessage(res) {
     const className = res.data
       ? res.data.success
         ? 'success'

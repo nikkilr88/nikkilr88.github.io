@@ -20,17 +20,15 @@ class IntersectionObserverAnimations {
   }
 
   _observeFaders() {
-    for (let i = 0; i < this.faders.length; i++) {
-      this.observer.observe(this.faders[i])
+    for (let fader of this.faders) {
+      this.observer.observe(fader)
     }
   }
 
   _fadeInOnScroll(entries, observer) {
-    let serviceOffset = 100
+    let offset = 100
 
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i]
-
+    for (let entry of entries) {
       // Early return if the element is not visible on screen
       if (!entry.isIntersecting) return
 
@@ -38,9 +36,9 @@ class IntersectionObserverAnimations {
       if (entry.target.classList.contains('service')) {
         setTimeout(function () {
           entry.target.classList.add('fadeIn')
-        }, serviceOffset)
+        }, offset)
 
-        serviceOffset += 300
+        offset += 300
       }
       // Show everything else
       else {

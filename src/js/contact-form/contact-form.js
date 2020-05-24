@@ -27,27 +27,22 @@ class ContactForm {
     })
   }
 
-  _handleFormSubmit(event) {
-    event.preventDefault()
-
+  _postFormData() {
     const data = {
       name: this.nameField.value,
       email: this.emailField.value,
       message: this.messageField.value,
     }
 
-    axios
-      .post('https://node-sender.glitch.me/', data)
-      .then(res => {
-        messageHandler.displayData(res)
+    return axios.post('https://node-sender.glitch.me/', data)
+  }
 
-        if (res.data.success) {
-          this._resetForm()
-        }
-      })
-      .catch(error => {
-        messageHandler.displayData(error)
-      })
+  _handleFormSubmit(event) {
+    event.preventDefault()
+
+    this._postFormData()
+      .then(res => messageHandler.showDisplayMessage(res))
+      .catch(error => messageHandler.showDisplayMessage(error))
   }
 }
 
