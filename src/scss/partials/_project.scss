@@ -4,7 +4,7 @@
   align-items: flex-start;
   margin: 0 auto $padding-lg auto;
 
-  @include mobile() {
+  @include tablet() {
     display: block;
     margin: 0 auto $padding-md auto;
     text-align: center;
@@ -20,7 +20,7 @@
     padding-left: 10px;
     border-left: 2px solid $purple-light;
 
-    @include mobile() {
+    @include tablet() {
       margin: 0 auto 15px auto;
       text-align: center;
       border: none;
@@ -30,7 +30,7 @@
   &__text {
     margin: 0 0 0 65px;
 
-    @include mobile() {
+    @include tablet() {
       margin: 0;
     }
   }
@@ -41,7 +41,7 @@
     font-weight: bold;
     font-family: $secondary;
 
-    @include mobile() {
+    @include tablet() {
       display: block;
       margin: 0 0 10px;
     }

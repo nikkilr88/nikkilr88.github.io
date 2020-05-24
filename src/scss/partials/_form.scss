@@ -10,7 +10,7 @@
     padding: 10px;
     position: relative;
 
-    @include mobile() {
+    @include tablet() {
       flex: 1 1 100%;
     }
   }
@@ -57,7 +57,7 @@
     border-bottom: 2px solid #eee;
     outline: none;
 
-    @include mobile() {
+    @include tablet() {
       margin: 15px 5px;
     }
   }

@@ -4,7 +4,7 @@
   padding: $padding-lg;
   position: relative;
 
-  @include mobile() {
+  @include tablet() {
     padding: 65px 25px;
   }
 

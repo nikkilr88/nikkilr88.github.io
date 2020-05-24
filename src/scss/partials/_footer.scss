@@ -2,7 +2,7 @@
   text-align: center;
   position: relative;
 
-  @include mobile() {
+  @include tablet() {
     margin-top: $padding-lg;
   }
 
@@ -26,7 +26,7 @@
     border-radius: 5px;
     position: relative;
 
-    @include mobile {
+    @include tablet() {
       padding: $padding-md $padding-sm $padding-lg $padding-sm;
     }
   }
@@ -94,7 +94,7 @@
   .container {
     padding: 0 90px;
 
-    @include mobile() {
+    @include tablet() {
       padding: 0;
       width: 95%;
     }

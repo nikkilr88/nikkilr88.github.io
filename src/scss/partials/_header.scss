@@ -5,7 +5,7 @@ $enterUpOpacity: 0;
   position: relative;
   margin: 170px $padding-md 0;
 
-  @include mobile() {
+  @include tablet() {
     margin: 190px $padding-sm 0;
     background: none;
     background-size: cover;
@@ -18,7 +18,7 @@ $enterUpOpacity: 0;
     max-width: 950px;
     width: 95%;
 
-    @include mobile() {
+    @include tablet() {
       max-width: 550px;
       width: 100%;
       text-align: center;
@@ -35,7 +35,7 @@ $enterUpOpacity: 0;
     opacity: $enterUpOpacity;
     animation: 0.5s enterUp ease-in-out forwards;
 
-    @include mobile() {
+    @include tablet() {
       font-size: 35px;
     }
   }
@@ -50,7 +50,7 @@ $enterUpOpacity: 0;
     animation: 0.5s enterUp 0.05s ease-in-out forwards;
     font-weight: normal;
 
-    @include mobile {
+    @include tablet {
       margin: 15px auto;
       width: 85%;
     }
@@ -68,7 +68,7 @@ $enterUpOpacity: 0;
     opacity: $enterUpOpacity;
     animation: 0.5s enterUp 0.1s ease-in-out forwards;
 
-    @include mobile() {
+    @include tablet() {
       min-height: 0;
       margin-bottom: -1px;
     }

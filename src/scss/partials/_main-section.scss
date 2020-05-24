@@ -4,14 +4,14 @@
   section {
     padding: $padding-xl $padding-lg 0;
 
-    @include mobile() {
+    @include tablet() {
       padding: $padding-lg 35px 0;
     }
 
     &:last-child {
       padding-bottom: $padding-xl;
 
-      @include mobile() {
+      @include tablet() {
         padding-bottom: 0;
       }
     }
@@ -22,7 +22,7 @@
     margin-bottom: $padding-lg !important;
     font-weight: bold;
 
-    @include mobile() {
+    @include tablet() {
       margin-bottom: $padding-md !important;
     }
   }
@@ -30,7 +30,7 @@
   &__para {
     @include para(2em);
 
-    @include mobile() {
+    @include tablet() {
       padding: 5px 0;
     }
   }

@@ -21,7 +21,7 @@
     box-shadow: none;
   }
 
-  @include mobile {
+  @include tablet {
     padding: 25px;
     margin-bottom: $padding-md;
     font-size: 1.8rem;
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
 
-    @include mobile() {
+    @include tablet() {
       display: block;
       margin: 0 0 $padding-sm 0;
     }
@@ -49,7 +49,7 @@
       height: auto;
       margin-right: 5px;
 
-      @include mobile() {
+      @include tablet() {
         height: 100%;
         margin-right: 0;
       }
@@ -61,7 +61,7 @@
       color: $purple-dark;
       font-weight: 500;
 
-      @include mobile() {
+      @include tablet() {
         display: none;
       }
     }
@@ -107,7 +107,7 @@
       backface-visibility: hidden;
     }
 
-    @include mobile() {
+    @include tablet() {
       color: $lightgray;
     }
   }
@@ -126,7 +126,7 @@
     background-position: 100%;
     transition: background-position 0.5s;
 
-    @include mobile() {
+    @include tablet() {
       padding: 0;
       color: #555 !important;
       border: none;
@@ -154,7 +154,7 @@
     display: flex;
     align-items: center;
 
-    @include mobile {
+    @include tablet {
       flex-direction: column;
       align-items: center;
     }
