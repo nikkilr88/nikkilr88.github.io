@@ -31,7 +31,7 @@ class DisplayMessageHandler {
 
     this.displayMessage.innerHTML = this._buildMessageTemplate(
       className,
-      res.data?.error || res
+      res.data?.error || res.data?.success || res.response?.data.error
     )
   }
 }

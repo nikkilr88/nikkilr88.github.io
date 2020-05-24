@@ -41,7 +41,13 @@ class ContactForm {
     event.preventDefault()
 
     this._postFormData()
-      .then(res => messageHandler.showDisplayMessage(res))
+      .then(res => {
+        if (res?.data.success) {
+          this._resetForm()
+        }
+
+        messageHandler.showDisplayMessage(res)
+      })
       .catch(error => messageHandler.showDisplayMessage(error))
   }
 }
