@@ -1,21 +1,38 @@
 const gulp = require('gulp')
-const autoprefixer = require('gulp-autoprefixer')
-const sass = require('gulp-sass')
 const wait = require('gulp-wait')
+const sass = require('gulp-sass')
+const babel = require('gulp-babel')
+const rename = require('gulp-rename')
+const plumber = require('gulp-plumber')
+const webpack = require('webpack-stream')
+const minifyCSS = require('gulp-minify-css')
+const autoprefixer = require('gulp-autoprefixer')
 
-gulp.task('prefixer', () =>
+gulp.task('sass', () =>
   gulp
-    .src('src/main.scss')
-    .pipe(wait(200))
+    .src('src/scss/main.scss')
+    .pipe(wait(350))
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ['last 4 versions']
+        browserList: ['defaults', 'last 4 versions'],
       })
     )
-    .pipe(gulp.dest('css'))
+    .pipe(minifyCSS())
+    .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('dist'))
 )
 
-gulp.task('watch:styles', () => {
-  gulp.watch('./src/**/*.scss', gulp.series('prefixer'))
+gulp.task('scripts', () => {
+  return gulp
+    .src(['./src/js/index.js'])
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest('dist'))
+})
+
+gulp.task('watch', () => {
+  gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
+  gulp.watch('./src/js/**/*.js', gulp.series(['scripts']))
 })

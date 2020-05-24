@@ -4,9 +4,9 @@ html {
 }
 
 body {
-  font-family: $main;
+  font-family: $secondary;
   background: #f9f9f9;
-  color: #333;
+  color: #4b4453;
   position: relative;
 }
 
@@ -21,14 +21,14 @@ html {
 }
 
 h1,
-h2,
 h3 {
-  font-weight: normal;
-  color: #555;
+  font-weight: 700;
+  font-family: $primary;
 }
 
 p {
   padding: 5px;
+  font-weight: 100;
 }
 
 a {
@@ -56,11 +56,13 @@ button {
   margin: 0 auto;
 }
 
+// TODO: Move this out of global
 .go-top {
   height: 45px;
   width: 45px;
+  border: none;
   border-radius: 50%;
-  background: $purple;
+  background: $pink;
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -68,13 +70,32 @@ button {
   line-height: 45px;
   font-size: 1.5rem;
   color: #fff;
-  transform: translateX(70px);
+  transform: scale(0);
   transition: all 0.2s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
 
 .show-go-top {
-  transform: translateX(0);
+  transform: scale(1);
   opacity: 1;
+}
+
+.hidden {
+  opacity: 0 !important;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.mobile-break {
+  display: none;
+
+  @include mobile() {
+    display: block;
+  }
 }

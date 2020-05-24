@@ -3,30 +3,36 @@
   <head>
     <!-- Meta shizz -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      name="description"
+      content="I'm a JavaScript developer with an eye for design. I build beautiful websites and web apps."
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Tab icon -->
-    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="images/Logo-Solid.svg" />
 
     <!-- Web Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300|Grand+Hotel|Quicksand|Lato:300"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@500;700&family=Roboto:wght@300;500;900&family=Poppins:wght@500;800&display=swap"
     />
 
     <link
       rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/styles.min.css" />
 
     <title>DevNikki - Web Developer & Design Dabbler</title>
   </head>
@@ -35,19 +41,29 @@
     <nav class="navbar">
       <div class="container">
         <!-- Logos -->
-        <img class="navbar__logo" src="images/logo-test2.png" alt="logo" />
-        <img class="navbar__logo-mobile" src="images/logo.png" alt="logo" />
+        <div class="navbar__logo">
+          <img
+            src="images/Logo-Solid.svg"
+            alt="DevNikki logo - A 'D' made from two triangles and a half circle with a 'N' in the middle"
+          />
+          <span>DevNikki</span>
+        </div>
 
         <!-- Nav links -->
-        <ul>
+        <ul class="navbar__links-wrapper">
           <li class="navbar__link">
-            <a href="#main" data-goto="#main">About</a>
+            <a href="#main" aria-label="Go to about section ">About</a>
           </li>
           <li class="navbar__link">
-            <a href="#projects" data-goto="#projects">Projects</a>
+            <a href="#projects" aria-label="Go to projects section">Projects</a>
           </li>
-          <li class="navbar__link">
-            <a href="#contact" data-goto="#contact">Contact</a>
+          <li class="navbar__link contact">
+            <a
+              href="#contact"
+              class="navbar__contact"
+              aria-label="Go to contact section"
+              >Say hello <span class="hand-emoji">👋</span></a
+            >
           </li>
         </ul>
       </div>
@@ -58,83 +74,79 @@
       <!-- Textblock -->
       <div class="hero__text">
         <h1 class="hero__heading">
-          I'm a JavaScript
-          <br id="br" />
-          developer and
-          <span class="fancy">design dabbler</span>
+          I'm a <br class="mobile-break" />
+          JavaScript developer
+          <br />
+          with an eye for <span class="squiggle">design</span>
         </h1>
-        <h2 class="hero__sub-heading">
-          I create websites and web apps. Click the button below to get in
-          touch, or scroll down to learn more.
-        </h2>
-        <a class="hero__button button button--main" href="#contact">
-          Tell me about your project
-        </a>
+        <p class="hero__sub-heading">
+          I build beautiful websites and apps.
+        </p>
       </div>
+      <img class="hero__blob" src="./images/Blob.svg" alt="Circle blob" />
+      <img
+        class="hero__illustration"
+        src="./images/Hero-Illustration.svg"
+        alt="Computer and mobile devices with design software and websites on screen"
+      />
     </header>
 
-    <!-- Technologies section -->
-    <section class="technologies">
-      <h3 class="technologies__heading">
-        Technologies & tools I enjoy...
-      </h3>
-      <div class="technologies__icons">
-        <span class="technologies__icon-wrapper">
-          <i class="fab fa-js"></i>
-          <h4>JavaScript</h4>
-        </span>
-        <span class="technologies__icon-wrapper">
-          <i class="fab fa-node-js"></i>
-          <h4>Node.js</h4>
-        </span>
-        <span class="technologies__icon-wrapper">
-          <i class="fab fa-react"></i>
-          <h4>React</h4>
-        </span>
-        <span class="technologies__icon-wrapper">
-          <i class="fab fa-sass"></i>
-          <h4>Sass</h4>
-        </span>
-        <span class="technologies__icon-wrapper">
-          <i class="fab fa-figma"></i>
-          <h4>Figma</h4>
-        </span>
-      </div>
+    <!-- About section -->
+    <section class="about">
+      <p>
+        <strong>Hi there, I'm Nikki!</strong> I'm a self-taught JavaScript
+        developer and UI designer. My passion is building websites and web apps
+        that are beautiful, responsive and accessible.
+      </p>
+
+      <img
+        class="about__dots"
+        src="/images/Dots.svg"
+        alt="Three dot section divider"
+      />
     </section>
 
     <!-- Main -->
     <main class="main" id="main">
       <section class="container services">
         <div class="main__textblock">
-          <h2 class="main__heading center">I'm usually working on...</h2>
+          <h2 class="main__heading center">
+            What I do
+          </h2>
         </div>
 
         <div class="services__wrapper">
-          <div class="service">
-            <img src="./images/Design.svg" alt="design" />
-            <h3 class="service__heading">Design</h3>
+          <div class="service fadeInOnScroll hidden">
+            <img src="./images/color-wheel.svg" alt="Design color wheel" />
+            <h3 class="service__heading">UI Design</h3>
             <p>
-              Colors and shapes and pen tools, oh my! I'm not a designer, but
-              recently I've been dabbling quite a bit with it. Figma is my go-to
-              software.
+              I'm a design hobbist who loves learning and making beautiful
+              things. My process is research → wireframe → mockup. Figma and
+              Affinity Designer are my go-tos.
             </p>
           </div>
-          <div class="service">
-            <img src="./images/App.svg" alt="app" />
-            <h3 class="service__heading">Web Apps</h3>
+          <div class="service fadeInOnScroll hidden">
+            <img
+              src="./images/Responsive-Design.svg"
+              alt="Monitor and mobile devices"
+            />
+            <h3 class="service__heading">Websites & SPAs</h3>
             <p>
-              Single page apps, progressive web apps, Chrome extensions... I
-              love it all. My favorite framework is React, and I'm currently
-              learning Gatsby.
+              I create responsive websites, single page apps and Chrome
+              extensions. My favorite framework is React, and I have a new found
+              love for Gatsby.
             </p>
           </div>
-          <div class="service">
-            <img src="./images/Service.svg" alt="service" />
-            <h3 class="service__heading">Node Services & Apps</h3>
+          <div class="service fadeInOnScroll hidden">
+            <img
+              src="./images/Database.svg"
+              alt="Backend database and server"
+            />
+            <h3 class="service__heading">Backend Apps</h3>
             <p>
               I use Node.js and Express to build out backend and fullstack apps.
-              I have coded bots, APIs and basic services to send templated
-              e-mails.
+              I have coded Twitter and Slack bots, APIs, and microservices to
+              send templated e-mails.
             </p>
           </div>
         </div>
@@ -147,43 +159,48 @@
         </div>
 
         <!-- PROJECT ONE -->
-        <div class="project">
+        <div class="project fadeInOnScroll hidden">
           <!-- Heading -->
           <div class="project__title-wrapper">
             <h3 class="project__title">DevCasts</h3>
-            <span>Node</span>
             <span>React</span>
+            <span>Node</span>
             <span>Parcel</span>
           </div>
           <!-- Description -->
           <div class="project__text">
             <p>
-              DevCasts is a podcast player featuring some of my favorite
-              developer shows. Features include basic audio and volume control
-              and uninterrupted play when switching channels.
+              DevCasts is a web podcast player featuring hand-picked developer
+              shows. Features include basic audio and volume controls and
+              uninterrupted audio when switching pages.
             </p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-solid">
-                <a href="https://devcasts.netlify.com/" target="_blank">
-                  View live
-                </a>
-              </button>
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/react-podcasts"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                rel="noopener"
+                target="_blank"
+                href="https://devcasts.netlify.com/"
+                aria-label="Go to DevCasts project website"
+                class="button button--small button--small-solid"
+              >
+                View live
+              </a>
+              <a
+                rel="noopener"
+                target="_blank"
+                aria-label="Go to DevCasts GitHub repo"
+                href="https://github.com/nikkilr88/react-podcasts"
+                class="button button--small button--small-outlined"
+              >
+                <i class="devicon-github-plain"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
 
         <!-- PROJECT TWO -->
-        <div class="project">
+        <div class="project fadeInOnScroll hidden">
           <!-- Heading -->
           <div class="project__title-wrapper">
             <h3 class="project__title">Code Snap</h3>
@@ -203,70 +220,97 @@
             </p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-solid">
-                <a href="https://codesnap.netlify.com/" target="_blank">
-                  View live
-                </a>
-              </button>
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/code-snap"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                rel="noopener"
+                target="_blank"
+                href="https://codesnap.netlify.com/"
+                aria-label="Go to Code Snap project website"
+                class="button button--small button--small-solid"
+              >
+                View live
+              </a>
+              <a
+                rel="noopener"
+                target="_blank"
+                aria-label="Go to Code Snap GitHub repo"
+                href="https://github.com/nikkilr88/code-snap"
+                class="button button--small button--small-outlined"
+              >
+                <i class="devicon-github-plain"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
 
         <!-- PROJECT THREE -->
-        <div class="project">
+        <div class="project fadeInOnScroll hidden">
           <!-- Heading -->
           <div class="project__title-wrapper">
-            <h3 class="project__title">Switchr</h3>
+            <h3 class="project__title">YT Downloader</h3>
             <span>React</span>
-            <span>API</span>
+            <span>Electron</span>
             <span>Parcel</span>
           </div>
           <!-- Description -->
           <div class="project__text">
             <p>
-              Switchr is a Chrome extension that toggles other extensions on and
-              off with just a click. Extensions are sorted by enabled status,
-              and there is a popup search to easily find what you're looking
-              for.
+              A desktop application to download YouTube videos. This basic
+              version of the app let's the user download one video at a time in
+              either MP3 or MP4 format.
             </p>
+            <p>Currently only availble on Windows.</p>
             <!-- Buttons -->
             <div class="project__btns">
-              <button class="button button--small button--small-outlined">
-                <a
-                  href="https://github.com/nikkilr88/chrome-ext-toggler"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </button>
+              <a
+                rel="noopener"
+                target="_blank"
+                class="button button--small button--small-solid"
+                aria-label="Download Youtube Downloader app for Windows"
+                href="https://github.com/nikkilr88/yt-mp3-react/releases"
+              >
+                <i class="devicon-windows8-original"></i> Download</a
+              >
+              <a
+                rel="noopener"
+                target="_blank"
+                href="https://github.com/nikkilr88/yt-mp3-react"
+                aria-label="Go to Youtube Downloader GitHub repo"
+                class="button button--small button--small-outlined"
+              >
+                <i class="devicon-github-plain"></i>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Honorable Mentions -->
         <div class="honorable">
-          <h1>Honorable Mentions</h1>
+          <h2 class="honorable__heading">Honorable Mentions</h2>
           <a
-            href="https://www.devnikki.com/frontend-mentor-challenges/"
+            rel="noopener"
             target="_blank"
+            class="honorable__link"
+            href="https://www.devnikki.com/frontend-mentor-challenges/"
+            aria-label="Go to Frontend Mentor Challenges project website"
             >⚡ Frontend Mentor Challenges</a
           >
           <a
-            href="https://www.npmjs.com/package/sarcastic-string"
+            rel="noopener"
             target="_blank"
+            class="honorable__link"
+            aria-label="Go to Sarcastic String npm page"
+            href="https://www.npmjs.com/package/sarcastic-string"
             >⚡ Sarcastic String</a
           >
-          <a href="https://twitter.com/GitLit000" target="_blank"
-            >⚡ Twitter Bot</a
+          <a
+            rel="noopener"
+            target="_blank"
+            class="honorable__link"
+            aria-label="Go to Switchr GitHub repo"
+            href="https://github.com/nikkilr88/chrome-ext-toggler"
+            >⚡ Switchr</a
           >
         </div>
       </section>
@@ -276,76 +320,95 @@
     <!-- Footer -->
     <footer class="footer" id="contact">
       <!-- Footer text -->
-      <div class="footer__text-wrapper">
-        <div class="footer__textblock">
-          <h2 class="footer__heading">Have an idea for a project?</h2>
-          <p class="footer__para">
-            I would love to hear about it! If you're still not convinced, you
-            can find more about me and my work on my social media below.
-          </p>
+      <div class="container">
+        <div class="footer__text-wrapper">
+          <div class="footer__textblock">
+            <h2 class="footer__heading">Say hello 👋!</h2>
+            <p class="footer__para">
+              Do you want to work together? Maybe you just want to say hello?
+              Feel free to reach out to me and let's talk! My DMs are also open
+              on Twitter (linked below) if you prefer to chat there.
+            </p>
+          </div>
+
+          <!-- Contact form -->
+          <form
+            class="form"
+            method="POST"
+            action="https://node-sender.glitch.me/"
+          >
+            <div class="form-group">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="form-input"
+                spellcheck="false"
+              />
+              <label for="name">Name</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                required
+                id="email"
+                type="email"
+                name="email"
+                class="form-input"
+                spellcheck="false"
+              />
+              <label for="email">E-mail *</label>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                required
+                id="message"
+                name="message"
+                class="form-input"
+                spellcheck="false"
+              ></textarea>
+              <label for="message">How can I help you? *</label>
+            </div>
+
+            <button class="button button--main footer__btn">
+              Send Message
+            </button>
+          </form>
+          <div id="display-msg"></div>
         </div>
-
-        <!-- Contact form -->
-        <form
-          class="form"
-          action="https://node-sender.glitch.me/"
-          method="POST"
-        >
-          <div class="form-group">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="form-input"
-              spellcheck="false"
-            />
-            <label for="name">Name</label>
-          </div>
-
-          <div class="form-group">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="form-input"
-              spellcheck="false"
-              required
-            />
-            <label for="email">E-mail</label>
-          </div>
-
-          <div class="form-group">
-            <textarea
-              id="message"
-              name="message"
-              class="form-input"
-              spellcheck="false"
-              required
-            ></textarea>
-            <label for="message">How can I help you?</label>
-          </div>
-
-          <button class="button button--main footer__btn">
-            Get in touch
-          </button>
-        </form>
-        <div id="display-msg"></div>
       </div>
-
       <!-- Social icons -->
       <div class="footer__icons">
-        <a href="https://twitter.com/nikkilr88" target="_blank">
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://twitter.com/nikkilr88"
+          aria-label="Go to DevNikki's Twitter"
+        >
           <i class="fab fa-twitter footer__icon"></i>
         </a>
-        <a href="https://github.com/nikkilr88" target="_blank">
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/nikkilr88"
+          aria-label="Go to DevNikki's GitHub"
+        >
           <i class="fab fa-github footer__icon"></i>
         </a>
-        <a href="https://codepen.io/nikkilr88/" target="_blank">
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://codepen.io/nikkilr88/"
+          aria-label="Go to DevNikki's Codepen"
+        >
           <i class="fab fa-codepen footer__icon"></i>
         </a>
         <a
-          href="https://linkedin.com/in/nicole-sattler-285910142/"
+          rel="noopener"
           target="_blank"
+          aria-label="Go to DevNikki's Linkedin"
+          href="https://linkedin.com/in/nicole-sattler-285910142/"
         >
           <i class="fab fa-linkedin-in footer__icon"></i>
         </a>
@@ -354,28 +417,39 @@
       <!-- Attribution -->
       <div class="footer__attribution">
         <p>
-          Design icon by
+          Devices illustration by
           <a
-            href="https://thenounproject.com/search/?q=design&i=2084639#_=_"
             target="_blank"
+            rel="noopener"
+            href="https://www.figma.com/community/file/810922307190314237"
+            >realvjy</a
           >
-            Andi Nur Abdillah, ID
+
+          | Color wheel icon by
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://www.flaticon.com/free-icon/color-wheel_2919733"
+          >
+            Freepik
           </a>
 
-          | App icon by
+          | Responsive design icon by
           <a
-            href="https://thenounproject.com/search/?q=web%20app&i=325781"
+            rel="noopener"
             target="_blank"
+            href="https://www.flaticon.com/free-icon/responsive-design_1837965"
           >
-            Ben Davis, RO
+            Freepik
           </a>
 
-          | Development icon by
+          | Database icon by
           <a
-            href="https://thenounproject.com/search/?q=development&creator=3463109&i=1959082"
+            rel="noopener"
             target="_blank"
+            href="https://www.flaticon.com/free-icon/database-storage_2906274"
           >
-            mynamepong, TH
+            phatplus
           </a>
         </p>
       </div>
@@ -384,19 +458,27 @@
       <div class="footer__bg"></div>
     </footer>
 
-    <div class="go-top"><i class="fas fa-arrow-up"></i></div>
+    <button class="go-top" aria-label="Go to top of page">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Minified version of `es6-promise-auto` below. -->
+    <!-- Without this, axios won't work in IE -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 
     <!-- Axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+    ></script>
 
     <!-- Smooth scroll polyfill -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"
+    ></script>
 
     <!-- Local scripts -->
-    <script src="./js/script.js"></script>
+    <script defer src="./dist/index.min.js"></script>
   </body>
 </html>

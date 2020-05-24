@@ -1,4 +1,10 @@
 .services {
+  padding-top: 0 !important;
+
+  h2 {
+    color: #fff;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,7 +19,7 @@
   text-align: center;
   width: 30%;
   background: #fff;
-  padding: 25px;
+  padding: 35px;
   border: 1px solid #dedede;
   border-radius: 5px;
 
@@ -27,10 +33,16 @@
     margin-bottom: 0;
   }
 
+  img {
+    max-width: 75px;
+    width: 45%;
+  }
+
   &__heading {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin: 15px;
     font-weight: bold;
+    font-family: $secondary;
   }
 
   p {

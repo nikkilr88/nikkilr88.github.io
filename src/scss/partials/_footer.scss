@@ -12,49 +12,39 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(
-      to bottom right,
-      $purple,
-      darken($purple, 10%)
-    );
-    clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
+    background: linear-gradient(to bottom right, $purple-light, $purple-dark);
     z-index: -1;
   }
 
   &__text-wrapper {
     background: #fff;
+    border: 1px solid #dedede;
     padding: 75px;
-    max-width: 900px;
-    width: 95%;
+    max-width: calc(1500px - 180px);
     margin: 0 auto;
-    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     position: relative;
 
     @include mobile {
       padding: $padding-md $padding-sm $padding-lg $padding-sm;
-      max-width: 550px;
     }
   }
 
   &__heading {
-    font-size: 2.8rem;
-    color: $darkgray;
+    font-size: 3.2rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: $padding-sm;
   }
 
   &__para {
-    @include para(2.2em);
+    @include para(2em);
     margin: 0 auto 50px auto;
-    width: 65%;
+    max-width: 650px;
+    width: 100%;
     text-align: center;
-    font-family: 'Lato';
-
-    @include mobile() {
-      width: 90%;
-    }
+    font-family: 'Roboto';
   }
 
   &__icons {
@@ -70,6 +60,7 @@
     padding: 15px;
     color: #eee;
     transition: all 0.2s;
+    backface-visibility: hidden;
 
     &:hover {
       transform: scale(1.3);
@@ -89,13 +80,23 @@
 
   &__attribution {
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.75;
     padding: 10px;
     line-height: 2;
+    font-family: 'Roboto';
 
     a {
       color: inherit;
       border-bottom: 1px dotted #fff;
+    }
+  }
+
+  .container {
+    padding: 0 90px;
+
+    @include mobile() {
+      padding: 0;
+      width: 95%;
     }
   }
 }

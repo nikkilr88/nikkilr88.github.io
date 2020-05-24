@@ -1,0 +1,172 @@
+.navbar {
+  font-size: 1.6rem;
+  padding: $padding-md;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-family: $secondary;
+
+  &--solid {
+    padding: 20px $padding-md;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
+  }
+
+  &--transparent {
+    padding: $padding-md;
+    background: none;
+    box-shadow: none;
+  }
+
+  @include mobile {
+    padding: 25px;
+    margin-bottom: $padding-md;
+    font-size: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px -10px;
+  }
+
+  &__links-wrapper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    @include mobile() {
+      display: block;
+      margin: 0 0 $padding-sm 0;
+    }
+
+    img {
+      width: 25px;
+      height: auto;
+      margin-right: 5px;
+
+      @include mobile() {
+        height: 100%;
+        margin-right: 0;
+      }
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-family: $secondary;
+      color: $purple-dark;
+      font-weight: 500;
+
+      @include mobile() {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 35px;
+    position: relative;
+    transition: width 0.05s;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media (hover: hover) {
+      &:hover:not(.contact) {
+        &:after {
+          width: 100%;
+          background: $purple-dark;
+        }
+
+        a {
+          color: $purple-dark;
+        }
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      background: $purple-dark;
+      transition: all 0.2s;
+      width: 0;
+      backface-visibility: hidden;
+    }
+
+    @include mobile() {
+      color: $lightgray;
+    }
+  }
+
+  // TODO: Move this over to button styles
+  &__contact {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: $purple-dark !important;
+    border: 2px solid $purple-dark;
+    background: linear-gradient(45deg, $purple-dark 50%, transparent 50%);
+    background-size: 300%;
+    background-position: 100%;
+    transition: background-position 0.5s;
+
+    @include mobile() {
+      padding: 0;
+      color: #555 !important;
+      border: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: #fff !important;
+        background-position: 0;
+
+        .hand-emoji {
+          animation: wave 0.2s 0.5s infinite ease-in-out alternate;
+        }
+      }
+    }
+  }
+
+  .hand-emoji {
+    display: inline-block;
+    transform: rotate(0);
+    transform-origin: bottom right;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}

@@ -19,7 +19,7 @@
     position: absolute;
     font-size: 1.6rem;
     transition: all 0.3s;
-    color: #999;
+    color: #6d6d6d;
   }
 
   input + label {
@@ -41,13 +41,13 @@
   textarea.notEmpty + label {
     font-size: 1.3rem;
     transform: translate(-10px, -50px);
-    color: $purple;
+    color: $purple-dark;
     font-weight: bold;
   }
 
   input,
   textarea {
-    font-family: $main;
+    font-family: $secondary;
     display: block;
     width: 100%;
     padding: 15px;
@@ -64,7 +64,7 @@
 
   input:focus,
   textarea:focus {
-    border-bottom: 2px solid $purple;
+    border-bottom: 2px solid $purple-dark;
   }
 
   textarea {
@@ -97,9 +97,9 @@
 }
 
 .error {
-  background: $redorange;
+  background: $pink;
 }
 
 .success {
-  background: $purple;
+  background: $purple-dark;
 }
