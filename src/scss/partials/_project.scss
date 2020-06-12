@@ -18,7 +18,7 @@
   &__title-wrapper {
     flex: 0 0 20%;
     padding-left: 10px;
-    border-left: 2px solid $purple-light;
+    border-left: 2px solid $purple-dark;
 
     @include tablet() {
       margin: 0 auto 15px auto;

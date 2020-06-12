@@ -37,6 +37,10 @@
       background: none;
       color: $purple-dark;
     }
+
+    &-no-border {
+      border: 2px solid transparent;
+    }
   }
 
   a {
