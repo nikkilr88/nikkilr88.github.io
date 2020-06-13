@@ -1,6 +1,10 @@
 .honorable {
   padding: 45px;
-  background: $purple-dark;
+  background-image: url('/images/Circle.svg'), url('/images/Circle.svg');
+  background-repeat: no-repeat;
+  background-position: -50px -85px, calc(100% + 100px) calc(100% + 110px);
+  background-size: 150px, 225px;
+  background-color: $purple-dark;
   color: #fff;
   border-radius: 5px;
   display: flex;
@@ -11,6 +15,14 @@
   @include tablet() {
     flex-direction: column;
     padding: 45px 25px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &__textblock {
+    margin: 0 auto !important;
   }
 
   &__heading {
@@ -34,6 +46,16 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &__icons {
+    margin-top: 35px;
+    text-align: center;
+
+    i {
+      font-size: 32px;
+      margin: 0 20px;
     }
   }
 }

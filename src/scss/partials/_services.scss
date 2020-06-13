@@ -26,7 +26,7 @@
   @include tablet() {
     max-width: 500px;
     width: 100%;
-    margin: 0 auto $padding-md;
+    margin: 0 auto 50px;
   }
 
   &:last-child {

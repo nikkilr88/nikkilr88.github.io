@@ -1,9 +1,10 @@
 .footer {
   text-align: center;
   position: relative;
+  margin-top: 75px;
 
   @include tablet() {
-    margin-top: $padding-lg;
+    margin-top: 50px;
   }
 
   &__bg {

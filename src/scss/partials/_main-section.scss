@@ -2,29 +2,33 @@
   display: block;
 
   section {
-    padding: $padding-xl $padding-lg 0;
+    padding: $padding-md $padding-lg;
 
     @include tablet() {
-      padding: $padding-lg 35px 0;
+      padding: $padding-lg $padding-sm 50px;
+    }
+  }
+
+  &__textblock {
+    margin-bottom: $padding-lg !important;
+
+    @include tablet() {
+      margin-bottom: $padding-md !important;
     }
 
-    &:last-child {
-      padding-bottom: $padding-xl;
-
-      @include tablet() {
-        padding-bottom: 0;
-      }
+    p {
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto;
     }
   }
 
   &__heading {
     font-size: 3.2rem;
-    margin-bottom: $padding-lg !important;
     font-weight: bold;
-
-    @include tablet() {
-      margin-bottom: $padding-md !important;
-    }
+    margin-bottom: 25px !important;
   }
 
   &__para {
@@ -33,5 +37,10 @@
     @include tablet() {
       padding: 5px 0;
     }
+  }
+
+  &__down-arrow {
+    display: block;
+    margin: 0 auto;
   }
 }

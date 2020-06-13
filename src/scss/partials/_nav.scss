@@ -106,10 +106,6 @@
       width: 0;
       backface-visibility: hidden;
     }
-
-    @include tablet() {
-      color: $lightgray;
-    }
   }
 
   // TODO: Move this over to button styles
@@ -128,7 +124,7 @@
 
     @include tablet() {
       padding: 0;
-      color: #555 !important;
+      color: $text-color !important;
       border: none;
     }
 

@@ -6,7 +6,7 @@ html {
 body {
   font-family: $secondary;
   background: #fcfcfc;
-  color: #4b4453;
+  color: $text-color;
   position: relative;
 }
 
@@ -62,6 +62,7 @@ button {
   width: 45px;
   border: none;
   border-radius: 50%;
+  border: 2px solid #fbfbfb;
   background: $pink;
   position: fixed;
   bottom: 25px;

@@ -19,17 +19,17 @@
   &--small {
     padding: 5px 10px;
     box-shadow: none;
-    border: 2px solid $purple-dark;
+    border: 2px solid #2980b9;
     transition: all 0.2s;
 
     &:hover {
-      background: darken($purple-dark, 15);
-      border: 2px solid darken($purple-dark, 15);
+      background: darken($blue, 10);
+      border: 2px solid darken($blue, 10);
       color: #fff;
     }
 
     &-solid {
-      background: $purple-dark;
+      background: #2980b9;
       color: #fff;
     }
 
