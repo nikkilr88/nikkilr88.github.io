@@ -3,7 +3,7 @@ $enterUpOpacity: 0;
 
 .hero {
   position: relative;
-  margin: 170px $padding-md 0;
+  margin: 185px $padding-md 0;
 
   @include tablet() {
     margin: 190px $padding-sm 0;
@@ -12,7 +12,7 @@ $enterUpOpacity: 0;
   }
 
   &__text {
-    margin: 0 auto 90px auto;
+    margin: 0 auto 60px auto;
     color: inherit;
     text-align: center;
     max-width: 950px;

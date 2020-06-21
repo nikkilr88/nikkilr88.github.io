@@ -1,7 +1,7 @@
 .navbar {
   font-size: 1.6rem;
-  padding: $padding-md;
   width: 100%;
+  padding: 50px $padding-md;
   z-index: 999;
   position: fixed;
   top: 0;
@@ -16,7 +16,7 @@
   }
 
   &--transparent {
-    padding: $padding-md;
+    padding: 50px $padding-md;
     background: none;
     box-shadow: none;
   }
