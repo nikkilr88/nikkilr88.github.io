@@ -4,6 +4,12 @@
   font-family: 'Roboto';
 }
 
+@mixin bigassScreen() {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (max-width: 925px) {
     @content;

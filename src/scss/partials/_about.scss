@@ -22,6 +22,10 @@
     background-position: 0 101%;
     background-repeat: no-repeat;
 
+    @include bigassScreen() {
+      height: 235%;
+    }
+
     @include mobile() {
       height: 155%;
     }
